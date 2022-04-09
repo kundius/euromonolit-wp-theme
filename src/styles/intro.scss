@@ -1,0 +1,167 @@
+.intro {
+  background: #ffffff url('../images/bg-intro.jpg') no-repeat 50% 100%;
+  background-size: cover;
+  padding-top: 103px;
+  padding-bottom: 162px;
+}
+
+.intro__title {
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #fff;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.44);
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.intro__subtitle {
+  text-transform: uppercase;
+  font-size: 32px;
+  color: #fff;
+  line-height: 1.25;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.44);
+  font-weight: 600;
+  margin-top: 11px;
+}
+
+.intro__description {
+  color: #fff;
+  font-size: 28px;
+  line-height: 1.071;
+  margin-top: 33px;
+}
+
+.intro__description span {
+  background: #0d1d40;
+}
+
+.intro__list {
+  padding: 0 0 0 76px;
+  margin: 26px 0 0 0;
+  list-style: none;
+}
+
+.intro__list li {
+  position: relative;
+  padding-left: 10px;
+  color: rgb(255, 255, 255);
+  line-height: 1.25;
+  font-size: 18px;
+}
+
+.intro__list li + li {
+  margin-top: 10px;
+}
+
+.intro__list li::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 10px;
+  border-radius: 50%;
+}
+
+.intro__layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.intro__layout-content {
+  flex-grow: 1;
+}
+
+.intro__layout-form {
+  width: 386px;
+  margin-left: 60px;
+}
+
+.intro-form {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.38);
+  padding: 35px 42px 23px;
+}
+
+.intro-form__title {
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.intro-form__row {
+
+}
+
+.intro-form__row + .intro-form__row {
+  margin-top: 11px;
+}
+
+.intro-form__rules {
+  font-size: 12px;
+  line-height: 14px;
+  color: #404040;
+  position: relative;
+  padding-left: 26px;
+  display: block;
+  margin-top: 6px;
+}
+
+.intro-form__rules input {
+  display: none;
+}
+
+.intro-form__rules span {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #0a0f37;
+  cursor: pointer;
+}
+
+.intro-form__rules span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 8px;
+  height: 4px;
+  border-left: 3px solid #0b5083;
+  border-bottom: 3px solid #0b5083;
+  margin-top: -2px;
+  display: none;
+}
+
+.intro-form__rules input:checked + span::before {
+  display: block;
+}
+
+.intro-form__rules a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.intro-form__submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.intro-form__submit .ui-button-submit {
+  min-width: 152px;
+}

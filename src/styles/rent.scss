@@ -1,0 +1,104 @@
+.rent {
+  background: url('../images/bg-rent.jpg');
+  padding-bottom: 82px;
+  padding-top: 60px;
+}
+
+.rent__headline {
+  display: flex;
+  justify-content: center;
+  padding-left: 180px;
+  position: relative;
+}
+
+.rent__headline-why {
+  font-size: 68px;
+  color: rgb(13, 92, 151);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 272px), calc(-50% + 5px));
+}
+
+.rent__headline-why::before {
+  content: '';
+  display: block;
+  width: 112px;
+  height: 170px;
+  background: url('../images/icon-question-rent.png') no-repeat 50% 50%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.rent__headline-title {
+  font-size: 36px;
+  line-height: 1.28;
+  letter-spacing: -0.025em;
+  color: #2a2a2a;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+.rent__headline-title strong {
+  color: #0d5c97;
+}
+
+.rent__items {
+  display: grid;
+  margin-top: 33px;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  grid-row-gap: 25px;
+  grid-column-gap: 43px;
+  grid-auto-flow: dense;
+}
+
+.rent-card {
+  border: 2px solid rgb(5, 92, 149);
+  display: flex;
+  align-items: center;
+}
+
+.rent-card__image {
+  width: 85px;
+  height: 85px;
+  margin-right: 0;
+  margin-bottom: 0;
+  flex-shrink: 0;
+  margin-left: -2px;
+  margin-top: -2px;
+  align-self: flex-start;
+  background: #0d5c97;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.rent-card__image svg {
+  fill: #ffffff;
+}
+
+.rent-card__body {
+  padding: 22px;
+  flex-grow: 1;
+}
+
+.rent-card__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1;
+  color: #000;
+}
+
+.rent-card__description {
+  font-size: 18px;
+  line-height: 1.222;
+  color: #000;
+  margin-top: 10px;
+}
