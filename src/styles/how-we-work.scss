@@ -1,0 +1,121 @@
+@import './variables';
+
+.how-we-work {
+  background: #f4f4f4;
+  padding-top: 44px;
+  padding-bottom: 49px;
+}
+
+.how-we-work__title {
+  font-size: 36px;
+  line-height: 1;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.how-we-work__title::after {
+  content: "";
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 51px;
+  height: 9px;
+  background: url('../images/title-underline.jpg') no-repeat 50% 50%;
+  background-size: cover;
+  margin-top: 18px;
+}
+
+.how-we-work__items {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 25px;
+}
+
+.how-we-work__item {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.how-we-work__item-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a6eaa;
+  border-bottom: 2px solid #8abbd8;
+  margin-bottom: 33px;
+  width: 100%;
+  height: 120px;
+  position: relative;
+}
+
+.how-we-work__item-image svg {
+  fill: currentColor;
+}
+
+.how-we-work__item-image::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-right: 2px solid #8abbd8;
+  border-bottom: 2px solid #8abbd8;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%) rotate(-45deg);
+}
+
+.how-we-work__item_last .how-we-work__item-image::after {
+  display: none;
+}
+
+.how-we-work__item-body {
+  display: flex;
+}
+
+.how-we-work__item-number {
+  font-size: 36px;
+  width: 28px;
+  flex-shrink: 0;
+  text-align: center;
+  line-height: 28px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #0a6eaa;
+  margin-right: 22px;
+  position: relative;
+}
+
+.how-we-work__item-number::after {
+  content: '';
+  width: 2px;
+  background: #0a6eaa;
+  position: absolute;
+  top: 3px;
+  right: -12px;
+  height: 35px;
+}
+
+.how-we-work__item-number::before {
+  content: '';
+  position: absolute;
+  top: -42px;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 4px solid #0a6eaa;
+}
+
+.how-we-work__item-description {
+  flex-grow: 1;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  padding-right: 20px;
+  width: calc(100% - 50%);
+}
