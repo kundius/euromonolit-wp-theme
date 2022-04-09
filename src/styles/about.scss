@@ -1,0 +1,135 @@
+.about {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.about__title {
+  font-size: 36px;
+  line-height: 1;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.about__title::after {
+  content: "";
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 68px;
+  height: 6px;
+  background: #fbbb49;
+  margin-top: 20px;
+}
+
+.about__content {
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  line-height: 1.182;
+  text-align: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 36px;
+}
+
+.about__content p {
+  margin: 0;
+}
+
+.about__content p + p {
+  margin-top: 26px;
+}
+
+.about__hr {
+  height: 1px;
+  width: 100%;
+  background: #e5e5e5;
+  margin-top: 43px;
+  margin-bottom: 47px;
+}
+
+.about__layout {
+  display: flex;
+  align-items: center;
+}
+
+.about__layout-sep-1 {
+  width: 30px;
+  flex-shrink: 4;
+}
+
+.about__layout-sep-2 {
+  width: 100px;
+  flex-shrink: 4;
+}
+
+.about__layout-why {
+  width: 385px;
+  flex-shrink: 1;
+}
+
+.about__layout-items {
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+
+.about-why {
+  background: url('../images/about-why.png') no-repeat 50% 50%;
+  background-size: cover;
+  width: 100%;
+  max-width: 385px;
+  margin: 0 auto;
+}
+
+.about-why::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 83%;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+}
+
+.about-item + .about-item {
+  margin-top: 12px;
+}
+
+.about-item__image {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  color: #b9b9b9;
+}
+
+.about-item__image svg {
+  fill: currentColor;
+}
+
+.about-item__body {
+  
+}
+
+.about-item__title {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -0.005em;
+}
+
+.about-item__description {
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  margin-top: 1px;
+}

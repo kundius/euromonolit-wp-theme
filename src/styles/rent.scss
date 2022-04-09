@@ -21,7 +21,7 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  transform: translate(calc(-50% - 272px), calc(-50% + 5px));
+  transform: translate(calc(-50% - 272px), calc(-50% + 6px));
 }
 
 .rent__headline-why::before {
@@ -33,6 +33,9 @@
   background-size: cover;
   position: absolute;
   z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% - 18px), calc(-50% - 10px));
 }
 
 .rent__headline-title {
@@ -51,8 +54,8 @@
 
 .rent__items {
   display: grid;
-  margin-top: 33px;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  margin-top: 57px;
+  grid-template-columns: 1fr 1fr;
   grid-row-gap: 25px;
   grid-column-gap: 43px;
   grid-auto-flow: dense;
@@ -61,7 +64,6 @@
 .rent-card {
   border: 2px solid rgb(5, 92, 149);
   display: flex;
-  align-items: center;
 }
 
 .rent-card__image {
@@ -72,7 +74,6 @@
   flex-shrink: 0;
   margin-left: -2px;
   margin-top: -2px;
-  align-self: flex-start;
   background: #0d5c97;
   display: flex;
   align-items: center;
@@ -85,7 +86,7 @@
 }
 
 .rent-card__body {
-  padding: 22px;
+  padding: 20px 22px;
   flex-grow: 1;
 }
 
