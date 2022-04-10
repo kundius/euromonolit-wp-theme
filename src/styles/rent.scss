@@ -1,7 +1,14 @@
+@import 'responsive';
+
 .rent {
   background: url('../images/bg-rent.jpg');
   padding-bottom: 82px;
   padding-top: 60px;
+  
+  @include below(sm) {
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
 }
 
 .rent__headline {
@@ -9,6 +16,10 @@
   justify-content: center;
   padding-left: 180px;
   position: relative;
+
+  @include below(sm) {
+    padding-left: 115px;
+  }
 }
 
 .rent__headline-why {
@@ -22,6 +33,12 @@
   top: 50%;
   left: 50%;
   transform: translate(calc(-50% - 272px), calc(-50% + 6px));
+
+  @include below(sm) {
+    letter-spacing: 0.025em;
+    font-size: 28px;
+    transform: translate(calc(-50% - 84px), calc(-50% + 1px));
+  }
 }
 
 .rent__headline-why::before {
@@ -36,6 +53,12 @@
   left: 50%;
   top: 50%;
   transform: translate(calc(-50% - 18px), calc(-50% - 10px));
+  
+  @include below(sm) {
+    width: 48px;
+    height: 72px;
+    transform: translate(calc(-50% - 8px), calc(-50% - 6px));
+  }
 }
 
 .rent__headline-title {
@@ -46,6 +69,10 @@
   font-weight: normal;
   margin: 0;
   text-align: center;
+
+  @include below(sm) {
+    font-size: 15px;
+  }
 }
 
 .rent__headline-title strong {
@@ -59,6 +86,12 @@
   grid-row-gap: 25px;
   grid-column-gap: 43px;
   grid-auto-flow: dense;
+
+  @include below(sm) {
+    grid-template-columns: 1fr;
+    margin-top: 21px;
+    grid-row-gap: 8px;
+  }
 }
 
 .rent-card {
@@ -79,15 +112,31 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+
+  @include below(sm) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .rent-card__image svg {
   fill: #ffffff;
+
+  @include below(sm) {
+    max-width: 60%;
+    max-height: 60%;
+    width: auto;
+    height: auto;
+  }
 }
 
 .rent-card__body {
   padding: 20px 22px;
   flex-grow: 1;
+
+  @include below(sm) {
+    padding: 6px 16px 12px;
+  }
 }
 
 .rent-card__title {
@@ -95,6 +144,10 @@
   font-size: 24px;
   line-height: 1;
   color: #000;
+
+  @include below(sm) {
+    font-size: 18px;
+  }
 }
 
 .rent-card__description {
@@ -102,4 +155,11 @@
   line-height: 1.222;
   color: #000;
   margin-top: 10px;
+
+  @include below(sm) {
+    font-size: 14px;
+    line-height: 1.111;
+    margin-top: 16px;
+    margin-left: -48px;
+  }
 }

@@ -1,8 +1,16 @@
+@import 'responsive';
+
 .intro {
   background: #ffffff url('../images/bg-intro.jpg') no-repeat 50% 100%;
   background-size: cover;
   padding-top: 103px;
   padding-bottom: 162px;
+
+  @include below(sm) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-image: url('../images/bg-intro-sm.jpg');
+  }
 }
 
 .intro__title {
@@ -14,6 +22,10 @@
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.44);
   font-weight: bold;
   margin-top: 2px;
+
+  @include below(sm) {
+    font-size: 30px;
+  }
 }
 
 .intro__subtitle {
@@ -24,6 +36,13 @@
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.44);
   font-weight: 600;
   margin-top: 11px;
+
+  @include below(sm) {
+    font-size: 18px;
+    line-height: 1.111;
+    letter-spacing: -0.01em;
+    margin-top: 6px;
+  }
 }
 
 .intro__description {
@@ -31,16 +50,44 @@
   font-size: 28px;
   line-height: 1.071;
   margin-top: 33px;
+
+  @include below(sm) {
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 12px;
+  }
 }
 
 .intro__description span {
   background: #0d1d40;
 }
 
+.intro__button {
+  margin-top: 30px;
+
+  @include above(sm) {
+    display: none;
+  }
+
+  @include below(sm) {
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+    .ui-button-secondary {
+      width: 270px;
+    }
+  }
+}
+
 .intro__list {
   padding: 0 0 0 76px;
   margin: 26px 0 0 0;
   list-style: none;
+
+  @include below(sm) {
+    padding-left: 0;
+    margin-top: 8px;
+  }
 }
 
 .intro__list li {
@@ -49,10 +96,19 @@
   color: rgb(255, 255, 255);
   line-height: 1.25;
   font-size: 18px;
+
+  @include below(sm) {
+    font-size: 14px;
+    line-height: 1;
+  }
 }
 
 .intro__list li + li {
   margin-top: 10px;
+
+  @include below(sm) {
+    margin-top: 0;
+  }
 }
 
 .intro__list li::before {
@@ -65,6 +121,10 @@
   left: 0;
   top: 10px;
   border-radius: 50%;
+
+  @include below(sm) {
+    top: 6px;
+  }
 }
 
 .intro__layout {
@@ -79,6 +139,10 @@
 .intro__layout-form {
   width: 386px;
   margin-left: 60px;
+
+  @include below(sm) {
+    display: none;
+  }
 }
 
 .intro-form {

@@ -1,3 +1,5 @@
+@import 'responsive';
+
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&display=swap');
 
 *,
@@ -22,6 +24,10 @@ body {
   width: 1320px;
   max-width: 100%;
   box-sizing: border-box;
+  @include below(sm) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 .ui-input {
@@ -120,6 +126,12 @@ body {
   letter-spacing: -0.005em;
   text-decoration: none;
   padding: 10px 30px;
+
+  @include below(sm) {
+    border-width: 2px;
+    font-size: 16px;
+    padding: 6px 18px;
+  }
 }
 
 .ui-button-more:hover {

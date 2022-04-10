@@ -1,5 +1,11 @@
 <section class="header">
   <div class="ui-container header__container">
+    <button class="header__toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <div class="header__logo">
       <a href="/">
         <img src="<?php bloginfo('template_url') ?>/dist/images/logo.png" alt="<?php bloginfo('name') ?>" />

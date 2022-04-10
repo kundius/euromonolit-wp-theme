@@ -1,6 +1,13 @@
+@import 'responsive';
+
 .catalog {
   padding-top: 10px;
   padding-bottom: 72px;
+
+  @include below(sm) {
+    padding-top: 38px;
+    padding-bottom: 11px;
+  }
 }
 
 .catalog__title {
@@ -10,6 +17,11 @@
   line-height: 1.2;
   text-align: center;
   margin: 0;
+
+  @include below(sm) {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .catalog__title::after {
@@ -21,6 +33,12 @@
   height: 6px;
   background: #fbbb49;
   margin-top: 36px;
+
+  @include below(sm) {
+    margin-top: 30px;
+    width: 60px;
+    height: 5px;
+  }
 }
 
 .catalog__subtitle {
@@ -29,14 +47,26 @@
   font-size: 20px;
   color: rgb(0, 0, 0);
   line-height: 1.5;
+
+  @include below(sm) {
+    font-size: 16px;
+    line-height: 1.111;
+    margin-top: 15px;
+  }
 }
 
 .catalog__items {
   display: grid;
   margin-top: 33px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 66px;
   grid-auto-flow: dense;
+
+  @include below(sm) {
+    grid-gap: 30px;
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .catalog__description {
@@ -45,12 +75,22 @@
   line-height: 1.364;
   text-align: center;  
   margin-top: 82px;
+
+  @include below(sm) {
+    font-size: 16px;
+    margin-top: 55px;
+    line-height: 1.111;
+  }
 }
 
 .catalog__action {
   margin-top: 44px;
   display: flex;
   justify-content: center;
+
+  @include below(sm) {
+    margin-top: 32px;
+  }
 }
 
 .catalog-card {
@@ -75,11 +115,20 @@
   line-height: 1;
   text-align: center;
   margin: 0;
+
+  @include below(sm) {
+    font-size: 20px;
+  }
 }
 
 .catalog-card__headline {
   min-height: 84px;
   margin-top: 33px;
+
+  @include below(sm) {
+    margin-top: 6px;
+    min-height: auto;
+  }
 }
 
 .catalog-card__subtitle {
@@ -90,6 +139,11 @@
   text-align: center;
   margin: 0;
   margin-top: 4px;
+
+  @include below(sm) {
+    font-size: 18px;
+    margin-top: 10px;
+  }
 }
 
 .catalog-card__subtitle sup {
@@ -102,12 +156,22 @@
   line-height: 1.111;
   text-align: center;
   margin-top: 9px;
+
+  @include below(sm) {
+    margin-top: 16px;
+    line-height: 1;
+    font-size: 16px;
+  }
 }
 
 .catalog-card__more {
   display: flex;
   justify-content: center;
   margin-top: 32px;
+
+  @include below(sm) {
+    margin-top: 16px;
+  }
 }
 
 .special-offer {
@@ -115,6 +179,10 @@
   display: flex;
   width: 776px;
   max-width: 100%;
+
+  @include below(sm) {
+    flex-direction: column;
+  }
 }
 
 .special-offer__title {
@@ -129,6 +197,12 @@
   position: relative;
   padding: 11px 10px 36px 28px;
   box-sizing: border-box;
+
+  @include below(sm) {
+    width: 100%;
+    font-size: 24px;
+    padding: 16px 10px 27px 20px;
+  }
 }
 
 .special-offer__title::before {
@@ -139,6 +213,11 @@
   width: 36px;
   height: 37px;
   vertical-align: middle;
+
+  @include below(sm) {
+    width: 30px;
+    height: 31px;
+  }
 }
 
 .special-offer__date {
@@ -154,6 +233,17 @@
   right: -4px;
   bottom: 10px;
   letter-spacing: -0.05em;
+
+  @include below(sm) {
+    bottom: 6px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 16px;
+    padding-bottom: 2px;
+  }
 }
 
 .special-offer__date::after {
@@ -165,6 +255,17 @@
   right: -13px;
   top: 50%;
   transform: translateY(-50%);
+
+  @include below(sm) {
+    transform: translateX(-50%);
+    top: 100%;
+    right: auto;
+    left: 50%;
+    border-top: 12px solid #f8cc54;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: none;
+  }
 }
 
 .special-offer__description {
@@ -177,4 +278,11 @@
   display: flex;
   align-items: center;
   padding-bottom: 6px;
+
+  @include below(sm) {
+    width: 100%;
+    font-size: 22px;
+    padding-top: 13px;
+    padding-bottom: 16px;
+  }
 }

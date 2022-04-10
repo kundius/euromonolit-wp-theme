@@ -1,9 +1,15 @@
-@import './variables';
+@import 'responsive';
+@import 'variables';
 
 .how-we-work {
   background: #f4f4f4;
   padding-top: 44px;
   padding-bottom: 49px;
+
+  @include below(sm) {
+    padding-top: 37px;
+    padding-bottom: 32px;
+  }
 }
 
 .how-we-work__title {
@@ -12,6 +18,11 @@
   margin: 0;
   font-weight: 600;
   text-align: center;
+
+  @include below(sm) {
+    font-size: 22px;
+    font-weight: bold;
+  }
 }
 
 .how-we-work__title::after {
@@ -24,18 +35,38 @@
   background: url('../images/title-underline.jpg') no-repeat 50% 50%;
   background-size: cover;
   margin-top: 18px;
+
+  @include below(sm) {
+    width: 56px;
+    height: 5px;
+    margin-top: 22px;
+  }
 }
 
 .how-we-work__items {
   display: flex;
   align-items: flex-start;
   margin-top: 25px;
+
+  @include below(sm) {
+    flex-direction: column;
+  }
 }
 
 .how-we-work__item {
   width: 20%;
   display: flex;
   flex-wrap: wrap;
+
+  @include below(sm) {
+    width: 100%;
+  }
+}
+
+.how-we-work__item + .how-we-work__item {
+  @include below(sm) {
+    margin-top: 20px;
+  }
 }
 
 .how-we-work__item-image {
@@ -48,10 +79,23 @@
   width: 100%;
   height: 120px;
   position: relative;
+
+  @include below(sm) {
+    order: 2;
+    height: 60px;
+    width: 60px;
+    border: none;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .how-we-work__item-image svg {
   fill: currentColor;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .how-we-work__item-image::after {
@@ -65,14 +109,14 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%) translateY(50%) rotate(-45deg);
+
+  @include below(sm) {
+    display: none;
+  }
 }
 
 .how-we-work__item_last .how-we-work__item-image::after {
   display: none;
-}
-
-.how-we-work__item-body {
-  display: flex;
 }
 
 .how-we-work__item-number {
@@ -86,6 +130,14 @@
   color: #0a6eaa;
   margin-right: 22px;
   position: relative;
+
+  @include below(sm) {
+    order: 1;
+    font-size: 28px;
+    width: 36px;
+    line-height: 1;
+    margin-right: 18px;
+  }
 }
 
 .how-we-work__item-number::after {
@@ -96,6 +148,12 @@
   top: 3px;
   right: -12px;
   height: 35px;
+
+  @include below(sm) {
+    top: 4px;
+    right: -1px;
+    height: 29px;
+  }
 }
 
 .how-we-work__item-number::before {
@@ -109,6 +167,10 @@
   height: 16px;
   border-radius: 50%;
   border: 4px solid #0a6eaa;
+
+  @include below(sm) {
+    display: none;
+  }
 }
 
 .how-we-work__item-description {
@@ -118,4 +180,11 @@
   letter-spacing: -0.05em;
   padding-right: 20px;
   width: calc(100% - 50%);
+
+  @include below(sm) {
+    order: 3;
+    font-size: 16px;
+    line-height: 0.875;
+    align-self: center;
+  }
 }
