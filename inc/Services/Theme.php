@@ -51,6 +51,14 @@ class Theme implements Service
      */
     private function add_theme_supports(): void
     {
+        add_filter( 'wpcf7_load_js', '__return_false' );
+        add_filter( 'wpcf7_load_css', '__return_false' );
+
+        
+        // add_action('init', function (){
+        //     header("Access-Control-Allow-Origin: *");
+        // });
+
         // Add the theme support basic elements
         add_theme_support('align-wide');
         add_theme_support('responsive-embeds');

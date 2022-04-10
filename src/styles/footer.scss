@@ -1,0 +1,48 @@
+.footer {
+  background: #444444;
+  padding: 16px 0;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  color: #999;
+  max-width: 400px;
+}
+
+.footer__counters {
+  font-size: 12px;
+  color: #999;
+}
+
+.footer__map {
+  font-size: 12px;
+  color: #999;
+}
+
+.footer__map a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.footer__map a:hover {
+  color: #ffffff;
+}
+
+.footer__creator {
+  margin-left: auto;
+}
+
+.footer__creator a {
+  filter: grayscale(100%);
+}
+
+.footer__creator a:hover {
+  filter: grayscale(0);
+}

@@ -457,7 +457,7 @@
               </div>
 
               <div class="get-estimate__layout-form">
-                <form action="/wp-json/contact-form-7/v1/contact-forms/4198/feedback" method="post" class="get-estimate-form js-form">
+                <form action="/wp-json/contact-form-7/v1/contact-forms/12/feedback" method="post" class="get-estimate-form js-form">
                   <input type="hidden" name="subject" value="">
           
                   <div class="get-estimate-form__row">
@@ -489,25 +489,55 @@
         </div>
       </section>
 
-      <section>
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
-        body<br />
+      <section class="news">
+        <div class="ui-container">
+          <div class="news__title">
+            Новости
+          </div>
+          <div class="news__items">
+            <article class="news-item">
+              <div class="news-item__date">11.04.2022</div>
+              <div class="news-item__title">
+                <a href="#">Приоритетное развитие направления «Загородное строительство»</a>
+              </div>
+              <div class="news-item__desc">
+                В связи с большим количеством запросов на опалубку для загородного строительства принято решение о приоритетном развитии направления «Загородное строительство»...
+              </div>
+              <div class="news-item__more">
+                <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-item__date">11.04.2022</div>
+              <div class="news-item__title">
+                <a href="#"> Летняя акция. Аренда оборудования</a>
+              </div>
+              <div class="news-item__desc">
+                Уважаемые партнеры!<br />
+                Компания «Евромонолит» устраивает летнюю акцию и предлагает в аренду опалубку...
+              </div>
+              <div class="news-item__more">
+                <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-item__date">11.04.2022</div>
+              <div class="news-item__title">
+                <a href="#">Вакансия</a>
+              </div>
+              <div class="news-item__desc">
+                В связи с расширением деятельности открыта вакансия по позиции Менеджер по аренде строительного оборудования (опалубка)...
+              </div>
+              <div class="news-item__more">
+                <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af35372aecc6daf7269a14f23dd0162eca35df6f7bc4c1810693c2e6d5328dbe4&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
       </section>
 
       <?php get_template_part('partials/footer');?>

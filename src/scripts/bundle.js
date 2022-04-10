@@ -3,6 +3,8 @@ import "lazysizes/plugins/native-loading/ls.native-loading";
 import "lazysizes/plugins/object-fit/ls.object-fit";
 import "what-input";
 
+import "./form";
+
 // alert("dada");
 
 import { Keukenhof } from "keukenhof";
@@ -18,5 +20,3 @@ Keukenhof.init({
 lazySizes.cfg.nativeLoading = {
   setLoadingAttribute: false,
 };
-
-console.log(lazySizes, Keukenhof);

@@ -1,0 +1,150 @@
+.underground {
+  padding-top: 40px;
+  padding-bottom: 27px;
+  background: url('../images/bg-rent.jpg');
+}
+
+.underground__grid {
+  display: grid;
+  grid-column-gap: 30px;
+}
+
+.underground__grid-about {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+}
+
+.underground__grid-office {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.underground__grid-warehouse {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.underground__grid-socials {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.underground__grid-rules {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
+
+
+.underground__container {
+  display: flex;
+}
+
+.underground-about {
+
+}
+
+.underground-about__logo {
+  display: block;
+}
+
+.underground-about__logo img {
+  display: block;
+}
+
+.underground-about__rights {
+  letter-spacing: 0.2em;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+.underground-about__rights span {
+  font-weight: bold;
+  letter-spacing: normal;
+  font-size: 26px;
+}
+
+.underground-contacts {
+
+}
+
+.underground-contacts__title {
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #5e5e5e;
+  font-weight: bold;
+  border-bottom: 1px solid #b3b3b3;
+  max-width: 220px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.underground-contacts__phone svg {
+  fill: #5b5b5b;
+}
+
+.underground-contacts__phone {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: -0.005em;
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.underground-contacts__address {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.underground-contacts__address + .underground-contacts__address {
+  margin-top: 22px;
+}
+
+.underground-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.underground-social__groups {
+  display: flex;
+}
+
+.underground-social__email {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #000;
+  line-height: 1;
+}
+
+.underground-social__email a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
+.underground-rules {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.underground-rules__item {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+  line-height: 1;
+}
+
+.underground-rules__item a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
