@@ -5,6 +5,11 @@
   background-size: cover;
   padding-top: 50px;
   padding-bottom: 52px;
+
+  @include below(sm) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .get-estimate__container {
@@ -21,13 +26,17 @@
   margin-bottom: 30px;
   margin-top: 0;
   font-weight: bold;
-  @media (max-width: $breakpoint-small-max) {
-    font-size: 36px;
-    margin-bottom: 30px;
+  max-width: 860px;
+
+  @include below(md) {
+    font-size: 32px;
+    max-width: 600px;
   }
-  @media (max-width: $breakpoint-xsmall-max) {
-    font-size: 28px;
-    text-align: center;
+
+  @include below(sm) {
+    max-width: 440px;
+    font-size: 24px;
+    line-height: 0.875;
   }
 }
 
@@ -38,9 +47,10 @@
   background: #ffffff;
   display: block;
   margin-top: 32px;
-  @media (max-width: $breakpoint-xsmall-max) {
-    margin-left: auto;
-    margin-right: auto;
+
+  @include below(sm) {
+    width: 90px;
+    height: 3px;
   }
 }
 
@@ -48,23 +58,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: $breakpoint-xsmall-max) {
+
+  @include below(sm) {
     flex-direction: column;
   }
 }
 
 .get-estimate__layout-expert {
   width: 550px;
-  @media (max-width: $breakpoint-small-max) {
-    width: 280px;
+
+  @include below(md) {
+    width: 380px;
+    padding-right: 40px;
   }
-  @media (max-width: $breakpoint-xsmall-max) {
-    margin-bottom: 30px;
+
+  @include below(sm) {
+    width: 100%;
+    padding-right: 0;
   }
 }
 
 .get-estimate__layout-form {
   width: 274px;
+
+  @include below(sm) {
+    width: 100%;
+    margin-top: 15px;
+  }
 }
 
 .get-estimate-expert {
@@ -72,16 +92,23 @@
 
 .get-estimate-expert__grid {
   display: grid;
-  @media (max-width: $breakpoint-small-max) {
+
+  @include below(md) {
+    grid-template-columns: 94px 1fr;
   }
 }
 
 .get-estimate-expert__grid-image {
-  grid-row: 1 / 4;
+  grid-row: 1 / 3;
   grid-column: 1 / 2;
   padding-right: 36px;
   display: flex;
   align-items: center;
+
+  @include below(md) {
+    grid-row: 1 / 2;
+    padding-right: 0;
+  }
 }
 
 .get-estimate-expert__image {
@@ -96,9 +123,10 @@
   img {
     display: block;
   }
-  @media (max-width: $breakpoint-small-max) {
-    margin-right: 0;
-    margin-bottom: 20px;
+
+  @include below(md) {
+    width: 78px;
+    height: 78px;
     margin-left: 0;
   }
 }
@@ -106,7 +134,9 @@
 .get-estimate-expert__grid-name {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
-  padding-bottom: 24px;
+
+  @include below(md) {
+  }
 }
 
 .get-estimate-expert__name {
@@ -114,11 +144,12 @@
   font-size: 30px;
   line-height: 1;
   font-weight: normal;
-}
+  margin-bottom: 24px;
 
-.get-estimate-expert__grid-stats {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
+  @include below(md) {
+    font-size: 24px;
+    margin-bottom: 9px;
+  }
 }
 
 .get-estimate-expert__stats {
@@ -131,30 +162,60 @@
   line-height: 1;
   padding-top: 8px;
   padding-bottom: 8px;
+
+  @include below(sm) {
+    font-size: 12px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 .get-estimate-expert__grid-description {
-  grid-row: 3 / 4;
+  grid-row: 2 / 3;
   grid-column: 2 / 3;
   padding-top: 24px;
+
+  @include below(md) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    padding-top: 18px;
+  }
 }
 
 .get-estimate-expert__description {
   font-size: 18px;
   color: #e2e3e5;
   line-height: 1.125;
+
+  @include below(md) {
+    font-size: 14px;
+  }
 }
 
 .get-estimate-form {
 
+  @include below(sm) {
+    background: #06476e;
+    padding: 42px 30px;
+  }
 }
 
 .get-estimate-form__row + .get-estimate-form__row {
   margin-top: 24px;
+
+  @include below(sm) {
+    margin-top: 12px;
+  }
 }
 
 .get-estimate-form__submit {
   margin-top: 23px;
+
+  @include below(sm) {
+    margin-top: 15px;
+  }
 }
 
 .get-estimate-form__submit .ui-button-secondary {
@@ -169,6 +230,12 @@
   display: block;
   margin-top: 17px;
   color: #fff;
+
+  @include below(sm) {
+    margin-top: 8px;
+    font-size: 11px;
+    line-height: 12px;
+  }
 }
 
 .get-estimate-form__rules input {

@@ -4,6 +4,11 @@
   padding-top: 40px;
   padding-bottom: 27px;
   background: url('../images/bg-rent.jpg');
+
+  @include below(sm) {
+    padding-top: 18px;
+    padding-bottom: 22px;
+  }
 }
 
 .underground__grid {
@@ -16,35 +21,99 @@
   grid-row: 1 / 3;
   display: flex;
   align-items: center;
+
+  @include below(md) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-bottom: 40px;
+  }
+
+  @include below(sm) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 }
 
 .underground__grid-office {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
+
+  @include below(md) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  @include below(sm) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-top: 28px;
+  }
 }
 
 .underground__grid-warehouse {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
+
+  @include below(md) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  @include below(sm) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin-top: 40px;
+    .underground-contacts__phone {
+      display: none;
+    }
+  }
 }
 
 .underground__grid-socials {
   grid-column: 4 / 5;
   grid-row: 1 / 2;
+
+  @include below(md) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    margin-bottom: 40px;
+  }
+
+  @include below(sm) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    margin-top: 33px;
+  }
 }
 
 .underground__grid-rules {
   grid-column: 3 / 5;
   grid-row: 2 / 3;
-}
 
+  @include below(md) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  @include below(sm) {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    margin-top: 23px;
+  }
+}
 
 .underground__container {
   display: flex;
 }
 
 .underground-about {
-
+  @include below(sm) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 .underground-about__logo {
@@ -53,6 +122,8 @@
 
 .underground-about__logo img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .underground-about__rights {
@@ -60,12 +131,21 @@
   font-size: 16px;
   line-height: 1;
   margin-top: 12px;
+
+  @include below(sm) {
+    font-size: 12px;
+    margin-top: 6px;
+  }
 }
 
 .underground-about__rights span {
   font-weight: bold;
   letter-spacing: normal;
   font-size: 26px;
+
+  @include below(sm) {
+    font-size: 18px;
+  }
 }
 
 .underground-contacts {
@@ -82,10 +162,25 @@
   max-width: 220px;
   margin-bottom: 20px;
   padding-bottom: 5px;
+
+  @include below(sm) {
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .underground-contacts__phone svg {
   fill: #5b5b5b;
+  display: block;
+
+  @include below(sm) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .underground-contacts__phone {
@@ -97,16 +192,42 @@
   display: flex;
   gap: 4px;
   margin-bottom: 14px;
+
+  @include below(lg) {
+    font-size: 18px;
+  }
+
+  @include below(sm) {
+    font-size: 20px;
+    margin-bottom: 12px;
+
+    justify-content: center;
+  }
 }
 
 .underground-contacts__address {
   font-size: 16px;
   line-height: 1.5;
   color: #000;
+
+  @include below(lg) {
+    font-size: 14px;
+  }
+
+  @include below(sm) {
+    font-size: 14px;
+    line-height: 16px;
+
+    text-align: center;
+  }
 }
 
 .underground-contacts__address + .underground-contacts__address {
   margin-top: 22px;
+
+  @include below(sm) {
+    margin-top: 14px;
+  }
 }
 
 .underground-social {
@@ -117,6 +238,50 @@
 
 .underground-social__groups {
   display: flex;
+
+  @include below(sm) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.underground-social__groups a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+
+  @include below(lg) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include below(sm) {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.underground-social__groups a svg {
+  fill: currentColor;
+}
+
+.underground-social__groups-telegram {
+  background: #36acf2;
+}
+
+.underground-social__groups-vk {
+  background: #556b9a;
+}
+
+.underground-social__groups-ok {
+  background: #ee931d;
+}
+
+.underground-social__groups-rutube {
+  background: #14191f;
 }
 
 .underground-social__email {
@@ -124,6 +289,12 @@
   font-size: 16px;
   color: #000;
   line-height: 1;
+
+  @include below(sm) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+  }
 }
 
 .underground-social__email a {
@@ -136,6 +307,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @include below(sm) {
+    align-items: center;
+  }
 }
 
 .underground-rules__item {
@@ -143,6 +318,11 @@
   font-size: 14px;
   color: #000;
   line-height: 1;
+
+  @include below(sm) {
+    font-size: 12px;
+    margin-top: 6px;
+  }
 }
 
 .underground-rules__item a {

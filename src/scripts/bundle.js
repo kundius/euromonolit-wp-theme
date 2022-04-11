@@ -1,11 +1,11 @@
-import lazySizes from "lazysizes";
-import "lazysizes/plugins/native-loading/ls.native-loading";
-import "lazysizes/plugins/object-fit/ls.object-fit";
-import "what-input";
+// import lazySizes from "lazysizes";
+// import "lazysizes/plugins/native-loading/ls.native-loading";
+// import "lazysizes/plugins/object-fit/ls.object-fit";
+// import "what-input";
 
 import "./form";
-
-// alert("dada");
+import "./drawer";
+import "./menuScrollTo";
 
 import { Keukenhof } from "keukenhof";
 
@@ -17,6 +17,6 @@ Keukenhof.init({
  * LazySizes configuration
  * https://github.com/aFarkas/lazysizes/#js-api---options
  */
-lazySizes.cfg.nativeLoading = {
-  setLoadingAttribute: false,
-};
+// lazySizes.cfg.nativeLoading = {
+//   setLoadingAttribute: false,
+// };

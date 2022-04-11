@@ -3,6 +3,14 @@
 .news {
   padding-top: 37px;
   padding-bottom: 44px;
+
+  @include below(md) {
+    padding-top: 0;
+  }
+
+  @include below(sm) {
+    padding-bottom: 35px;
+  }
 }
 
 .news__title {
@@ -10,17 +18,90 @@
   line-height: 1;
   font-weight: bold;
   margin-bottom: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include below(md) {
+    font-size: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-left: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: -16px;
+    background: #efefef;
+  }
+
+  @include below(sm) {
+    font-size: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-left: -8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: -8px;
+  }
 }
 
-.news__items {
-  display: grid;
-  grid-gap: 80px;
-  grid-template-columns: 1fr 1fr 1fr;
+.news__more {
+  font-size: 14px;
+  border: 1px solid currentColor;
+  color: #2d76a6;
+  line-height: 24px;
+  padding: 0 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: normal;
+
+  @include above(md) {
+    display: none;
+  }
 }
 
-.news-item {
-
+.news__more:hover {
+  color: #faaf00;
 }
+
+.news__items {}
+
+.news__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -40px;
+
+  @include below(lg) {
+    margin: -20px;
+  }
+}
+
+.news__grid-cell {
+  padding: 40px;
+  width: calc(100% / 3);
+
+  @include below(lg) {
+    padding: 20px;
+  }
+
+  @include below(md) {
+    width: calc(100% / 2);
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @include below(sm) {
+    width: 100%;
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+.news-item {}
 
 .news-item__date {
   position: relative;
@@ -29,6 +110,10 @@
   color: #faaf00;
   line-height: 1;
   margin-bottom: 15px;
+
+  @include below(sm) {
+    margin-bottom: 11px;
+  }
 }
 
 .news-item__date::before {
@@ -47,6 +132,11 @@
   font-size: 24px;
   line-height: 22px;
   font-weight: 500;
+
+  @include below(sm) {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .news-item__title a {
@@ -64,6 +154,11 @@
   line-height: 1.25;
   color: #000;
   margin-top: 15px;
+
+  @include below(sm) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .news-item__more {
@@ -71,6 +166,10 @@
   font-size: 14px;
   line-height: 1;
   margin-top: 23px;
+
+  @include below(sm) {
+    margin-top: 27px;
+  }
 }
 
 .news-item__more a {
