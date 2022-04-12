@@ -527,7 +527,7 @@ Template Name: Главная
                           В ближайшее время<br />
                           мы свяжемся с вами.
                         </div>
-                        <div class="get-estimate-success__body-close wpcf7-form-result-close">
+                        <div class="get-estimate-success__body-close wpcf7-form-success-close">
                           Закрыть окно
                         </div>
                       </div>
