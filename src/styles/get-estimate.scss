@@ -225,6 +225,7 @@
 
 .get-estimate-form__rules {
   margin-top: 17px;
+  color: #f5f5f5;
 
   @include below(sm) {
     margin-top: 8px;
@@ -239,28 +240,31 @@
   bottom: 0;
 }
 
-.form-success {
-
+.get-estimate-success {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.form-success__head {
+.get-estimate-success__head {
   background: #2e82b9;
   display: flex;
   align-items: center;
   padding: 20px;
 }
 
-.form-success__head-icon {
-  width: 64px;
-  height: 64px;
+.get-estimate-success__head-icon {
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
   border-radius: 50%;
   background: url('../images/bg-icon-result.jpg') no-repeat 50% 50%;
   background-size: cover;
   position: relative;
+  margin-right: 12px;
 }
 
-.form-success__head-icon::before {
+.get-estimate-success__head-icon::before {
   content: '';
   display: block;
   position: absolute;
@@ -272,35 +276,35 @@
   border-left: 3px solid #0b5083;
   border-bottom: 3px solid #0b5083;
   margin-top: -2px;
-  display: none;
 }
 
-.form-success__head-title {
-  font-size: 24px;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
+.get-estimate-success__head-title {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
   line-height: 1.2;
   text-align: left;
-  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.44);  
+  text-shadow: 0 2px 5px rgb(0 0 0 / 44%);
 }
 
-.form-success__body {
+.get-estimate-success__body {
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  flex-grow: 1;
 }
 
-.form-success__body-text {
-  font-size: 20px;
-  line-height: 22px;
+.get-estimate-success__body-text {
+  font-size: 16px;
+  line-height: 1.25;
   color: #333;
   text-align: center;
 }
 
-.form-success__body-close {
+.get-estimate-success__body-close {
   margin-top: 20px;
   line-height: 34px;
   font-size: 16px;
@@ -308,5 +312,9 @@
   white-space: nowrap;
   border-radius: 18px;
   color: #2d76a6;
-  border: 1px solid #2d76a6;
+  cursor: pointer;
+  border: 1px solid currentColor;
+  &:hover {
+    color: #faaf00;
+  }
 }

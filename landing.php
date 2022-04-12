@@ -514,20 +514,20 @@ Template Name: Главная
                   </div>
 
                   <div class="get-estimate-form__success">
-                    <div class="form-success">
-                      <div class="form-success__head">
-                        <div class="form-success__head-icon"></div>
-                        <div class="form-success__head-title">
+                    <div class="get-estimate-success">
+                      <div class="get-estimate-success__head">
+                        <div class="get-estimate-success__head-icon"></div>
+                        <div class="get-estimate-success__head-title">
                           Ваше сообщение
                           успешно отправлено
                         </div>
                       </div>
-                      <div class="form-success__body">
-                        <div class="form-success__body-text">
+                      <div class="get-estimate-success__body">
+                        <div class="get-estimate-success__body-text">
                           В ближайшее время<br />
                           мы свяжемся с вами.
                         </div>
-                        <div class="form-success__body-close wpcf7-form-result-close">
+                        <div class="get-estimate-success__body-close wpcf7-form-result-close">
                           Закрыть окно
                         </div>
                       </div>
