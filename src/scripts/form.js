@@ -67,12 +67,12 @@ document.querySelectorAll('.js-form').forEach(function(form) {
             const el = form.querySelector(field.into)
             el.classList.add('_error')
             const message = document.createElement('span')
-            message.classList.add('form-error')
+            message.classList.add('ui-form-error')
             message.innerHTML = field.message
             el.appendChild(message)
             messages.push(message)
             const close = document.createElement('span')
-            close.classList.add('form-error__close')
+            close.classList.add('ui-form-error__close')
             message.appendChild(close)
             close.addEventListener('click', () => {
               message.parentNode.removeChild(message)
