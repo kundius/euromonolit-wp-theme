@@ -483,7 +483,7 @@ Template Name: Главная
               </div>
 
               <div class="get-estimate__layout-form">
-                <form action="/wp-json/contact-form-7/v1/contact-forms/12/feedback" method="post" class="get-estimate-form js-form">
+                <form action="/wp-json/contact-form-7/v1/contact-forms/19/feedback" method="post" class="get-estimate-form js-form">
                   <input type="hidden" name="subject" value="">
           
                   <div class="get-estimate-form__row">

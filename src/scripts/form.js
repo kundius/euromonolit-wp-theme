@@ -18,7 +18,7 @@ document.querySelectorAll('.js-form').forEach(function(form) {
   form.addEventListener('submit', function(e) {
     e.preventDefault()
 
-    // grecaptcha.execute(wpcf7_recaptcha.sitekey, {action: 'submit'}).then(function(token) {
+    grecaptcha.execute(wpcf7_recaptcha.sitekey, {action: 'submit'}).then(function(token) {
       removeErrors()
       removeMessages()
 
@@ -36,7 +36,7 @@ document.querySelectorAll('.js-form').forEach(function(form) {
 
           form.reset()
           form.classList.add('_mail_sent')
-          // notifier.success(response.message)
+          alert(response.message)
           setTimeout(() => {
             form.classList.remove('_mail_sent')
           }, 5000)
@@ -45,19 +45,19 @@ document.querySelectorAll('.js-form').forEach(function(form) {
         if (response.status == 'acceptance_missing') {
           form.dispatchEvent(new Event("wpcf7invalid"))
 
-          // notifier.warning(response.message)
+          alert(response.message)
         }
 
         if (response.status == 'mail_failed') {
           form.dispatchEvent(new Event("wpcf7mailfailed"))
 
-          // notifier.alert(response.message)
+          alert(response.message)
         }
 
         if (response.status == 'spam') {
           form.dispatchEvent(new Event("wpcf7spam"))
 
-          // notifier.alert(response.message)
+          alert(response.message)
         }
 
         if (response.status == 'validation_failed') {
@@ -82,8 +82,8 @@ document.querySelectorAll('.js-form').forEach(function(form) {
       })
 
       const formData = new FormData(form)
-      // formData.append('_wpcf7_recaptcha_response', token)
+      formData.append('_wpcf7_recaptcha_response', token)
       request.send(formData)
-    // })
+    })
   })
 })
