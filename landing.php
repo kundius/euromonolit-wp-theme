@@ -518,7 +518,7 @@ Template Name: Главная
       <section class="news" id="news">
         <div class="ui-container">
           <div class="news__title">
-            Новости 1
+            Новости
             <a href="#" class="news__more">смотреть все</a>
           </div>
 
