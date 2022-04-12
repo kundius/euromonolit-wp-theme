@@ -232,14 +232,14 @@
   }
 }
 
-.get-estimate-form__success {
+.wpcf7-form-result._mail-sent {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   display: none;
-  ._mail_sent & {
+  &._active {
     display: block;
   }
 }

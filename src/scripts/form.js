@@ -1,7 +1,6 @@
 document.querySelectorAll(".js-form").forEach(function (form) {
-  const controlWrapElements = form.querySelectorAll(".wpcf7-form-control-wrap");
-  const successCloseElement = form.querySelector(".wpcf7-form-success-close");
-  const failedCloseElement = form.querySelector(".wpcf7-form-failed-close");
+  const controlWrapElements = form.querySelectorAll(".wpcf7-form-control-wrap") || [];
+  const resultCloseElements = form.querySelectorAll(".wpcf7-form-result-close") || [];
   let messages = [];
 
   const removeErrors = () => {
@@ -32,18 +31,17 @@ document.querySelectorAll(".js-form").forEach(function (form) {
       messageEl.parentNode.removeChild(messageEl);
     });
   };
-  
-  if (successCloseElement) {
-    successCloseElement.addEventListener('click', () => {
-      form.classList.remove('_mail_sent');
-    })
+
+  const renderResult = (cls) => {
+    const resultElement = form.querySelector(`.wpcf7-form-result${cls}`);
+    resultElement.classList.add('_active')
   }
 
-  if (failedCloseElement) {
-    failedCloseElement.addEventListener('click', () => {
-      form.classList.remove('_mail_failed');
+  resultCloseElements.forEach((el) => {
+    el.addEventListener('click', () => {
+      el.closest('.wpcf7-form-result').classList.remove('_active')
     })
-  }
+  })
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -67,13 +65,8 @@ document.querySelectorAll(".js-form").forEach(function (form) {
             form.dispatchEvent(new Event("wpcf7mailsent"));
 
             form.reset();
-            form.classList.add('_mail_sent');
 
-            if (!successCloseElement) {
-              setTimeout(() => {
-                form.classList.remove('_mail_sent');
-              }, 5000);
-            }
+            renderResult('._mail-sent')
           }
 
           if (response.status == "acceptance_missing") {
@@ -85,25 +78,13 @@ document.querySelectorAll(".js-form").forEach(function (form) {
           if (response.status == "mail_failed") {
             form.dispatchEvent(new Event("wpcf7mailfailed"));
 
-            form.classList.add('_mail_failed');
-
-            if (!failedCloseElement) {
-              setTimeout(() => {
-                form.classList.remove('_mail_failed');
-              }, 5000);
-            }
+            renderResult('._mail-failed')
           }
 
           if (response.status == "spam") {
             form.dispatchEvent(new Event("wpcf7spam"));
 
-            form.classList.add('_mail_failed');
-
-            if (!failedCloseElement) {
-              setTimeout(() => {
-                form.classList.remove('_mail_failed');
-              }, 5000);
-            }
+            renderResult('._mail-failed')
           }
 
           if (response.status == "validation_failed") {

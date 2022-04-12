@@ -513,7 +513,7 @@ Template Name: Главная
                     </span>
                   </div>
 
-                  <div class="get-estimate-form__success">
+                  <div class="wpcf7-form-result _mail-sent">
                     <div class="get-estimate-success">
                       <div class="get-estimate-success__head">
                         <div class="get-estimate-success__head-icon"></div>
@@ -527,14 +527,14 @@ Template Name: Главная
                           В ближайшее время<br />
                           мы свяжемся с вами.
                         </div>
-                        <div class="get-estimate-success__body-close wpcf7-form-success-close">
+                        <div class="get-estimate-success__body-close wpcf7-form-result-close">
                           Закрыть окно
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="get-estimate-form__failed">
+                  <div class="wpcf7-form-result _mail-failed">
 
                   </div>
                 </form>
