@@ -1,101 +1,107 @@
-document.querySelectorAll('.js-form').forEach(function(form) {
-  let controls = form.querySelectorAll('span.wpcf7-form-control-wrap')
-  let messages = []
+document.querySelectorAll(".js-form").forEach(function (form) {
+  let controlWrapElements = form.querySelectorAll(".wpcf7-form-control-wrap");
+  let resultCloseElement = form.querySelector(".wpcf7-form-result-close");
+  let timer;
+  let messages = [];
 
   const removeErrors = () => {
-    controls.forEach(el => el.classList.remove('_error'))
-  }
+    controlWrapElements.forEach((el) => el.classList.remove("_error"));
+  };
 
   const removeMessages = () => {
-    messages.forEach(message => {
+    messages.forEach((message) => {
       if (message.parentNode) {
-        message.parentNode.removeChild(message)
+        message.parentNode.removeChild(message);
       }
-    })
-    messages = []
-  }
+    });
+    messages = [];
+  };
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault()
+  const renderMessage = (selector, message) => {
+    const el = form.querySelector(selector);
+    el.classList.add("_error");
+    const messageEl = document.createElement("span");
+    messageEl.classList.add("ui-form-error");
+    messageEl.innerHTML = message;
+    el.appendChild(messageEl);
+    messages.push(messageEl);
+    const close = document.createElement("span");
+    close.classList.add("ui-form-error__close");
+    messageEl.appendChild(close);
+    close.addEventListener("click", () => {
+      messageEl.parentNode.removeChild(messageEl);
+    });
+  };
 
-    grecaptcha.execute(wpcf7_recaptcha.sitekey, {action: 'submit'}).then(function(token) {
-      removeErrors()
-      removeMessages()
+  const addTimedFormClass = (cls) => {
+    form.classList.add(cls);
 
-      const request = new XMLHttpRequest()
-      request.open('POST', form.action, true)
-      request.addEventListener('readystatechange', function() {
-        if (this.readyState != 4) return
+    if (!resultCloseElement) {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        form.classList.remove(cls);
+      }, 5000);
+    }
+  };
 
-        form.dispatchEvent(new Event("wpcf7submit"))
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        const response = JSON.parse(request.response)
+    grecaptcha
+      .execute(wpcf7_recaptcha.sitekey, { action: "submit" })
+      .then(function (token) {
+        removeErrors();
+        removeMessages();
 
-        if (response.status == 'mail_sent') {
-          form.dispatchEvent(new Event("wpcf7mailsent"))
+        const request = new XMLHttpRequest();
+        request.open("POST", form.action, true);
+        request.addEventListener("readystatechange", function () {
+          if (this.readyState != 4) return;
 
-          form.reset()
-          form.classList.add('_mail_sent')
-          alert(response.message)
-          setTimeout(() => {
-            form.classList.remove('_mail_sent')
-          }, 5000)
-        }
+          form.dispatchEvent(new Event("wpcf7submit"));
 
-        if (response.status == 'acceptance_missing') {
-          form.dispatchEvent(new Event("wpcf7invalid"))
+          const response = JSON.parse(request.response);
 
-          const el = form.querySelector('.wpcf7-form-acceptance-wrap')
-          el.classList.add('_error')
-          const message = document.createElement('span')
-          message.classList.add('ui-form-error')
-          message.innerHTML = response.message
-          el.appendChild(message)
-          messages.push(message)
-          const close = document.createElement('span')
-          close.classList.add('ui-form-error__close')
-          message.appendChild(close)
-          close.addEventListener('click', () => {
-            message.parentNode.removeChild(message)
-          })
-        }
+          if (response.status == "mail_sent") {
+            form.dispatchEvent(new Event("wpcf7mailsent"));
 
-        if (response.status == 'mail_failed') {
-          form.dispatchEvent(new Event("wpcf7mailfailed"))
+            form.reset();
 
-          alert(response.message)
-        }
+            addTimedFormClass("_mail_sent");
+          }
 
-        if (response.status == 'spam') {
-          form.dispatchEvent(new Event("wpcf7spam"))
+          if (response.status == "acceptance_missing") {
+            form.dispatchEvent(new Event("wpcf7invalid"));
 
-          alert(response.message)
-        }
+            renderMessage(".wpcf7-form-acceptance-wrap", response.message);
+          }
 
-        if (response.status == 'validation_failed') {
-          form.dispatchEvent(new Event("wpcf7invalid"))
-          
-          response.invalid_fields.forEach(field => {
-            const el = form.querySelector(field.into)
-            el.classList.add('_error')
-            const message = document.createElement('span')
-            message.classList.add('ui-form-error')
-            message.innerHTML = field.message
-            el.appendChild(message)
-            messages.push(message)
-            const close = document.createElement('span')
-            close.classList.add('ui-form-error__close')
-            message.appendChild(close)
-            close.addEventListener('click', () => {
-              message.parentNode.removeChild(message)
-            })
-          })
-        }
-      })
+          if (response.status == "mail_failed") {
+            form.dispatchEvent(new Event("wpcf7mailfailed"));
 
-      const formData = new FormData(form)
-      formData.append('_wpcf7_recaptcha_response', token)
-      request.send(formData)
-    })
-  })
-})
+            addTimedFormClass("_mail_failed");
+          }
+
+          if (response.status == "spam") {
+            form.dispatchEvent(new Event("wpcf7spam"));
+
+            addTimedFormClass("_mail_failed");
+          }
+
+          if (response.status == "validation_failed") {
+            form.dispatchEvent(new Event("wpcf7invalid"));
+
+            response.invalid_fields.forEach((field) => {
+              renderMessage(field.into, field.message);
+            });
+          }
+        });
+
+        const formData = new FormData(form);
+        formData.append("_wpcf7_recaptcha_response", token);
+        request.send(formData);
+      });
+  });
+});
