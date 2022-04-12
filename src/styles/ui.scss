@@ -64,9 +64,9 @@ body {
   display: block;
   box-sizing: border-box;
   ._error & {
-    color: #f00;
-    background-color: #fed8de;
-    border-color: #fc3b5a;
+    color: #e60f0f;
+    background-color: #ffe5e5;
+    border-color: #e24646;
   }
 }
 
@@ -82,9 +82,9 @@ body {
   display: block;
   box-sizing: border-box;
   ._error & {
-    color: #f00;
-    background-color: #fed8de;
-    border-color: #fc3b5a;
+    color: #e60f0f;
+    background-color: #ffe5e5;
+    border-color: #e24646;
   }
 }
 
@@ -369,17 +369,28 @@ body {
 
 .ui-form-error {
   border-radius: 2px;
-  padding: 16px 20px;
-  background-color: #f9152e;
-  letter-spacing: -0.005em;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.851);
   font-size: 14px;
-  line-height: 1;
-  color: #fff;
+  border: 1px solid rgb(204, 0, 0);
+  line-height: 18px;
+  color: #ff0000;
   position: absolute;
   right: 0;
-  top: calc(100% + 5px);
-  width: 200px;
+  top: calc(100% + 10px);
+  width: 240px;
   z-index: 120;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  &::before {
+    content: '';
+    right: 8px;
+    top: -12px;
+    position: absolute;
+    border-top: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgb(204, 0, 0);
+  }
   &::after {
     content: '';
     right: 10px;
@@ -388,12 +399,12 @@ body {
     border-top: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #f9152e;
+    border-bottom: 10px solid rgba(255, 255, 255, 0.851);
   }
 }
 
 .ui-form-error__close {
-  color: #fff;
+  color: #ff0000;
   position: absolute;
   right: 5px;
   top: 5px;
