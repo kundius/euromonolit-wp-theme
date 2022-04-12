@@ -369,8 +369,8 @@ body {
 
 .ui-form-error {
   border-radius: 2px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.851);
+  padding: 16px;
+  background-color: rgb(247 217 217);
   font-size: 14px;
   border: 1px solid rgb(204, 0, 0);
   line-height: 18px;
@@ -406,10 +406,10 @@ body {
 .ui-form-error__close {
   color: #ff0000;
   position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 12px;
-  height: 12px;
+  right: 8px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
   &::before {
     content: '';

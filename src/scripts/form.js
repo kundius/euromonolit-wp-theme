@@ -45,7 +45,19 @@ document.querySelectorAll('.js-form').forEach(function(form) {
         if (response.status == 'acceptance_missing') {
           form.dispatchEvent(new Event("wpcf7invalid"))
 
-          alert(response.message)
+          const el = form.querySelector('.wpcf7-form-acceptance-wrap')
+          el.classList.add('_error')
+          const message = document.createElement('span')
+          message.classList.add('ui-form-error')
+          message.innerHTML = response.message
+          el.appendChild(message)
+          messages.push(message)
+          const close = document.createElement('span')
+          close.classList.add('ui-form-error__close')
+          message.appendChild(close)
+          close.addEventListener('click', () => {
+            message.parentNode.removeChild(message)
+          })
         }
 
         if (response.status == 'mail_failed') {

@@ -223,59 +223,9 @@
 }
 
 .get-estimate-form__rules {
-  font-size: 12px;
-  line-height: 14px;
-  position: relative;
-  padding-left: 26px;
-  display: block;
   margin-top: 17px;
-  color: #fff;
 
   @include below(sm) {
     margin-top: 8px;
-    font-size: 11px;
-    line-height: 12px;
   }
-}
-
-.get-estimate-form__rules input {
-  display: none;
-}
-
-.get-estimate-form__rules span {
-  position: absolute;
-  left: 0;
-  top: 2px;
-  border-radius: 2px;
-  box-sizing: border-box;
-  display: block;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #0a0f37;
-  background: #fff;
-  cursor: pointer;
-}
-
-.get-estimate-form__rules span::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  width: 12px;
-  height: 8px;
-  border-left: 3px solid #0b5083;
-  border-bottom: 3px solid #0b5083;
-  margin-top: -2px;
-  display: none;
-}
-
-.get-estimate-form__rules input:checked + span::before {
-  display: block;
-}
-
-.get-estimate-form__rules a {
-  color: inherit;
-  text-decoration: underline;
 }
