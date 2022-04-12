@@ -2,6 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&display=swap');
 
+@keyframes buttonGlare {
+  0% {
+      left: -30px;
+      margin-left:0
+  }
+  30% {
+      left: 110%;
+      margin-left: 80px
+  }
+  100% {
+      left:110%;
+      margin-left: 80px
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -81,12 +96,33 @@ body {
   transition: color .3s ease;
   text-align: center;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .ui-button-submit:hover {
   color: #000;
   background: rgb(255, 189, 37);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32), inset 0px -3px 0px 0px #cc930f;
+}
+
+.ui-button-submit_glare::after {
+  content: '';
+  margin-left: 60px;
+  width: 30px;
+  height: 300px;
+  background: rgb(255, 220, 60);
+  animation-delay: 0.05s;
+  position: absolute;
+  left: -40px;
+  top: -150px;
+  animation-timing-function: ease-in-out;
+  animation-name: buttonGlare;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  transform: rotate(45deg);
+  mix-blend-mode: color;
+  filter: invert(100%);
 }
 
 .ui-button-secondary {
@@ -109,6 +145,8 @@ body {
   transition: color .3s ease;
   text-align: center;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 
   @include below(sm) {
     font-size: 16px;
@@ -120,6 +158,25 @@ body {
   color: #000;
   background-color: rgb(255, 180, 6);
   box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.28);
+}
+
+.ui-button-secondary_glare::after {
+  content: '';
+  margin-left: 60px;
+  width: 30px;
+  height: 300px;
+  background: rgb(255, 220, 60);
+  animation-delay: 0.05s;
+  position: absolute;
+  left: -40px;
+  top: -150px;
+  animation-timing-function: ease-in-out;
+  animation-name: buttonGlare;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  transform: rotate(45deg);
+  mix-blend-mode: color;
+  filter: invert(100%);
 }
 
 .ui-button-more {
@@ -177,4 +234,118 @@ body {
   right: 0;
   top: 2px;
   transform: rotate(-45deg);
+}
+
+.ui-input-file {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.ui-input-file:hover .ui-input-file__icon {
+  background: rgb(228, 150, 30);
+  color: #fff;
+}
+
+.ui-input-file:hover .ui-input-file__label {
+  color: rgb(228, 150, 30);
+}
+
+.ui-input-file__icon {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  display: flex;
+  background: #0a6fad;
+  border-radius: 50%;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+}
+
+.ui-input-file__icon svg {
+  display: block;
+  fill: currentColor;
+}
+
+.ui-input-file__label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0a6fad;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ui-input-file__desc {
+  margin-left: 16px;
+  font-style: italic;
+  font-size: 12px;
+  color: #5e5e5e;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ui-input-file__input {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-rules {
+  font-size: 12px;
+  line-height: 14px;
+  color: currentColor;
+  position: relative;
+  padding-left: 26px;
+  display: block;
+  margin-top: 6px;
+}
+
+.ui-rules input {
+  display: none;
+}
+
+.ui-rules span {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border: 1px solid #0a0f37;
+  cursor: pointer;
+}
+
+.ui-rules span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 12px;
+  height: 8px;
+  border-left: 3px solid #0b5083;
+  border-bottom: 3px solid #0b5083;
+  margin-top: -2px;
+  display: none;
+}
+
+.ui-rules input:checked + span::before {
+  display: block;
+}
+
+.ui-rules a {
+  color: inherit;
+  text-decoration: underline;
 }

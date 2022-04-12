@@ -1,4 +1,4 @@
-const links = document.querySelectorAll('a[href^="#"]') || [];
+const links = document.querySelectorAll('a[href*="#"]') || [];
 const header = document.querySelector(".header");
 
 links.forEach((link) => {

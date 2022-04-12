@@ -83,10 +83,10 @@
       <div class="underground__grid-rules">
         <div class="underground-rules">
           <div class="underground-rules__item">
-            <a href="#">Пользовательское соглашение</a>
+            <a href="<?php the_permalink(16)?>" target="_blank">Пользовательское соглашение</a>
           </div>
           <div class="underground-rules__item">
-            <a href="#">Политика обработки персональных данных</a>
+            <a href="<?php the_permalink(3)?>" target="_blank">Политика обработки персональных данных</a>
           </div>
         </div>
       </div>
@@ -196,23 +196,91 @@
   </div>
 </div>
 
-<div id="feedback" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal__title" aria-describedby="modal__description">
-  <button class="modal__overlay" tabindex="-1" data-keukenhof-close></button>
+<div class="hystmodal hystmodal--small" id="feedback" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close"></button>
 
-  <div class="modal__container">
-    <header>
-      <button class="button button--close" aria-label="Close modal" data-keukenhof-close="">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.41 12l4.3-4.29a1 1 0 10-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 00-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 000 1.42 1 1 0 001.42 0l4.29-4.3 4.29 4.3a1 1 0 001.42 0 1 1 0 000-1.42z"></path></svg>
-      </button>
-    </header>
-    <main class="modal__main">
-      <h2 id="modal__title" class="modal__title">Keukenhof.js</h2>
-      <p id="modal__description"> Lightweight and easy to use the library for modals with keyboard control support. Use the <code class="special">Tab</code> key to focus on an element or <code class="special">Esc</code> to close </p>
-    </main>
-    <footer class="modal__footer">
-      <button class="button button--base">Okay</button>
-      <button class="button button--base" data-keukenhof-close="">Close</button>
-    </footer>
+      <form action="/wp-json/contact-form-7/v1/contact-forms/12/feedback" method="post" class="modal-form js-form">
+        <div class="modal-form__title">
+          Заказать расчет
+        </div>
+        <div class="modal-form__field">
+          <input type="text" name="your-name" class="ui-input" placeholder="Контактное лицо:" />
+        </div>
+        <div class="modal-form__field">
+          <input type="text" name="your-company" class="ui-input" placeholder="Компания:" />
+        </div>
+        <div class="modal-form__field">
+          <input type="tel" name="your-phone" class="ui-input" placeholder="Телефон*:" />
+        </div>
+        <div class="modal-form__field">
+          <input type="email" name="your-email" class="ui-input" placeholder="E-mail:" />
+        </div>
+        <div class="modal-form__field">
+          <textarea rows="4" name="your-message" class="ui-textarea" placeholder="Техническое задание:"></textarea>
+        </div>
+        <div class="modal-form__file">
+          <div class="ui-input-file">
+            <div class="ui-input-file__icon">
+              <svg width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.463 5.576c-.688-.75-1.929-.796-2.756.031l-8.1 8.1c-.21.21-.21.476 0 .686.21.21.476.21.686 0l6.7-6.7a1 1 0 0 1 1.414 1.414l-6.7 6.7a2.45 2.45 0 0 1-3.514 0 2.45 2.45 0 0 1 0-3.514l8.1-8.1c1.567-1.568 4.115-1.619 5.63.015 1.552 1.569 1.597 4.104-.03 5.613l-9.486 9.486c-2.19 2.19-5.624 2.19-7.814 0-2.19-2.19-2.19-5.624 0-7.814l8.1-8.1a1 1 0 0 1 1.414 1.414l-8.1 8.1c-1.41 1.41-1.41 3.576 0 4.986 1.41 1.41 3.576 1.41 4.986 0l9.5-9.5.031-.03c.75-.687.796-1.929-.031-2.756l-.03-.031z" />
+              </svg>
+            </div>
+            <div class="ui-input-file__label">Прикрепить файл</div>
+            <div class="ui-input-file__desc">(не более 30 Мб)</div>
+            <input type="file" name="your-file" class="ui-input-file__input" />
+          </div>
+        </div>
+        <div class="modal-form__note">
+          Поля, отмеченные *, обязательны для заполнения
+        </div>
+        <div class="modal-form__rules">
+          <label class="ui-rules">
+            <input type="checkbox" name="rules" value="1" class="form-checkbox">
+            <span></span>
+            Прочитал(-а) <a href="<?php the_permalink(16)?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3)?>" target="_blank">Политикой конфиденциальности</a>
+          </label>
+        </div>
+        <div class="modal-form__submit">
+          <button type="submit" class="ui-button-submit ui-button-submit_glare">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal hystmodal--small" id="callback" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close"></button>
+
+      <form action="/wp-json/contact-form-7/v1/contact-forms/12/feedback" method="post" class="modal-form js-form">
+        <div class="modal-form__title">
+          Заказать<br />
+          обратный звонок
+        </div>
+        <div class="modal-form__field">
+          <input type="text" name="your-name" class="ui-input" placeholder="Имя:" />
+        </div>
+        <div class="modal-form__field">
+          <input type="tel" name="your-phone" class="ui-input" placeholder="Телефон*:" />
+        </div>
+        <div class="modal-form__note">
+          Поля, отмеченные *, обязательны для заполнения
+        </div>
+        <div class="modal-form__rules">
+          <label class="ui-rules">
+            <input type="checkbox" name="rules" value="1" class="form-checkbox">
+            <span></span>
+            Прочитал(-а) <a href="<?php the_permalink(16)?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3)?>" target="_blank">Политикой конфиденциальности</a>
+          </label>
+        </div>
+        <div class="modal-form__submit">
+          <button type="submit" class="ui-button-submit ui-button-submit_glare">Отправить</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 

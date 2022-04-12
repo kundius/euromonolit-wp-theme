@@ -3,15 +3,11 @@
 // import "lazysizes/plugins/object-fit/ls.object-fit";
 // import "what-input";
 
+import "./modal";
 import "./form";
 import "./drawer";
 import "./menuScrollTo";
-
-import { Keukenhof } from "keukenhof";
-
-Keukenhof.init({
-  hasAnimation: true,
-});
+import "./inputFile";
 
 /**
  * LazySizes configuration
