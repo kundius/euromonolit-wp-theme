@@ -28,6 +28,8 @@ class Seo implements Service
         \remove_action('wp_head', 'rel_canonical');
         \add_action('wp_head', [$this, 'add_canonical']);
         \add_action('wp_head', [$this, 'add_meta']);
+
+        $this->registerAcfFields();
     }
 
     /**
@@ -36,6 +38,102 @@ class Seo implements Service
     public function get_service_name(): string
     {
         return 'seo';
+    }
+
+    public function registerAcfFields(): void
+    {
+        acf_add_local_field_group([
+            'key' => 'theme_seo',
+            'title' => 'SEO',
+            'fields' => [
+                [
+                    'key' => 'theme_seo_title',
+                    'label' => 'Заголовок',
+                    'name' => 'theme_seo_title',
+                    'type' => 'text',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+                [
+                    'key' => 'theme_seo_keywords',
+                    'label' => 'Ключевые слова',
+                    'name' => 'theme_seo_keywords',
+                    'type' => 'text',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+                [
+                    'key' => 'theme_seo_description',
+                    'label' => 'Описание',
+                    'name' => 'theme_seo_description',
+                    'type' => 'text',
+                    'prefix' => '',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ],
+            ],
+            'location' => [
+                [
+                    [
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'post',
+                    ],
+                    [
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'page',
+                    ],
+                ],
+            ],
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+        ]);
     }
 
     public function add_meta(): void
@@ -72,12 +170,12 @@ class Seo implements Service
         } elseif (\is_404()) {
             $title = 'Not Found';
         } else {
-            $title = \get_field('seo_title');
+            $title = \get_field('theme_seo_title');
             if (empty($title)) {
                 $title = \get_the_title();
             }
-            $description = \get_field('seo_description');
-            $keywords = \get_field('seo_keywords');
+            $description = \get_field('theme_seo_description');
+            $keywords = \get_field('theme_seo_keywords');
         }
 
         echo '<title>' . $title . '</title>';
