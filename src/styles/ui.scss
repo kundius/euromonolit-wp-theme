@@ -32,20 +32,20 @@
 }
 
 @keyframes loaderSquareSecond {
-  0% { box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 0) }
-  12% { box-shadow: 0 24px rgba(#FFF, 1), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 0) }
-  25% { box-shadow: 0 24px rgba(#FFF, 1), 24px 24px rgba(#FFF, 1), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 0) }
-  37% { box-shadow: 0 24px rgba(#FFF, 1), 24px 24px rgba(#FFF, 1), 24px 48px rgba(#FFF, 1), 0px 48px rgba(#FFF, 0) }
-  50% { box-shadow: 0 24px rgba(#FFF, 1), 24px 24px rgba(#FFF, 1), 24px 48px rgba(#FFF, 1), 0px 48px rgba(#FFF, 1) }
-  62% { box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 1), 24px 48px rgba(#FFF, 1), 0px 48px rgba(#FFF, 1) }
-  75% { box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 1), 0px 48px rgba(#FFF, 1) }
-  87%{ box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 1) }
-  100%{ box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 0) }
+  0% { box-shadow: 0 0.5em rgba(#FFF, 0), 0.5em 0.5em rgba(#FFF, 0), 0.5em 1em rgba(#FFF, 0), 0px 1em rgba(#FFF, 0) }
+  12% { box-shadow: 0 0.5em rgba(#FFF, 1), 0.5em 0.5em rgba(#FFF, 0), 0.5em 1em rgba(#FFF, 0), 0px 1em rgba(#FFF, 0) }
+  25% { box-shadow: 0 0.5em rgba(#FFF, 1), 0.5em 0.5em rgba(#FFF, 1), 0.5em 1em rgba(#FFF, 0), 0px 1em rgba(#FFF, 0) }
+  37% { box-shadow: 0 0.5em rgba(#FFF, 1), 0.5em 0.5em rgba(#FFF, 1), 0.5em 1em rgba(#FFF, 1), 0px 1em rgba(#FFF, 0) }
+  50% { box-shadow: 0 0.5em rgba(#FFF, 1), 0.5em 0.5em rgba(#FFF, 1), 0.5em 1em rgba(#FFF, 1), 0px 1em rgba(#FFF, 1) }
+  62% { box-shadow: 0 0.5em rgba(#FFF, 0), 0.5em 0.5em rgba(#FFF, 1), 0.5em 1em rgba(#FFF, 1), 0px 1em rgba(#FFF, 1) }
+  75% { box-shadow: 0 0.5em rgba(#FFF, 0), 0.5em 0.5em rgba(#FFF, 0), 0.5em 1em rgba(#FFF, 1), 0px 1em rgba(#FFF, 1) }
+  87%{ box-shadow: 0 0.5em rgba(#FFF, 0), 0.5em 0.5em rgba(#FFF, 0), 0.5em 1em rgba(#FFF, 0), 0px 1em rgba(#FFF, 1) }
+  100%{ box-shadow: 0 0.5em rgba(#FFF, 0), 0.5em 0.5em rgba(#FFF, 0), 0.5em 1em rgba(#FFF, 0), 0px 1em rgba(#FFF, 0) }
 }
 
 .ui-loader-square {
-  width: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   position: relative;
   transform: rotate(45deg);
@@ -53,11 +53,11 @@
 
 .ui-loader-square::before {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 0.5em;
+  height: 0.5em;
   position: absolute;
   left: 0;
-  top: -24px;
+  top: -0.5em;
   animation: loaderSquareSecond 4s ease infinite;
 }
 
@@ -66,10 +66,10 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 24px;
-  height: 24px;
+  width: 0.5em;
+  height: 0.5em;
   background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   animation: loaderSquareFirst 2s ease infinite;
 }
 
