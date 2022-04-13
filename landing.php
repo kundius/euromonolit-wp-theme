@@ -53,7 +53,9 @@ Template Name: Главная
                 </div>
 
                 <div class="intro-form__row">
-                  <input type="text" name="your-phone" class="ui-input" placeholder="Телефон*:" />
+                  <span class="wpcf7-form-control-wrap your-phone">
+                    <input type="tel" name="your-phone" value="" class="ui-input" placeholder="Телефон*">
+                  </span>
                 </div>
 
                 <div class="intro-form__row">
@@ -61,11 +63,13 @@ Template Name: Главная
                 </div>
 
                 <div class="intro-form__rules">
-                  <label class="ui-rules">
-                    <input type="checkbox" name="rules" value="1" />
-                    <span></span>
-                    Прочитал(-а) <a href="<?php the_permalink(16) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
-                  </label>
+                  <span class="wpcf7-form-acceptance-wrap">
+                    <label class="ui-rules">
+                      <input type="checkbox" name="rules" value="1" class="form-checkbox">
+                      <span></span>
+                      Прочитал(-а) <a href="<?php the_permalink(16) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+                    </label>
+                  </span>
                 </div>
 
                 <div class="intro-form__submit">
@@ -556,7 +560,7 @@ Template Name: Главная
                       <label class="ui-rules">
                         <input type="checkbox" name="rules" value="1" class="form-checkbox">
                         <span></span>
-                        Прочитал(-а) <a href="<?php the_permalink(16)?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3)?>" target="_blank">Политикой конфиденциальности</a>
+                        Прочитал(-а) <a href="<?php the_permalink(16) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
                       </label>
                     </span>
                   </div>
