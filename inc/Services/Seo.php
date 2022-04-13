@@ -74,6 +74,13 @@ class Seo implements Service
                         'value' => 'post',
                     ],
                 ],
+                [
+                    [
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'page',
+                    ],
+                ],
             ],
         ]);
     }
