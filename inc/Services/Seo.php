@@ -28,7 +28,7 @@ class Seo implements Service
         \remove_action('wp_head', 'rel_canonical');
         \add_action('wp_head', [$this, 'add_canonical']);
         \add_action('wp_head', [$this, 'add_meta']);
-        \add_action('acf/init', [$this, 'register_acf_fields']));
+        \add_action('acf/init', [$this, 'register_acf_fields']);
     }
 
     /**
@@ -41,7 +41,7 @@ class Seo implements Service
 
     public function register_acf_fields(): void
     {
-        acf_add_local_field_group([
+        \acf_add_local_field_group([
             'key' => 'group_theme_seo',
             'title' => 'SEO',
             'fields' => [
