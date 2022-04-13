@@ -28,8 +28,7 @@ class Seo implements Service
         \remove_action('wp_head', 'rel_canonical');
         \add_action('wp_head', [$this, 'add_canonical']);
         \add_action('wp_head', [$this, 'add_meta']);
-
-        $this->registerAcfFields();
+        \add_action('acf/init', [$this, 'register_acf_fields']));
     }
 
     /**
@@ -40,77 +39,30 @@ class Seo implements Service
         return 'seo';
     }
 
-    public function registerAcfFields(): void
+    public function register_acf_fields(): void
     {
         acf_add_local_field_group([
-            'key' => 'theme_seo',
+            'key' => 'group_theme_seo',
             'title' => 'SEO',
             'fields' => [
                 [
-                    'key' => 'theme_seo_title',
+                    'key' => 'field_theme_seo_title',
                     'label' => 'Заголовок',
                     'name' => 'theme_seo_title',
                     'type' => 'text',
-                    'prefix' => '',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => [
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ],
-                    'default_value' => '',
-                    'placeholder' => '',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => '',
-                    'readonly' => 0,
-                    'disabled' => 0,
                 ],
                 [
-                    'key' => 'theme_seo_keywords',
+                    'key' => 'field_theme_seo_keywords',
                     'label' => 'Ключевые слова',
                     'name' => 'theme_seo_keywords',
                     'type' => 'text',
-                    'prefix' => '',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => [
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ],
-                    'default_value' => '',
-                    'placeholder' => '',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => '',
-                    'readonly' => 0,
-                    'disabled' => 0,
                 ],
                 [
-                    'key' => 'theme_seo_description',
+                    'key' => 'field_theme_seo_description',
                     'label' => 'Описание',
                     'name' => 'theme_seo_description',
-                    'type' => 'text',
-                    'prefix' => '',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => [
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ],
-                    'default_value' => '',
-                    'placeholder' => '',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => '',
-                    'readonly' => 0,
-                    'disabled' => 0,
+                    'type' => 'textarea',
+                    'rows' => 3,
                 ],
             ],
             'location' => [
@@ -127,12 +79,6 @@ class Seo implements Service
                     ],
                 ],
             ],
-            'menu_order' => 0,
-            'position' => 'normal',
-            'style' => 'default',
-            'label_placement' => 'top',
-            'instruction_placement' => 'label',
-            'hide_on_screen' => '',
         ]);
     }
 
