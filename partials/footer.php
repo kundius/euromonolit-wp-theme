@@ -229,7 +229,7 @@
         </div>
 
         <div class="modal-form__file">
-          <div class="wpcf7-form-control-wrap your-file">
+          <span class="wpcf7-form-control-wrap your-file">
             <div class="ui-input-file">
               <div class="ui-input-file__icon">
                 <svg width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -240,7 +240,7 @@
               <div class="ui-input-file__desc">(не более 30 Мб)</div>
               <input type="file" name="your-file" class="ui-input-file__input" />
             </div>
-          </div>
+          </span>
         </div>
 
         <div class="modal-form__note">
