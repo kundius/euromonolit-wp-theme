@@ -26,7 +26,6 @@ class Seo implements Service
     public function boot(Service_Container $container): void
     {
         \remove_action('wp_head', 'rel_canonical');
-        \add_filter('wp_title', [$this, 'add_title']);
         \add_action('wp_head', [$this, 'add_canonical']);
         \add_action('wp_head', [$this, 'add_meta']);
         \add_action('acf/init', [$this, 'register_acf_fields']);
@@ -85,8 +84,12 @@ class Seo implements Service
         ]);
     }
 
-    public function add_title($title): string
+    public function add_meta(): void
     {
+        $title = '';
+        $description = '';
+        $keywords = '';
+
         if (is_archive()) {
             $term = \get_term_by('slug', \get_query_var('term'), \get_query_var('taxonomy'));
             if ($term) {
@@ -94,6 +97,8 @@ class Seo implements Service
                 if (empty($title)) {
                     $title = $term->name;
                 }
+                $description = \get_field('theme_seo_description', $term->taxonomy . '_' . $term->term_id);
+                $keywords = \get_field('theme_seo_keywords', $term->taxonomy . '_' . $term->term_id);
             } elseif (\is_post_type_archive()) {
                 $title = \get_queried_object()->labels->name;
             } elseif (\is_day()) {
@@ -117,31 +122,12 @@ class Seo implements Service
             if (empty($title)) {
                 $title = \get_the_title();
             }
-        }
-
-        $title = 'test qq';
-
-        return $title;
-    }
-
-    public function add_meta(): void
-    {
-        $description = '';
-        $keywords = '';
-
-        if (is_archive()) {
-            $term = \get_term_by('slug', \get_query_var('term'), \get_query_var('taxonomy'));
-            if ($term) {
-                $description = \get_field('theme_seo_description', $term->taxonomy . '_' . $term->term_id);
-                $keywords = \get_field('theme_seo_keywords', $term->taxonomy . '_' . $term->term_id);
-            }
-        } elseif (\is_search()) {
-            // pass
-        } elseif (\is_404()) {
-            // pass
-        } else {
             $description = \get_field('theme_seo_description');
             $keywords = \get_field('theme_seo_keywords');
+        }
+
+        if (!empty($title)) {
+            echo '<title>' . $title . '</title>';
         }
 
         if (!empty($keywords)) {
