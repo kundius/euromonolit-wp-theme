@@ -32,15 +32,15 @@
 }
 
 @keyframes loaderSquareSecond {
-  0% { box-shadow: 0 24px rgba($lite, 0), 24px 24px rgba($lite, 0), 24px 48px rgba($lite, 0), 0px 48px rgba($lite, 0) }
-  12% { box-shadow: 0 24px rgba($lite, 1), 24px 24px rgba($lite, 0), 24px 48px rgba($lite, 0), 0px 48px rgba($lite, 0) }
-  25% { box-shadow: 0 24px rgba($lite, 1), 24px 24px rgba($lite, 1), 24px 48px rgba($lite, 0), 0px 48px rgba($lite, 0) }
-  37% { box-shadow: 0 24px rgba($lite, 1), 24px 24px rgba($lite, 1), 24px 48px rgba($lite, 1), 0px 48px rgba($lite, 0) }
-  50% { box-shadow: 0 24px rgba($lite, 1), 24px 24px rgba($lite, 1), 24px 48px rgba($lite, 1), 0px 48px rgba($lite, 1) }
-  62% { box-shadow: 0 24px rgba($lite, 0), 24px 24px rgba($lite, 1), 24px 48px rgba($lite, 1), 0px 48px rgba($lite, 1) }
-  75% { box-shadow: 0 24px rgba($lite, 0), 24px 24px rgba($lite, 0), 24px 48px rgba($lite, 1), 0px 48px rgba($lite, 1) }
-  87%{ box-shadow: 0 24px rgba($lite, 0), 24px 24px rgba($lite, 0), 24px 48px rgba($lite, 0), 0px 48px rgba($lite, 1) }
-  100%{ box-shadow: 0 24px rgba($lite, 0), 24px 24px rgba($lite, 0), 24px 48px rgba($lite, 0), 0px 48px rgba($lite, 0) }
+  0% { box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 0) }
+  12% { box-shadow: 0 24px rgba(#FFF, 1), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 0) }
+  25% { box-shadow: 0 24px rgba(#FFF, 1), 24px 24px rgba(#FFF, 1), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 0) }
+  37% { box-shadow: 0 24px rgba(#FFF, 1), 24px 24px rgba(#FFF, 1), 24px 48px rgba(#FFF, 1), 0px 48px rgba(#FFF, 0) }
+  50% { box-shadow: 0 24px rgba(#FFF, 1), 24px 24px rgba(#FFF, 1), 24px 48px rgba(#FFF, 1), 0px 48px rgba(#FFF, 1) }
+  62% { box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 1), 24px 48px rgba(#FFF, 1), 0px 48px rgba(#FFF, 1) }
+  75% { box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 1), 0px 48px rgba(#FFF, 1) }
+  87%{ box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 1) }
+  100%{ box-shadow: 0 24px rgba(#FFF, 0), 24px 24px rgba(#FFF, 0), 24px 48px rgba(#FFF, 0), 0px 48px rgba(#FFF, 0) }
 }
 
 .ui-loader-square {
