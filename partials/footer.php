@@ -205,21 +205,29 @@
         <div class="modal-form__title">
           Заказать расчет
         </div>
+
         <div class="modal-form__field">
           <input type="text" name="your-name" class="ui-input" placeholder="Контактное лицо:" />
         </div>
+
         <div class="modal-form__field">
           <input type="text" name="your-company" class="ui-input" placeholder="Компания:" />
         </div>
+
         <div class="modal-form__field">
-          <input type="tel" name="your-phone" class="ui-input" placeholder="Телефон*:" />
+          <span class="wpcf7-form-control-wrap your-phone">
+            <input type="tel" name="your-phone" value="" class="ui-input" placeholder="Телефон*">
+          </span>
         </div>
+
         <div class="modal-form__field">
           <input type="email" name="your-email" class="ui-input" placeholder="E-mail:" />
         </div>
+
         <div class="modal-form__field">
           <textarea rows="4" name="your-message" class="ui-textarea" placeholder="Техническое задание:"></textarea>
         </div>
+
         <div class="modal-form__file">
           <div class="ui-input-file">
             <div class="ui-input-file__icon">
@@ -232,18 +240,64 @@
             <input type="file" name="your-file" class="ui-input-file__input" />
           </div>
         </div>
+
         <div class="modal-form__note">
           Поля, отмеченные *, обязательны для заполнения
         </div>
+
         <div class="modal-form__rules">
-          <label class="ui-rules">
-            <input type="checkbox" name="rules" value="1" class="form-checkbox">
-            <span></span>
-            Прочитал(-а) <a href="<?php the_permalink(16)?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3)?>" target="_blank">Политикой конфиденциальности</a>
-          </label>
+          <span class="wpcf7-form-acceptance-wrap">
+            <label class="ui-rules">
+              <input type="checkbox" name="rules" value="1" class="form-checkbox">
+              <span></span>
+              Прочитал(-а) <a href="<?php the_permalink(16) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+            </label>
+          </span>
         </div>
+
         <div class="modal-form__submit">
           <button type="submit" class="ui-button-submit ui-button-submit_glare">Отправить</button>
+        </div>
+
+        <div class="modal-form__success">
+          <div class="modal-form-result modal-form-result_success">
+            <div class="modal-form-result__head">
+              <div class="modal-form-result__head-icon"></div>
+              <div class="modal-form-result__head-title">
+                Ваше сообщение
+                успешно отправлено
+              </div>
+            </div>
+            <div class="modal-form-result__body">
+              <div class="modal-form-result__body-text">
+                В ближайшее время<br />
+                мы свяжемся с вами.
+              </div>
+              <div class="modal-form-result__body-close wpcf7-form-status-reset">
+                Закрыть окно
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-form__failed">
+          <div class="modal-form-result modal-form-result_failed">
+            <div class="modal-form-result__head">
+              <div class="modal-form-result__head-icon"></div>
+              <div class="modal-form-result__head-title">
+                Возникла ошибка
+              </div>
+            </div>
+            <div class="modal-form-result__body">
+              <div class="modal-form-result__body-text">
+                Не удалось<br />
+                отправить сообщение
+              </div>
+              <div class="modal-form-result__body-close wpcf7-form-status-reset">
+                Закрыть окно
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </div>
@@ -255,29 +309,79 @@
     <div class="hystmodal__window" role="dialog" aria-modal="true">
       <button data-hystclose class="hystmodal__close"></button>
 
-      <form action="/wp-json/contact-form-7/v1/contact-forms/12/feedback" method="post" class="modal-form js-form">
+      <form action="/wp-json/contact-form-7/v1/contact-forms/19/feedback" method="post" class="modal-form js-form">
         <div class="modal-form__title">
           Заказать<br />
           обратный звонок
         </div>
+
         <div class="modal-form__field">
           <input type="text" name="your-name" class="ui-input" placeholder="Имя:" />
         </div>
+
         <div class="modal-form__field">
-          <input type="tel" name="your-phone" class="ui-input" placeholder="Телефон*:" />
+          <span class="wpcf7-form-control-wrap your-phone">
+            <input type="tel" name="your-phone" value="" class="ui-input" placeholder="Телефон*">
+          </span>
         </div>
+
         <div class="modal-form__note">
           Поля, отмеченные *, обязательны для заполнения
         </div>
+
         <div class="modal-form__rules">
-          <label class="ui-rules">
-            <input type="checkbox" name="rules" value="1" class="form-checkbox">
-            <span></span>
-            Прочитал(-а) <a href="<?php the_permalink(16)?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3)?>" target="_blank">Политикой конфиденциальности</a>
-          </label>
+          <span class="wpcf7-form-acceptance-wrap">
+            <label class="ui-rules">
+              <input type="checkbox" name="rules" value="1" class="form-checkbox">
+              <span></span>
+              Прочитал(-а) <a href="<?php the_permalink(16) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+            </label>
+          </span>
         </div>
+
         <div class="modal-form__submit">
           <button type="submit" class="ui-button-submit ui-button-submit_glare">Отправить</button>
+        </div>
+
+        <div class="modal-form__success">
+          <div class="modal-form-result modal-form-result_success">
+            <div class="modal-form-result__head">
+              <div class="modal-form-result__head-icon"></div>
+              <div class="modal-form-result__head-title">
+                Ваше сообщение
+                успешно отправлено
+              </div>
+            </div>
+            <div class="modal-form-result__body">
+              <div class="modal-form-result__body-text">
+                В ближайшее время<br />
+                мы свяжемся с вами.
+              </div>
+              <div class="modal-form-result__body-close wpcf7-form-status-reset">
+                Закрыть окно
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-form__failed">
+          <div class="modal-form-result modal-form-result_failed">
+            <div class="modal-form-result__head">
+              <div class="modal-form-result__head-icon"></div>
+              <div class="modal-form-result__head-title">
+                Возникла ошибка
+              </div>
+            </div>
+            <div class="modal-form-result__body">
+              <div class="modal-form-result__body-text">
+                Не удалось<br />
+                отправить сообщение
+              </div>
+              <div class="modal-form-result__body-close wpcf7-form-status-reset">
+                Закрыть окно
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </div>
