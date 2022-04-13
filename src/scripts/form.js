@@ -1,6 +1,8 @@
 document.querySelectorAll(".js-form").forEach(function (form) {
-  const controlWrapElements = form.querySelectorAll(".wpcf7-form-control-wrap") || [];
-  const resultCloseElements = form.querySelectorAll(".wpcf7-form-result-close") || [];
+  const controlWrapElements =
+    form.querySelectorAll(".wpcf7-form-control-wrap") || [];
+  const statusResetElements =
+    form.querySelectorAll(".wpcf7-form-status-reset") || [];
   let messages = [];
 
   const removeErrors = () => {
@@ -32,16 +34,12 @@ document.querySelectorAll(".js-form").forEach(function (form) {
     });
   };
 
-  const renderResult = (cls) => {
-    const resultElement = form.querySelector(`.wpcf7-form-result${cls}`);
-    resultElement.classList.add('_active')
-  }
-
-  resultCloseElements.forEach((el) => {
-    el.addEventListener('click', () => {
-      el.closest('.wpcf7-form-result').classList.remove('_active')
-    })
-  })
+  statusResetElements.forEach((el) => {
+    el.addEventListener("click", () => {
+      form.classList.remove("_mail-sent");
+      form.classList.remove("_mail-failed");
+    });
+  });
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -66,7 +64,7 @@ document.querySelectorAll(".js-form").forEach(function (form) {
 
             form.reset();
 
-            renderResult('._mail-sent')
+            form.classList.add("_mail-sent");
           }
 
           if (response.status == "acceptance_missing") {
@@ -78,13 +76,13 @@ document.querySelectorAll(".js-form").forEach(function (form) {
           if (response.status == "mail_failed") {
             form.dispatchEvent(new Event("wpcf7mailfailed"));
 
-            renderResult('._mail-failed')
+            form.classList.add("_mail-failed");
           }
 
           if (response.status == "spam") {
             form.dispatchEvent(new Event("wpcf7spam"));
 
-            renderResult('._mail-failed')
+            form.classList.add("_mail-failed");
           }
 
           if (response.status == "validation_failed") {

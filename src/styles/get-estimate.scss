@@ -232,14 +232,26 @@
   }
 }
 
-.wpcf7-form-result._mail-sent {
+.get-estimate-form__success {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   display: none;
-  &._active {
+  ._mail-sent & {
+    display: block;
+  }
+}
+
+.get-estimate-form__failed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  ._mail-failed & {
     display: block;
   }
 }
