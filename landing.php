@@ -74,7 +74,7 @@ Template Name: Главная
 
                 <div class="intro-form__submit">
                   <button type="submit" class="ui-button-submit ui-button-submit_glare">
-                    <span class="ui-loader-square"></span>
+                    <span class="ui-loader-square intro-form__loader"></span>
                     Отправить
                   </button>
                 </div>
