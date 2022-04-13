@@ -44,6 +44,8 @@ document.querySelectorAll(".js-form").forEach(function (form) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    form.classList.add("_mail-sending");
+
     grecaptcha
       .execute(wpcf7_recaptcha.sitekey, { action: "submit" })
       .then(function (token) {
@@ -54,6 +56,8 @@ document.querySelectorAll(".js-form").forEach(function (form) {
         request.open("POST", form.action, true);
         request.addEventListener("readystatechange", function () {
           if (this.readyState != 4) return;
+
+          form.classList.remove("_mail-sending");
 
           form.dispatchEvent(new Event("wpcf7submit"));
 
