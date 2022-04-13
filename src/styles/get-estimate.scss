@@ -120,9 +120,8 @@
   overflow: hidden;
   flex-shrink: 0;
   margin-left: -14px;
-  img {
-    display: block;
-  }
+  background-position: 50% 50%;
+  background-size: cover;
 
   @include below(md) {
     width: 78px;

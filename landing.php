@@ -325,6 +325,9 @@ Template Name: Главная
           <div class="about__content">
             <p>За 20 лет работы на рынке мы заслужили репутацию надежного партера. Работаем как с&nbsp;застройщиками загородного строительства, так и с крупными компаниями: ЛСР-Строительство, Мавис-Строй, КВС, Проммонолит, Ленстройтрест, Союз-Строй, ЛЭК, Setl Group, Эталон-ЛенСпецСму и др.</p>
             <p>Являемся производителем собственной опалубочной системы «Евромонолит» (100% совместимость с опалубкой DOKA), позволяющей выполнять монолитные работы любой сложности и реализовывать проекты с различной конфигурацией.</p>
+            <p>
+              <a href="/wp-content/uploads/2022/04/предложение-о-струдничестве.pdf" target="_blank">Предложение о сотрудничестве</a>
+            </p>
           </div>
           <div class="about__hr"></div>
           <div class="about__layout">
@@ -482,9 +485,7 @@ Template Name: Главная
                 <div class="get-estimate-expert">
                   <div class="get-estimate-expert__grid">
                     <div class="get-estimate-expert__grid-image">
-                      <div class="get-estimate-expert__image">
-                        <img src="<?php bloginfo('template_url') ?>/dist/images/expert.jpg" alt="">
-                      </div>
+                      <div class="get-estimate-expert__image" style="background-image: url('/wp-content/uploads/2022/04/IMG_2109-225x300.jpg')"></div>
                     </div>
                     
                     <div class="get-estimate-expert__grid-name">
