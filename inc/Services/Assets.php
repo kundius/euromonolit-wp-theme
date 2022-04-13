@@ -45,7 +45,7 @@ class Assets implements Service
         $theme = wp_get_theme();
 
         \wp_register_style('theme-style', \get_stylesheet_uri(), [], $theme->get('Version'));
-        \wp_register_script('scripts', \get_theme_file_uri('dist/scripts/bundle.js'), ['jquery'], null, true);
+        \wp_register_script('scripts', \get_theme_file_uri('dist/scripts/bundle.js'), null, null, true);
     }
 
     public function enqueue_scripts(): void
