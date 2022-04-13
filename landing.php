@@ -423,7 +423,7 @@ Template Name: Главная
                 1
               </div>
               <div class="how-we-work__item-description">
-                  Заявка, предоставление проектной документации, чертежей (КЖ)
+                  Заявка, предоставление проектной докумен&shy;тации, чертежей (КЖ)
               </div>
             </article>
             <article class="how-we-work__item">
@@ -445,7 +445,7 @@ Template Name: Главная
                 3
               </div>
               <div class="how-we-work__item-description">
-                Подготовка и обсуждение спецификации оборудования
+                Подготовка и обсуж&shy;дение спецификации оборудования
               </div>
             </article>
             <article class="how-we-work__item">
