@@ -26,6 +26,7 @@ class Seo implements Service
     public function boot(Service_Container $container): void
     {
         \remove_action('wp_head', 'rel_canonical');
+        
         \add_action('wp_head', [$this, 'add_canonical']);
         \add_action('wp_head', [$this, 'add_meta']);
     }
