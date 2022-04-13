@@ -29,6 +29,7 @@ class Assets implements Service
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
         add_action('wp_print_styles', [$this, 'enqueue_styles']);
         add_filter('stylesheet_uri', [$this, 'stylesheet_uri']);
+        add_action('init', [$this, 'jquery_remove']);
     }
 
     /**
@@ -66,6 +67,14 @@ class Assets implements Service
         }
 
         return $stylesheet_uri;
+    }
+
+    private function jquery_remove(): void
+    {
+        if (!\is_admin() && !\is_product()) {
+            \wp_deregister_script('jquery');
+            \wp_register_script('jquery', false);
+        }
     }
 
 }

@@ -51,10 +51,9 @@ class Theme implements Service
      */
     private function add_theme_supports(): void
     {
-        \add_filter( 'wpcf7_load_js', '__return_false' );
-        \add_filter( 'wpcf7_load_css', '__return_false' );
+        \add_filter('wpcf7_load_js', '__return_false');
+        \add_filter('wpcf7_load_css', '__return_false');
 
-        
         // add_action('init', function (){
         //     header("Access-Control-Allow-Origin: *");
         // });
@@ -70,8 +69,6 @@ class Theme implements Service
         // \add_theme_support('title-tag');
         // \add_theme_support('async-js');
         // \add_theme_support('yoast-seo-breadcrumbs');
-
-        \wp_deregister_script('jquery');
     }
 
     /**
