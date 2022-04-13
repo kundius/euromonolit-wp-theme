@@ -205,7 +205,7 @@
 
 .intro-form__loader {
   display: none;
-  ._mail-sending {
+  ._mail-sending & {
     display: block;
   }
 }

@@ -258,7 +258,10 @@
         </div>
 
         <div class="modal-form__submit">
-          <button type="submit" class="ui-button-submit ui-button-submit_glare">Отправить</button>
+          <button type="submit" class="ui-button-submit ui-button-submit_glare">
+            <span class="ui-loader-square modal-form__loader"></span>
+            Отправить
+          </button>
         </div>
 
         <div class="modal-form__success">
@@ -342,7 +345,10 @@
         </div>
 
         <div class="modal-form__submit">
-          <button type="submit" class="ui-button-submit ui-button-submit_glare">Отправить</button>
+          <button type="submit" class="ui-button-submit ui-button-submit_glare">
+            <span class="ui-loader-square modal-form__loader"></span>
+            Отправить
+          </button>
         </div>
 
         <div class="modal-form__success">

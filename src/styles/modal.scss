@@ -184,6 +184,13 @@
   justify-content: center;
 }
 
+.modal-form__loader {
+  display: none;
+  ._mail-sending & {
+    display: block;
+  }
+}
+
 .modal-form__success {
   position: absolute;
   left: 0;
