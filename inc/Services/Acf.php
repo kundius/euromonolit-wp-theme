@@ -31,7 +31,6 @@ class Acf implements Service
             'menu_slug' => 'acf-options',
             'capability' => 'edit_posts',
             'redirect' => false,
-            // 'parent_slug' => 'options-general',
         ));
     }
 

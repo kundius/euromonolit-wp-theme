@@ -119,6 +119,8 @@ class Seo implements Service
             }
         }
 
+        $title = 'test qq';
+
         return $title;
     }
 
