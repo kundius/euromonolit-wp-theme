@@ -514,20 +514,20 @@ Template Name: Главная
                   </div>
 
                   <div class="get-estimate-form__success">
-                    <div class="get-estimate-success">
-                      <div class="get-estimate-success__head">
-                        <div class="get-estimate-success__head-icon"></div>
-                        <div class="get-estimate-success__head-title">
+                    <div class="get-estimate-result get-estimate-result_success">
+                      <div class="get-estimate-result__head">
+                        <div class="get-estimate-result__head-icon"></div>
+                        <div class="get-estimate-result__head-title">
                           Ваше сообщение
                           успешно отправлено
                         </div>
                       </div>
-                      <div class="get-estimate-success__body">
-                        <div class="get-estimate-success__body-text">
+                      <div class="get-estimate-result__body">
+                        <div class="get-estimate-result__body-text">
                           В ближайшее время<br />
                           мы свяжемся с вами.
                         </div>
-                        <div class="get-estimate-success__body-close wpcf7-form-status-reset">
+                        <div class="get-estimate-result__body-close wpcf7-form-status-reset">
                           Закрыть окно
                         </div>
                       </div>
@@ -535,19 +535,19 @@ Template Name: Главная
                   </div>
 
                   <div class="get-estimate-form__failed">
-                    <div class="get-estimate-failed">
-                      <div class="get-estimate-failed__head">
-                        <div class="get-estimate-failed__head-icon"></div>
-                        <div class="get-estimate-failed__head-title">
+                    <div class="get-estimate-result get-estimate-result_failed">
+                      <div class="get-estimate-result__head">
+                        <div class="get-estimate-result__head-icon"></div>
+                        <div class="get-estimate-result__head-title">
                           Возникла ошибка
                         </div>
                       </div>
-                      <div class="get-estimate-failed__body">
-                        <div class="get-estimate-failed__body-text">
+                      <div class="get-estimate-result__body">
+                        <div class="get-estimate-result__body-text">
                           Не удалось<br />
                           отправить сообщение
                         </div>
-                        <div class="get-estimate-failed__body-close wpcf7-form-status-reset">
+                        <div class="get-estimate-result__body-close wpcf7-form-status-reset">
                           Закрыть окно
                         </div>
                       </div>
