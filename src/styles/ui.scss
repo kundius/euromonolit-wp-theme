@@ -360,8 +360,13 @@ body {
   text-decoration: underline;
 }
 
-
 .wpcf7-form-control-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.wpcf7-form-acceptance-wrap {
   position: relative;
   display: inline-block;
   width: 100%;
