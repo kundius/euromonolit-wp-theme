@@ -32,15 +32,15 @@
 }
 
 @keyframes loaderSquareSecond {
-  0% { box-shadow: 0 0.5em rgba(#2e76a6, 0), 0.5em 0.5em rgba(#2e76a6, 0), 0.5em 1em rgba(#2e76a6, 0), 0px 1em rgba(#2e76a6, 0) }
-  12% { box-shadow: 0 0.5em rgba(#2e76a6, 1), 0.5em 0.5em rgba(#2e76a6, 0), 0.5em 1em rgba(#2e76a6, 0), 0px 1em rgba(#2e76a6, 0) }
-  25% { box-shadow: 0 0.5em rgba(#2e76a6, 1), 0.5em 0.5em rgba(#2e76a6, 1), 0.5em 1em rgba(#2e76a6, 0), 0px 1em rgba(#2e76a6, 0) }
-  37% { box-shadow: 0 0.5em rgba(#2e76a6, 1), 0.5em 0.5em rgba(#2e76a6, 1), 0.5em 1em rgba(#2e76a6, 1), 0px 1em rgba(#2e76a6, 0) }
-  50% { box-shadow: 0 0.5em rgba(#2e76a6, 1), 0.5em 0.5em rgba(#2e76a6, 1), 0.5em 1em rgba(#2e76a6, 1), 0px 1em rgba(#2e76a6, 1) }
-  62% { box-shadow: 0 0.5em rgba(#2e76a6, 0), 0.5em 0.5em rgba(#2e76a6, 1), 0.5em 1em rgba(#2e76a6, 1), 0px 1em rgba(#2e76a6, 1) }
-  75% { box-shadow: 0 0.5em rgba(#2e76a6, 0), 0.5em 0.5em rgba(#2e76a6, 0), 0.5em 1em rgba(#2e76a6, 1), 0px 1em rgba(#2e76a6, 1) }
-  87%{ box-shadow: 0 0.5em rgba(#2e76a6, 0), 0.5em 0.5em rgba(#2e76a6, 0), 0.5em 1em rgba(#2e76a6, 0), 0px 1em rgba(#2e76a6, 1) }
-  100%{ box-shadow: 0 0.5em rgba(#2e76a6, 0), 0.5em 0.5em rgba(#2e76a6, 0), 0.5em 1em rgba(#2e76a6, 0), 0px 1em rgba(#2e76a6, 0) }
+  0% { box-shadow: 0 0.5em rgba(#fff, 0), 0.5em 0.5em rgba(#fff, 0), 0.5em 1em rgba(#fff, 0), 0px 1em rgba(#fff, 0) }
+  12% { box-shadow: 0 0.5em rgba(#fff, 1), 0.5em 0.5em rgba(#fff, 0), 0.5em 1em rgba(#fff, 0), 0px 1em rgba(#fff, 0) }
+  25% { box-shadow: 0 0.5em rgba(#fff, 1), 0.5em 0.5em rgba(#fff, 1), 0.5em 1em rgba(#fff, 0), 0px 1em rgba(#fff, 0) }
+  37% { box-shadow: 0 0.5em rgba(#fff, 1), 0.5em 0.5em rgba(#fff, 1), 0.5em 1em rgba(#fff, 1), 0px 1em rgba(#fff, 0) }
+  50% { box-shadow: 0 0.5em rgba(#fff, 1), 0.5em 0.5em rgba(#fff, 1), 0.5em 1em rgba(#fff, 1), 0px 1em rgba(#fff, 1) }
+  62% { box-shadow: 0 0.5em rgba(#fff, 0), 0.5em 0.5em rgba(#fff, 1), 0.5em 1em rgba(#fff, 1), 0px 1em rgba(#fff, 1) }
+  75% { box-shadow: 0 0.5em rgba(#fff, 0), 0.5em 0.5em rgba(#fff, 0), 0.5em 1em rgba(#fff, 1), 0px 1em rgba(#fff, 1) }
+  87%{ box-shadow: 0 0.5em rgba(#fff, 0), 0.5em 0.5em rgba(#fff, 0), 0.5em 1em rgba(#fff, 0), 0px 1em rgba(#fff, 1) }
+  100%{ box-shadow: 0 0.5em rgba(#fff, 0), 0.5em 0.5em rgba(#fff, 0), 0.5em 1em rgba(#fff, 0), 0px 1em rgba(#fff, 0) }
 }
 
 .ui-loader-square {
@@ -68,7 +68,7 @@
   top: 0;
   width: 0.5em;
   height: 0.5em;
-  background: rgba(#2e76a6, 0.85);
+  background: rgba(#fff, 0.85);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   animation: loaderSquareFirst 2s ease infinite;
 }
