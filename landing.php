@@ -553,6 +553,7 @@ Template Name: Главная
 
                   <div class="get-estimate-form__submit">
                     <button type="submit" class="ui-button-secondary ui-button-secondary_glare">
+                      <span class="ui-loader-square get-estimate-form__loader"></span>
                       Отправить заявку
                       <span class="ui-arrow-right"></span>
                     </button>

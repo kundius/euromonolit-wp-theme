@@ -149,7 +149,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 22px 8px;
+  padding: 5px 22px 7px;
   border-radius: 4px;
   background: rgb(255, 220, 60);
   box-shadow: inset 0px -3px 0px 0px #e2b914;
@@ -165,6 +165,7 @@ body {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+
   .ui-loader-square {
     font-size: 80%;
     margin-left: -6px;
@@ -199,7 +200,8 @@ body {
 
 .ui-button-secondary {
   border: none;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
   padding: 10px 22px;
   border: 1px solid rgb(255, 186, 25);
@@ -219,6 +221,12 @@ body {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+
+  .ui-loader-square {
+    font-size: 80%;
+    margin-left: -6px;
+    margin-right: 10px;
+  }
 
   @include below(sm) {
     font-size: 16px;

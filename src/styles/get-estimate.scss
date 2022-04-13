@@ -219,6 +219,13 @@
   }
 }
 
+.get-estimate-form__loader {
+  display: none;
+  ._mail-sending & {
+    display: block;
+  }
+}
+
 .get-estimate-form__submit .ui-button-secondary {
   width: 100%;
 }
