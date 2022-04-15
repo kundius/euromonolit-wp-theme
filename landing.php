@@ -133,7 +133,7 @@ Template Name: Главная
           </h1>
 
           <div class="catalog__subtitle">
-            <a href="https://euromonolit.com/" target="_blank">ГК «Евромонолит»</a> предлагает специализированное оборудование для коттеджного строительства:<br />
+            <a href="https://euromonolit.com/" target="_blank">ГК «Евромонолит»</a> предлагает в аренду специализированное оборудование для коттеджного строительства:<br />
           </div>
 
           <div class="catalog__subtitle">
@@ -202,7 +202,7 @@ Template Name: Главная
                       Ламинированная фанера
                     </h2>
                     <div class="catalog-card__subtitle">
-                      от 20,0 руб./м<sup>2</sup>
+                      от 10,0 руб./м<sup>2</sup>
                     </div>
                   </div>
                   <div class="catalog-card__description">
