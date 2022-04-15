@@ -18,7 +18,7 @@ Template Name: Главная
         <div class="ui-container">
           <div class="intro__layout">
             <div class="intro__layout-content">
-              <div class="intro__title">Аренда опалубки</div>
+              <div class="intro__title">Опалубка в аренду</div>
               <div class="intro__subtitle">
                 для строительства коттеджей/<br />
                 загородных домов
