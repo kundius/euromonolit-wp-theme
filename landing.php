@@ -434,7 +434,7 @@ Template Name: Главная
                 2
               </div>
               <div class="how-we-work__item-description">
-                Разработка проекта опалубливания/ раскладки
+                Разработка проекта опалубливания/раскладки
               </div>
             </article>
             <article class="how-we-work__item">
