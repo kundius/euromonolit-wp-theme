@@ -133,7 +133,10 @@ Template Name: Главная
           </h1>
 
           <div class="catalog__subtitle">
-            Мы предлагаем специализированное оборудование для коттеджного строительства:<br />
+            <a href="https://euromonolit.com/" target="_blank">ГК «Евромонолит»</a> предлагает специализированное оборудование для коттеджного строительства:<br />
+          </div>
+
+          <div class="catalog__subtitle">
             <a href="/wp-content/uploads/2022/04/предложение-о-струдничестве.pdf" target="_blank" class="ui-button-submit ui-button-submit_glare">Предложение о сотрудничестве</a>
           </div>
 
@@ -323,7 +326,7 @@ Template Name: Главная
       <section class="about" id="about">
         <div class="ui-container">
           <div class="about__title">
-            <a href="https://euromonolit.com/" target="_blank">ГК «Евромонолит»</a>
+            ГК «Евромонолит»
           </div>
           <div class="about__content">
             <p>За 20 лет работы на рынке мы заслужили репутацию надежного партера. Работаем как с&nbsp;застройщиками загородного строительства, так и с крупными компаниями: ЛСР-Строительство, Мавис-Строй, КВС, Проммонолит, Ленстройтрест, Союз-Строй, ЛЭК, Setl Group, Эталон-ЛенСпецСму и др.</p>
