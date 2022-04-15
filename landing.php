@@ -134,7 +134,7 @@ Template Name: Главная
 
           <div class="catalog__subtitle">
             Мы предлагаем специализированное оборудование для коттеджного строительства:<br />
-            <a href="/wp-content/uploads/2022/04/предложение-о-струдничестве.pdf" target="_blank">Предложение о сотрудничестве</a>
+            <a href="/wp-content/uploads/2022/04/предложение-о-струдничестве.pdf" target="_blank" class="ui-button-submit ui-button-submit_glare">Предложение о сотрудничестве</a>
           </div>
 
           <div class="catalog__items">
