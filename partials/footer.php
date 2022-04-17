@@ -75,7 +75,7 @@
       <div class="underground__grid-rules">
         <div class="underground-rules">
           <div class="underground-rules__item">
-            <a href="<?php the_permalink(16)?>" target="_blank">Пользовательское соглашение</a>
+            <a href="<?php the_permalink(49)?>" target="_blank">Пользовательское соглашение</a>
           </div>
           <div class="underground-rules__item">
             <a href="<?php the_permalink(3)?>" target="_blank">Политика обработки персональных данных</a>
@@ -264,7 +264,7 @@
             <label class="ui-rules">
               <input type="checkbox" name="rules" value="1" class="form-checkbox">
               <span></span>
-              Прочитал(-а) <a href="<?php the_permalink(16) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+              Прочитал(-а) <a href="<?php the_permalink(49) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
             </label>
           </span>
         </div>
@@ -351,7 +351,7 @@
             <label class="ui-rules">
               <input type="checkbox" name="rules" value="1" class="form-checkbox">
               <span></span>
-              Прочитал(-а) <a href="<?php the_permalink(16) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+              Прочитал(-а) <a href="<?php the_permalink(49) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
             </label>
           </span>
         </div>
