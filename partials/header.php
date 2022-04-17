@@ -36,8 +36,8 @@
 
       <div class="header__contacts-sep-2"></div>
 
-      <a href="tel:78124541104" class="header__phone">
-        +7 (812) 454-11-04
+      <a href="tel:<?php the_field('theme_phone', 'options') ?>" class="header__phone">
+        <?php the_field('theme_phone', 'options') ?>
       </a>
     </div>
 
