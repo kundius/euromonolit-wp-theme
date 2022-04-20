@@ -417,68 +417,13 @@ Template Name: Главная
         </div>
       </section>
 
+      <?php get_template_part('partials/section-formwork-advantages') ?>
+
       <?php get_template_part('partials/section-how-we-work') ?>
 
       <?php get_template_part('partials/section-get-estimate') ?>
 
-      <section class="news" id="news">
-        <div class="ui-container">
-          <div class="news__title">
-            Новости
-            <a href="#" class="news__more">смотреть все</a>
-          </div>
-
-          <div class="news__items">
-            <div class="news__grid">
-              <div class="news__grid-cell">
-                <article class="news-item">
-                  <div class="news-item__date">11.04.2022</div>
-                  <div class="news-item__title">
-                    <a href="#">Приоритетное развитие направления «Загородное строительство»</a>
-                  </div>
-                  <div class="news-item__desc">
-                    В связи с большим количеством запросов на опалубку для загородного строительства принято решение о приоритетном развитии направления «Загородное строительство»...
-                  </div>
-                  <div class="news-item__more">
-                    <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
-                  </div>
-                </article>
-              </div>
-              <div class="news__grid-cell">
-                <article class="news-item">
-                  <div class="news-item__date">11.04.2022</div>
-                  <div class="news-item__title">
-                    <a href="#"> Летняя акция. Аренда оборудования</a>
-                  </div>
-                  <div class="news-item__desc">
-                    Уважаемые партнеры!<br />
-                    Компания «Евромонолит» устраивает летнюю акцию и предлагает в аренду опалубку...
-                  </div>
-                  <div class="news-item__more">
-                    <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
-                  </div>
-              </div>
-              </article>
-              <div class="news__grid-cell">
-                <article class="news-item">
-                  <div class="news-item__date">11.04.2022</div>
-                  <div class="news-item__title">
-                    <a href="#">Вакансия</a>
-                  </div>
-                  <div class="news-item__desc">
-                    В связи с расширением деятельности открыта вакансия по позиции Менеджер по аренде строительного оборудования (опалубка)...
-                  </div>
-                  <div class="news-item__more">
-                    <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <?php get_template_part('partials/footer');?>
+      <?php get_template_part('partials/footer') ?>
     </div>
   </body>
 </html>
