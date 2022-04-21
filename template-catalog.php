@@ -11,7 +11,7 @@ $products = new WP_Query([
 ]);
 ?>
 <!DOCTYPE html>
-<html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">
+<html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
   <head>
     <?php get_template_part('partials/head');?>
   </head>
