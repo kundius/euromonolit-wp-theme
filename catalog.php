@@ -62,36 +62,6 @@ $products = new WP_Query([
           </div>
           <?php endif ?>
 
-          <?php if ($products->have_posts()): ?>
-          <div class="catalog__grid">
-            <?php while($products->have_posts()): $products->the_post() ?>
-            <div class="catalog__grid-cell">
-              <article class="catalog-card">
-                <figure class="catalog-card__image">
-                  <img src="<?php bloginfo('template_url')?>/dist/images/catalog-1.jpg" alt="" />
-                </figure>
-                <div class="catalog-card__headline">
-                  <h2 class="catalog-card__title">
-                    <?php the_title() ?>
-                  </h2>
-                  <div class="catalog-card__subtitle">
-                    <?php the_field('product_price') ?>
-                  </div>
-                </div>
-                <div class="catalog-card__description">
-                    <?php the_field('product_description') ?>
-                </div>
-                <div class="catalog-card__more">
-                  <a href="<?php the_permalink() ?>" class="ui-button-more" data-hystmodal="#feedback">
-                    Узнать больше
-                    <span class="ui-arrow-right"></span>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <?php endwhile; ?>
-          </div>
-          <?php endif; wp_reset_query() ?>
 
           <?php if ($emulsifier = get_field('emulsifier') && $emulsifier['show']): ?>
           <div class="catalog-body__emulsifier">
