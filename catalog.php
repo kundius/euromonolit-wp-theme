@@ -73,17 +73,17 @@ $products = new WP_Query([
                 </figure>
                 <div class="catalog-card__headline">
                   <h2 class="catalog-card__title">
-                    <?php the_title($product->ID)?>
+                    <?php the_title()?>
                   </h2>
                   <div class="catalog-card__subtitle">
-                    <?php the_field('product_price', $product->ID)?>
+                    <?php the_field('product_price')?>
                   </div>
                 </div>
                 <div class="catalog-card__description">
                     <?php the_field('product_description')?>
                 </div>
                 <div class="catalog-card__more">
-                  <a href="<?php the_permalink($product->ID)?>" class="ui-button-more" data-hystmodal="#feedback">
+                  <a href="<?php the_permalink()?>" class="ui-button-more" data-hystmodal="#feedback">
                     Узнать больше
                     <span class="ui-arrow-right"></span>
                   </a>
