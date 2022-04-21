@@ -203,8 +203,8 @@
 }
 
 .catalog-body__intro-text {
-  margin-left: 160px;
-  margin-right: 160px;
+  margin-left: 168px;
+  margin-right: 168px;
   position: relative;
   font-size: 18px;
   line-height: 26px;
@@ -380,6 +380,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   background: currentColor;
+  border-radius: 2px;
 }
 
 .special-offer-sm__close::after {
@@ -391,4 +392,5 @@
   top: 50%;
   transform: translate(-50%, -50%);
   background: currentColor;
+  border-radius: 2px;
 }
