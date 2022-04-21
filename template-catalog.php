@@ -65,35 +65,37 @@ $emulsifier = get_field('emulsifier');
           <?php endif?>
 
           <?php if ($products->have_posts()): ?>
-          <div class="catalog-grid">
-            <?php while ($products->have_posts()): ?>
-            <?php $products->the_post()?>
-            <div class="catalog-grid__cell">
-              <article class="catalog-card">
-                <figure class="catalog-card__image">
-                  <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
-                </figure>
-                <div class="catalog-card__headline">
-                  <h2 class="catalog-card__title">
-                    <?php the_title()?>
-                  </h2>
-                  <div class="catalog-card__subtitle">
-                    <?php the_field('product_price')?>
+          <div class="catalog-body__products">
+            <div class="catalog-grid">
+              <?php while ($products->have_posts()): ?>
+              <?php $products->the_post()?>
+              <div class="catalog-grid__cell">
+                <article class="catalog-card">
+                  <figure class="catalog-card__image">
+                    <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
+                  </figure>
+                  <div class="catalog-card__headline">
+                    <h2 class="catalog-card__title">
+                      <?php the_title()?>
+                    </h2>
+                    <div class="catalog-card__subtitle">
+                      <?php the_field('product_price')?>
+                    </div>
                   </div>
-                </div>
-                <div class="catalog-card__description">
-                    <?php the_field('product_description')?>
-                </div>
-                <div class="catalog-card__more">
-                  <a href="<?php the_permalink()?>" class="ui-button-more" data-hystmodal="#feedback">
-                    Узнать больше
-                    <span class="ui-arrow-right"></span>
-                  </a>
-                </div>
-              </article>
+                  <div class="catalog-card__description">
+                      <?php the_field('product_description')?>
+                  </div>
+                  <div class="catalog-card__more">
+                    <a href="<?php the_permalink()?>" class="ui-button-more" data-hystmodal="#feedback">
+                      Узнать больше
+                      <span class="ui-arrow-right"></span>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <?php endwhile?>
+              <?php wp_reset_postdata()?>
             </div>
-            <?php endwhile?>
-            <?php wp_reset_postdata()?>
           </div>
           <?php endif?>
 
