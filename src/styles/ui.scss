@@ -100,6 +100,12 @@ body {
     width: 980px;
   }
 
+  @include below(md) {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 764px;
+  }
+
   @include below(sm) {
     padding-left: 8px;
     padding-right: 8px;
