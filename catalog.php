@@ -64,7 +64,7 @@ $products = new WP_Query([
 
           <?php if ($products->have_posts()): ?>
           <div class="catalog__grid">
-            <?php foreach ($products as $product): ?>
+            <?php foreach ($products->posts as $product): ?>
             <div class="catalog__grid-cell">
               <article class="catalog-card">
                 <figure class="catalog-card__image">
