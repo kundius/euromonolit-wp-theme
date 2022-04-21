@@ -4,24 +4,17 @@ $articles = new WP_Query([
     'order' => 'DESC',
     'orderby' => 'date',
     'posts_per_page' => -1,
-    // 'cat' => 15,
     'meta_query' => [
-      // 'relation' => 'OR',
-      // [
-      //   'key' => 'color',
-      //   'value' => 'blue'
-      // ],
-      [
-        'key' => 'post_favorite',
-        'value' => 1
-      ]
-    ]
+        [
+            'key' => 'post_favorite',
+            'value' => 1,
+        ],
+    ],
 ]);
-// post_favorite
 ?>
 <div class="side-news">
   <div class="side-news__title">Новости</div>
-  
+
   <?php if ($articles->have_posts()): ?>
   <div class="side-news__articles">
     <?php while ($articles->have_posts()): ?>
@@ -32,7 +25,7 @@ $articles = new WP_Query([
       </figure>
       <div class="side-news-card__body">
         <div class="side-news-grid__date">
-          <?php echo get_the_date('d.m.Y')?>
+          <?php echo get_the_date('d.m.Y') ?>
         </div>
         <div class="side-news-grid__title">
           <a href="<?php the_permalink()?>"><?php the_title()?></a>

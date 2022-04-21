@@ -1,28 +1,22 @@
-.blog-headline {
-  padding-top: 14px;
-  padding-bottom: 22px;
+.blog-body {
+  background: linear-gradient(to bottom, #f1f1f1 0, #f1f1f1 156px, #f6f6f6 156px, #f6f6f6 100%);
   position: relative;
-  z-index: 10;
-  background: #f1f1f1;
+  z-index: 20;
+  padding-bottom: 30px;
+  padding-top: 14px;
 }
 
-.blog-headline__title {
+.blog-body__title {
   font-weight: bold;
   font-size: 60px;
   line-height: 1;
   color: #215578;
   margin: 0;
+  margin-bottom: 22px;
 
   @include below(lg) {
     font-size: 48px;
   }
-}
-
-.blog-body {
-  background: linear-gradient(to bottom, #f1f1f1 0, #f1f1f1 60px, #f6f6f6 60px, #f6f6f6 100%);
-  position: relative;
-  z-index: 20;
-  padding-bottom: 30px;
 }
 
 .blog-layout {

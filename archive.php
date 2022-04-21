@@ -15,14 +15,9 @@
         </div>
       </div>
 
-      <div class="blog-headline">
-        <div class="ui-container">
-          <h1 class="blog-headline__title"><?php single_cat_title()?></h1>
-        </div>
-      </div>
-
       <div class="blog-body">
         <div class="ui-container">
+          <h1 class="blog-body__title"><?php single_cat_title()?></h1>
           <div class="blog-layout">
             <div class="blog-layout__content">
               <?php if (have_posts()): ?>
