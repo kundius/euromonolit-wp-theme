@@ -69,6 +69,7 @@
   margin-right: auto;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
+  position: relative;
 
   &:hover {
     background-color: rgb(255, 255, 255);
@@ -122,6 +123,16 @@
   a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+    }
   }
 }
 
@@ -142,6 +153,8 @@
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 20;
 
   a {
     padding: 0 2px;
