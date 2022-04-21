@@ -65,10 +65,10 @@ $emulsifier = get_field('emulsifier');
           <?php endif?>
 
           <?php if ($products->have_posts()): ?>
-          <div class="catalog__grid">
+          <div class="catalog-grid">
             <?php while ($products->have_posts()): ?>
             <?php $products->the_post()?>
-            <div class="catalog__grid-cell">
+            <div class="catalog-grid__cell">
               <article class="catalog-card">
                 <figure class="catalog-card__image">
                   <img src="<?php bloginfo('template_url')?>/dist/images/catalog-1.jpg" alt="" />

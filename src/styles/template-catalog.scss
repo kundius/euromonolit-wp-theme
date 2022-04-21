@@ -63,7 +63,7 @@
   margin-top: 33px;
 }
 
-.catalog__grid {
+.catalog-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -74,7 +74,7 @@
   }
 }
 
-.catalog__grid-cell {
+.catalog-grid__cell {
   padding: 33px;
   width: calc(100% / 3);
 
