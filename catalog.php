@@ -91,7 +91,7 @@ $products = new WP_Query([
             </div>
             <?php endwhile; ?>
           </div>
-          <?php endif ?>
+          <?php endif; wp_reset_query() ?>
 
           <?php if ($emulsifier = get_field('emulsifier') && $emulsifier['show']): ?>
           <div class="catalog-body__emulsifier">
