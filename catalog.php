@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Виды опалубки
+Template Name: Каталог
 */
 ?>
 <!DOCTYPE html>
