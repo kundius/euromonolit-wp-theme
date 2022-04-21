@@ -71,7 +71,7 @@ $emulsifier = get_field('emulsifier');
             <div class="catalog-grid__cell">
               <article class="catalog-card">
                 <figure class="catalog-card__image">
-                  <img src="<?php bloginfo('template_url')?>/dist/images/catalog-1.jpg" alt="" />
+                  <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
                 </figure>
                 <div class="catalog-card__headline">
                   <h2 class="catalog-card__title">
