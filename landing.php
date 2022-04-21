@@ -125,41 +125,41 @@ Template Name: Главная
         </div>
       </section>
 
-      <section class="catalog" id="catalog">
+      <section class="landing-catalog" id="catalog">
         <div class="ui-container">
-          <h1 class="catalog__title">
+          <h1 class="landing-catalog__title">
             Аренда опалубки<br />
             для коттеджного/загородного строительства от&nbsp;ГК&nbsp;“Евромонолит”
           </h1>
 
-          <div class="catalog__subtitle">
+          <div class="landing-catalog__subtitle">
             <a href="https://euromonolit.com/" target="_blank">ГК «Евромонолит»</a> предлагает в аренду специализированное оборудование для коттеджного строительства:<br />
           </div>
 
-          <div class="catalog__subtitle">
+          <div class="landing-catalog__subtitle">
             <a href="/wp-content/uploads/2022/04/предложение-о-струдничестве.pdf" target="_blank" class="ui-button-submit ui-button-submit_glare">Предложение о сотрудничестве</a>
           </div>
 
-          <div class="catalog__items">
-            <div class="catalog__grid">
-              <div class="catalog__grid-cell">
-                <article class="catalog-card">
-                  <figure class="catalog-card__image">
+          <div class="landing-catalog__items">
+            <div class="landing-catalog__grid">
+              <div class="landing-catalog__grid-cell">
+                <article class="landing-catalog-card">
+                  <figure class="landing-catalog-card__image">
                     <img src="<?php bloginfo('template_url')?>/dist/images/catalog-1.jpg" alt="" />
                   </figure>
-                  <div class="catalog-card__headline">
-                    <h2 class="catalog-card__title">
+                  <div class="landing-catalog-card__headline">
+                    <h2 class="landing-catalog-card__title">
                       Мелкощитовая Опалубка стен
                     </h2>
-                    <div class="catalog-card__subtitle">
+                    <div class="landing-catalog-card__subtitle">
                       от 15,0 руб./м<sup>2</sup>
                     </div>
                   </div>
-                  <div class="catalog-card__description">
+                  <div class="landing-catalog-card__description">
                     <strong>(облегченная) рамная опалубка –</strong><br />
                     монтируется без крана
                   </div>
-                  <div class="catalog-card__more">
+                  <div class="landing-catalog-card__more">
                     <a href="#" class="ui-button-more" data-hystmodal="#feedback">
                       Узнать больше
                       <span class="ui-arrow-right"></span>
@@ -167,24 +167,24 @@ Template Name: Главная
                   </div>
                 </article>
               </div>
-              <div class="catalog__grid-cell">
-                <article class="catalog-card">
-                  <figure class="catalog-card__image">
+              <div class="landing-catalog__grid-cell">
+                <article class="landing-catalog-card">
+                  <figure class="landing-catalog-card__image">
                     <img src="<?php bloginfo('template_url')?>/dist/images/catalog-2.jpg" alt="" />
                   </figure>
-                  <div class="catalog-card__headline">
-                    <h2 class="catalog-card__title">
+                  <div class="landing-catalog-card__headline">
+                    <h2 class="landing-catalog-card__title">
                       Опалубка перекрытия
                     </h2>
-                    <div class="catalog-card__subtitle">
+                    <div class="landing-catalog-card__subtitle">
                       от 8,0 руб./м<sup>2</sup>
                     </div>
                   </div>
-                  <div class="catalog-card__description">
+                  <div class="landing-catalog-card__description">
                     <strong>горизонтальная опалубка</strong><br />
                     (на телескопических стойках)
                   </div>
-                  <div class="catalog-card__more">
+                  <div class="landing-catalog-card__more">
                     <a href="#" class="ui-button-more" data-hystmodal="#feedback">
                       Узнать больше
                       <span class="ui-arrow-right"></span>
@@ -192,24 +192,24 @@ Template Name: Главная
                   </div>
                 </article>
               </div>
-              <div class="catalog__grid-cell">
-                <article class="catalog-card">
-                  <figure class="catalog-card__image">
+              <div class="landing-catalog__grid-cell">
+                <article class="landing-catalog-card">
+                  <figure class="landing-catalog-card__image">
                     <img src="<?php bloginfo('template_url')?>/dist/images/catalog-3.jpg" alt="" />
                   </figure>
-                  <div class="catalog-card__headline">
-                    <h2 class="catalog-card__title">
+                  <div class="landing-catalog-card__headline">
+                    <h2 class="landing-catalog-card__title">
                       Ламинированная фанера
                     </h2>
-                    <div class="catalog-card__subtitle">
+                    <div class="landing-catalog-card__subtitle">
                       от 10,0 руб./м<sup>2</sup>
                     </div>
                   </div>
-                  <div class="catalog-card__description">
+                  <div class="landing-catalog-card__description">
                     <strong>ламинированная фанера –</strong><br />
                     для перекрытий
                   </div>
-                  <div class="catalog-card__more">
+                  <div class="landing-catalog-card__more">
                     <a href="#" class="ui-button-more" data-hystmodal="#feedback">
                       Узнать больше
                       <span class="ui-arrow-right"></span>
@@ -220,13 +220,13 @@ Template Name: Главная
             </div>
           </div>
 
-          <div class="catalog__description">
+          <div class="landing-catalog__description">
             Предлагаемое оборудование ГК «Евромонолит» со склада в Ленинградской области<br />
             в отличном состоянии, гарантировано качество всех элементов опалубки, в числе которых щиты,
             замки, гайки, анкера, стойки, балки и другие.
           </div>
 
-          <div class="catalog__action">
+          <div class="landing-catalog__action">
             <div class="special-offer">
               <div class="special-offer__title">
                 Спецпредложение
