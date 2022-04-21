@@ -249,7 +249,7 @@
   text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.35);
   font-weight: bold;
   position: relative;
-  padding: 11px 10px 11px 28px;
+  padding: 5px 10px 7px 15px;
   box-sizing: border-box;
 
   @include below(md) {
@@ -281,18 +281,18 @@
 
 .special-offer-sm__date {
   font-size: 14px;
-  color: rgb(0, 0, 0);
-  line-height: 22px;
-  padding: 0 10px;
+  color: #000;
+  line-height: 18px;
+  padding: 0 4px 0 7px;
   font-weight: 400;
   border-radius: 4px 0 0 4px;
   background: #f8cc54;
   text-shadow: none;
   position: absolute;
-  right: -31px;
+  right: -20px;
   top: 50%;
   transform: translateY(-50%);
-  letter-spacing: -0.05em;
+  letter-spacing: -.05em;
 
   @include below(sm) {
     bottom: 6px;
@@ -308,11 +308,11 @@
 
 .special-offer-sm__date::after {
   content: '';
-  border-left: 18px solid #f8cc54;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
+  border-left: 14px solid #f8cc54;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
   position: absolute;
-  right: -13px;
+  right: -10px;
   top: 50%;
   transform: translateY(-50%);
 
