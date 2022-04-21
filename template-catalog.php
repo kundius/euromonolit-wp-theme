@@ -9,6 +9,8 @@ $products = new WP_Query([
     'order' => 'ASC',
     'orderby' => 'menu_order',
 ]);
+$special_offer = get_field('special-offer');
+$emulsifier = get_field('emulsifier');
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
@@ -45,7 +47,7 @@ $products = new WP_Query([
           </div>
           <?php endif?>
 
-          <?php if ($special_offer = get_field('special-offer') && $special_offer['show']): ?>
+          <?php if ($special_offer && $special_offer['show']): ?>
           <div class="catalog-body__special-offer">
             <div class="special-offer-sm">
               <div class="special-offer-sm__title">
@@ -95,7 +97,7 @@ $products = new WP_Query([
           </div>
           <?php endif?>
 
-          <?php if ($emulsifier = get_field('emulsifier') && $emulsifier['show']): ?>
+          <?php if ($emulsifier && $emulsifier['show']): ?>
           <div class="catalog-body__emulsifier">
             <div class="emulsifier">
               <div class="emulsifier__image">
