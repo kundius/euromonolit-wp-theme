@@ -9,6 +9,12 @@
     <div class="ui-wrapper">
       <?php get_template_part('partials/header');?>
 
+      <div class="page-breadcrumbs">
+        <div class="ui-container">
+          <?php bcn_display()?>
+        </div>
+      </div>
+
       <?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
             
       <div class="ui-container">
