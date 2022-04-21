@@ -64,7 +64,8 @@ $products = new WP_Query([
 
           <?php if ($products->have_posts()): ?>
           <div class="catalog__grid">
-            <?php foreach ($products->posts as $product): ?>
+            <?php while ($products->have_posts()): ?>
+            <?php $products->the_post()?>
             <div class="catalog__grid-cell">
               <article class="catalog-card">
                 <figure class="catalog-card__image">
@@ -89,7 +90,8 @@ $products = new WP_Query([
                 </div>
               </article>
             </div>
-            <?php endforeach;?>
+            <?php endwhile?>
+            <?php wp_reset_postdata()?>
           </div>
           <?php endif?>
 
