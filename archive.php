@@ -44,9 +44,9 @@
                         <div class="blog-card__excerpt">
                           <?php the_excerpt()?>
                         </div>
-                        <div class="blog-card__tags">
-                          <?php the_tags()?>
-                        </div>
+                      </div>
+                      <div class="blog-card__tags">
+                        <?php the_tags('')?>
                       </div>
                   </article>
                 </div>
