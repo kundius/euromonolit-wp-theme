@@ -3,9 +3,21 @@ $articles = new WP_Query([
     'post_type' => 'post',
     'order' => 'DESC',
     'orderby' => 'date',
-    'posts_per_page' => 4,
-    'cat' => 15,
+    'posts_per_page' => -1,
+    // 'cat' => 15,
+    'meta_query' => [
+      // 'relation' => 'OR',
+      // [
+      //   'key' => 'color',
+      //   'value' => 'blue'
+      // ],
+      [
+        'key' => 'post_favorite',
+        'value' => 1
+      ]
+    ]
 ]);
+// post_favorite
 ?>
 <div class="side-news">
   <div class="side-news__title">Новости</div>
