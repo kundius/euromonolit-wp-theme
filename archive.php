@@ -53,11 +53,13 @@
                 <?php endwhile?>
                 <?php wp_reset_postdata()?>
               </div>
-              
-              <?php the_posts_pagination([
-                'prev_text' => 'Предыдущая',
-                'next_text' => 'Следующая'
-              ]) ?>
+
+              <div class="pagination">
+                <div class="nav-links">
+
+                </div>
+              </div>
+              <?php the_posts_pagination(['prev_text' => '', 'next_text' => ''])?>
               <?php else: ?>
                 <p>Извините, ничего не найдено.</p>
               <?php endif?>
