@@ -39,7 +39,7 @@
                           <?php the_date('d.m.Y')?>
                         </div>
                         <h2 class="blog-card__title">
-                          <a href="<?php the_permalink()?>" class="blog-card__title-link"><?php the_title()?></a>
+                          <a href="<?php the_permalink()?>"><?php the_title()?></a>
                         </h2>
                         <div class="blog-card__excerpt">
                           <?php the_excerpt()?>
