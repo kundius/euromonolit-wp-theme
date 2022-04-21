@@ -280,7 +280,7 @@
 }
 
 .special-offer-sm__date {
-  font-size: 18px;
+  font-size: 14px;
   color: rgb(0, 0, 0);
   line-height: 22px;
   padding: 0 10px;
@@ -357,6 +357,7 @@
   transform: translateY(-50%);
   width: 32px;
   height: 32px;
+  background: transparent;
   color: rgb(108, 109, 111);
   border: 2px solid currentColor;
   border-radius: 50%;
@@ -373,7 +374,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   background: currentColor;
 }
 
@@ -384,6 +385,6 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   background: currentColor;
 }
