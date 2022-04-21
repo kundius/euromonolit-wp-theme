@@ -29,6 +29,54 @@ Template Name: Виды опалубки
         </div>
       </div>
 
+      <div class="page-body catalog-body">
+        <div class="ui-container">
+
+          <?php if ($intro_text = get_field('intro-text')): ?>
+          <div class="catalog-body__intro-text">
+            <?php echo $intro_text ?>
+          </div>
+          <?php endif ?>
+
+          <?php if ($special_offer = get_field('special-offer') && $special_offer['show']): ?>
+          <div class="catalog-body__special-offer">
+            <div class="special-offer-sm">
+              <div class="special-offer-sm__title">
+                <?php echo $special_offer['title'] ?>
+                <div class="special-offer-sm__date">
+                  <?php echo $special_offer['date'] ?>
+                </div>
+              </div>
+              <div class="special-offer-sm__description">
+                <?php echo $special_offer['description'] ?>
+              </div>
+              <button class="special-offer-sm__close"></button>
+            </div>
+          </div>
+          <?php endif ?>
+
+          catalog
+
+          <?php if ($emulsifier = get_field('emulsifier') && $emulsifier['show']): ?>
+          <div class="catalog-body__emulsifier">
+            <div class="emulsifier">
+              <div class="emulsifier__image">
+
+              </div>
+              <div class="emulsifier__description">
+                <?php echo $emulsifier['description'] ?>
+              </div>
+            </div>
+          </div>
+          <?php endif ?>
+
+          <div class="content">
+            <?php the_content() ?>
+          </div>
+
+        </div>
+      </div>
+
       <?php get_template_part('partials/section-formwork-advantages') ?>
 
       <?php get_template_part('partials/section-how-we-work') ?>
