@@ -6,6 +6,10 @@
   padding-right: 45px;
   padding-top: 28px;
   padding-bottom: 38px;
+
+  @include below(lg) {
+    padding: 25px;
+  }
 }
 
 .side-news__title {
@@ -46,6 +50,11 @@
     width: 100%;
     height: auto;
     border-radius: 4px;
+  }
+
+  @include below(lg) {
+    width: 64px;
+    margin-right: 12px;
   }
 }
 

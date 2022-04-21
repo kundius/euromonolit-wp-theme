@@ -24,17 +24,29 @@
 .blog-layout {
   display: flex;
   margin-left: -30px;
+
+  @include below(lg) {
+    margin-left: -20px;
+  }
 }
 
 .blog-layout__content {
   padding-left: 30px;
   width: calc(100% / 3 * 2);
+
+  @include below(lg) {
+    padding-left: 20px;
+  }
 }
 
 .blog-layout__side {
   position: relative;
   padding-left: 30px;
   width: calc(100% / 3);
+
+  @include below(lg) {
+    padding-left: 20px;
+  }
 }
 
 .blog-layout__side-sicky {
@@ -47,18 +59,25 @@
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
+
+  @include below(lg) {
+    margin-left: -20px;
+    margin-top: -20px;
+  }
 }
 
 .blog-grid__cell {
   padding-left: 30px;
   padding-top: 30px;
   width: 50%;
+
+  @include below(lg) {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
 }
 
 .blog-card {
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
   position: relative;
@@ -84,6 +103,10 @@
 
 .blog-card__body {
   padding: 24px 32px 21px;
+
+  @include below(lg) {
+    padding: 20px;
+  }
 }
 
 .blog-card__date {
@@ -92,6 +115,10 @@
   line-height: 1;
   position: relative;
   padding-left: 25px;
+
+  @include below(lg) {
+    font-size: 14px;
+  }
 }
 
 .blog-card__date::before {
@@ -127,6 +154,11 @@
       position: absolute;
     }
   }
+
+  @include below(lg) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .blog-card__excerpt {
@@ -134,6 +166,20 @@
   font-size: 16px;
   line-height: 22px;
   margin-top: 28px;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 12px;
+  }
+
+  @include below(lg) {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
 }
 
 .blog-card__tags {
@@ -159,6 +205,12 @@
       background: #225a7e;
     }
   }
+
+  @include below(lg) {
+    padding: 10px 24px;
+    font-size: 11px;
+    line-height: 16px;
+  }
 }
 
 .blog-card__tags::before {
@@ -169,6 +221,11 @@
   left: 25px;
   top: 18px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13px' height='12px'%3E%3Cpath fill-rule='evenodd' fill='rgb(144, 144, 144)' d='M13.13,0.816 C13.13,0.373 12.652,0.14 12.206,0.14 L8.672,0.14 C8.540,0.14 8.417,0.46 8.307,0.100 C8.183,0.146 8.66,0.219 7.966,0.318 L1.249,6.989 C0.880,7.356 0.880,7.951 1.249,8.317 L4.650,11.695 C5.19,12.62 5.617,12.62 5.987,11.695 L12.704,5.23 C12.841,4.887 12.928,4.719 12.963,4.542 C12.995,4.456 13.13,4.361 13.13,4.263 L13.13,0.816 ZM10.184,2.820 C9.868,2.505 9.868,1.995 10.184,1.680 C10.501,1.365 11.15,1.365 11.332,1.680 C11.649,1.995 11.649,2.505 11.332,2.820 C11.15,3.134 10.501,3.134 10.184,2.820 Z'/%3E%3C/svg%3E");
+
+  @include below(lg) {
+    left: 5px;
+    top: 14px;
+  }
 }
 
 .pagination {
