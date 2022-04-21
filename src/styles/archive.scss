@@ -217,8 +217,8 @@
       border-bottom: 1px solid currentColor;
       position: absolute;
       top: 50%;
-      left: calc(50% - 8px);
-      transform: translate(-50%, -50%);
+      left: calc(50% - 4px);
+      transform: translate(-50%,-50%) rotate(45deg);
     }
     &::before {
       content: '';
@@ -237,12 +237,12 @@
       content: '';
       width: 8px;
       height: 8px;
-      border-left: 1px solid currentColor;
+      border-right: 1px solid currentColor;
       border-bottom: 1px solid currentColor;
       position: absolute;
       top: 50%;
-      left: calc(50% + 8px);
-      transform: translate(-50%, -50%);
+      left: calc(50% + 4px);
+      transform: translate(-50%,-50%) rotate(-45deg);
     }
     &::before {
       content: '';
