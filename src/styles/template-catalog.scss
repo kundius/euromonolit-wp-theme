@@ -218,20 +218,21 @@
   display: block;
   color: #fbbb49;
   position: absolute;
-  top: 2px;
+  top: 12px;
   left: -86px;
 }
 
 .catalog-body__special-offer {
-  margin-left: 160px;
-  margin-right: 160px;
-  margin-top: 30px;
+  margin-left: 168px;
+  margin-right: 168px;
+  margin-top: 22px;
 }
 
 .special-offer-sm {
   border: 2px solid #f5ae24;
   display: flex;
   width: 100%;
+  position: relative;
 
   @include below(sm) {
     flex-direction: column;
@@ -248,7 +249,7 @@
   text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.35);
   font-weight: bold;
   position: relative;
-  padding: 11px 10px 36px 28px;
+  padding: 11px 10px 11px 28px;
   box-sizing: border-box;
 
   @include below(md) {
@@ -328,7 +329,9 @@
 }
 
 .special-offer-sm__description {
-  color: #e48a00;
+  color: #000000;
+  background: #fff6a9;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1;
   letter-spacing: -0.005em;
@@ -338,7 +341,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 6px;
 
   @include below(sm) {
     width: 100%;
