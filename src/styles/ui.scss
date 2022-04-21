@@ -97,6 +97,7 @@ body {
   @include below(lg) {
     padding-left: 16px;
     padding-right: 16px;
+    width: 980px;
   }
 
   @include below(sm) {
