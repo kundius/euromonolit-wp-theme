@@ -21,19 +21,29 @@
   margin: 0 8px;
   width: 0;
   height: 0;
-  border-left: 4px solid currentColor;
+  border-left: 4px solid #aac5d7;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
 }
 
 .page-headline {
-
+  background: #f6f6f6;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .page-headline__title {
-
+  font-weight: bold;
+  color: #215578;
+  font-size: 60px;
+  line-height: 1;
+  margin: 0;
 }
 
 .page-headline__description {
-
+  font-weight: 300;
+  line-height: 1.25;
+  font-size: 20px;
+  color: #3f3f3f;
+  margin-top: 10px;
 }
