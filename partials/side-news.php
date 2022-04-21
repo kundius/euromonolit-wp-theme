@@ -20,7 +20,7 @@ $articles = new WP_Query([
       </figure>
       <div class="side-news-card__body">
         <div class="side-news-grid__date">
-          <?php the_date()?>
+          <?php echo get_the_date('d.m.Y')?>
         </div>
         <div class="side-news-grid__title">
           <a href="<?php the_permalink()?>"><?php the_title()?></a>
