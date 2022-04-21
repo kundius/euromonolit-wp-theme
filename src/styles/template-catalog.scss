@@ -348,4 +348,40 @@
   }
 }
 
+.special-offer-sm__close {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  color: rgb(108, 109, 111);
+  border: 2px solid currentColor;
+  border-radius: 50%;
 
+  &:hover {
+    color: #000;
+  }
+}
+
+.special-offer-sm__close::before {
+  content: '';
+  width: 4px;
+  height: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  background: currentColor;
+}
+
+.special-offer-sm__close::after {
+  content: '';
+  width: 16px;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  background: currentColor;
+}
