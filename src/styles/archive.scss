@@ -87,6 +87,10 @@
     padding-left: 20px;
     padding-top: 20px;
   }
+
+  @include below(sm) {
+    width: 100%;
+  }
 }
 
 .blog-card {
