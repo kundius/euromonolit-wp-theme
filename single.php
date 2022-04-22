@@ -29,7 +29,7 @@ $content = apply_filters('the_content', $content_parts['extended']);
                 <div class="single-headline__date">
                   <?php echo get_the_date('d.m.Y') ?>
                 </div>
-  
+
                 <h1 class="single-headline__title"><?php the_title()?></h1>
               </div>
 
@@ -37,7 +37,7 @@ $content = apply_filters('the_content', $content_parts['extended']);
                 <?php if (has_post_thumbnail()): ?>
                   <figure class="single-thumbnail">
                     <div class="single-thumbnail__image">
-                      <?php the_post_thumbnail('full') ?>
+                      <?php the_post_thumbnail('full')?>
                     </div>
                     <?php if ($caption = get_the_post_thumbnail_caption()): ?>
                     <div class="single-thumbnail__caption">
@@ -76,7 +76,7 @@ $content = apply_filters('the_content', $content_parts['extended']);
                 </div>
               </div>
             </div>
-            
+
             <div class="single-layout__side">
               <div class="single-layout__side-sicky">
                 <?php get_template_part('partials/side-news')?>
@@ -84,6 +84,17 @@ $content = apply_filters('the_content', $content_parts['extended']);
               </div>
             </div>
           </div>
+
+          <?php if ($see_also = get_field('post_see-also')): print_r($see_also)?>
+          <div class="see-also">
+            <div class="see-also__title">Читайте также:</div>
+            <div class="see-also__grid">
+              <div class="see-also__grid-cell">
+
+              </div>
+            </div>
+          </div>
+          <?php endif?>
         </div>
       </div>
 
