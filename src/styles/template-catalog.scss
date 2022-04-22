@@ -245,6 +245,12 @@
   margin-top: 36px;
 }
 
+.catalog-body__content {
+  width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .special-offer-sm {
   border: 2px solid #f5ae24;
   display: flex;
@@ -391,7 +397,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(45deg);
   background: currentColor;
   border-radius: 2px;
 }
@@ -403,7 +409,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(45deg);
   background: currentColor;
   border-radius: 2px;
 }

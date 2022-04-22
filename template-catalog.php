@@ -114,7 +114,7 @@ $emulsifier = get_field('emulsifier');
           </div>
           <?php endif?>
 
-          <div class="content">
+          <div class="catalog-body__content ui-content">
             <?php the_content()?>
           </div>
 

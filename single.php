@@ -29,7 +29,7 @@ if (strpos($post->post_content, '<!--more-->')) {
         </div>
       </div>
 
-      <div class="single-section">
+      <div class="single-body">
         <div class="ui-container">
           <div class="single-layout">
             <div class="single-layout__content">
