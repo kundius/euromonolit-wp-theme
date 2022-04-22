@@ -71,7 +71,7 @@ $content = apply_filters('the_content', $content_parts['extended']);
                     <?php the_tags('')?>
                   </div>
                   <div class="single-meta__share">
-                    <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram" data-color-scheme="whiteblack"></div>
+                    <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram"></div>
                   </div>
                 </div>
               </div>
