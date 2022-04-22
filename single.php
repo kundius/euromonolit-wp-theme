@@ -89,9 +89,31 @@ $content = apply_filters('the_content', $content_parts['extended']);
           <div class="see-also">
             <div class="see-also__title">Читайте также:</div>
             <div class="see-also__grid">
+              <?php foreach ($see_also as $item): ?>
+              <?php setup_postdata($item)?>
               <div class="see-also__grid-cell">
-
+                <article class="archive-card">
+                  <figure class="archive-card__image">
+                    <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
+                  </figure>
+                  <div class="archive-card__body">
+                    <div class="archive-card__date">
+                      <?php the_date('d.m.Y')?>
+                    </div>
+                    <h2 class="archive-card__title">
+                      <a href="<?php the_permalink()?>"><?php the_title()?></a>
+                    </h2>
+                    <div class="archive-card__excerpt">
+                      <?php the_excerpt()?>
+                    </div>
+                  </div>
+                  <div class="archive-card__tags">
+                    <?php the_tags('')?>
+                  </div>
+                </article>
               </div>
+              <?php endforeach?>
+              <?php wp_reset_postdata()?>
             </div>
           </div>
           <?php endif?>
