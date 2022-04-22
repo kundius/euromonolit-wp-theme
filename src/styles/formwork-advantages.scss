@@ -37,11 +37,16 @@
 }
 
 .formwork-advantages__grid {
-
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -90px;
+  margin-top: -70px;
 }
 
 .formwork-advantages__grid-cell {
-
+  padding-left: 90px;
+  padding-top: 70px;
+  width: 50%;
 }
 
 .formwork-advantages-item {
@@ -49,7 +54,14 @@
 }
 
 .formwork-advantages-item__icon {
-
+  width: 84px;
+  height: 84px;
+  background: #0d5c97;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 22px;
 }
 
 .formwork-advantages-item__body {
@@ -57,9 +69,15 @@
 }
 
 .formwork-advantages-item__title {
-
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
 }
 
 .formwork-advantages-item__description {
-
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+  margin-top: 8px;
 }
