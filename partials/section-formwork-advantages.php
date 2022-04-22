@@ -25,7 +25,7 @@
               <div class="formwork-advantages-item__title">
                 <?php echo $item['title'] ?>
               </div>
-              <div class="formwork-advantages-item__title">
+              <div class="formwork-advantages-item__description">
                 <?php echo $item['description'] ?>
               </div>
             </div>
