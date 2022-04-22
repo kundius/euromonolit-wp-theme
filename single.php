@@ -85,7 +85,7 @@ $content = apply_filters('the_content', $content_parts['extended']);
             </div>
           </div>
 
-          <?php if ($see_also = get_field('post_see-also')): print_r($see_also)?>
+          <?php if ($see_also = get_field('post_see-also')): ?>
           <div class="see-also">
             <div class="see-also__title">Читайте также:</div>
             <div class="see-also__grid">
