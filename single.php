@@ -20,10 +20,12 @@
           <div class="single-layout">
             <div class="single-layout__content">
               <div class="single-body__date">
-                <?php the_date('d.m.Y')?>
+                <?php echo get_the_date('d.m.Y') ?>
               </div>
               <h1 class="single-body__title"><?php the_title()?></h1>
               <?php the_content()?>
+              <?php wp_link_pages() ?>
+
             </div>
             <div class="single-layout__side">
               <div class="single-layout__side-sicky">
