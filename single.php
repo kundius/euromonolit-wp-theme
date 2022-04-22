@@ -1,3 +1,7 @@
+<?php
+global $post;
+$content_parts = get_extended($post->post_content);
+?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
   <head>
@@ -23,9 +27,8 @@
                 <?php echo get_the_date('d.m.Y') ?>
               </div>
               <h1 class="single-body__title"><?php the_title()?></h1>
-              <?php the_content()?>
-              <?php wp_link_pages() ?>
-
+              <?php echo apply_filters('the_content', $content_parts['main']); // часть до тега more  ?>
+              <?php echo apply_filters('the_content', $content_parts['extended']); // часть до тега more  ?>
             </div>
             <div class="single-layout__side">
               <div class="single-layout__side-sicky">
