@@ -187,6 +187,7 @@
     height: 32px;
     width: 32px;
     background-size: 32px 32px;
+    filter: brightness(0.6);
   }
   .ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
     background-size: 32px 32px;
@@ -206,7 +207,10 @@
   .ya-share2__item_service_odnoklassniki .ya-share2__badge {
     background: transparent;
   }
-  .ya-share2__item:hover .ya-share2__item_service_odnoklassniki .ya-share2__badge {
+  // .single-meta__share .ya-share2__item_service_odnoklassniki .ya-share2__badge {
+  //   background: 0 0;
+  // }
+  .ya-share2__item:hover .single-meta__share .ya-share2__item_service_odnoklassniki .ya-share2__badge {
     background: #eb722e;
     border-color: #eb722e;
   }
