@@ -62,7 +62,7 @@ $content = apply_filters('the_content', $content_parts['extended']);
                   </div>
                 </div>
 
-                <div class="single-main__content content">
+                <div class="single-main__content ui-content">
                   <?php echo $content ?>
                 </div>
 
