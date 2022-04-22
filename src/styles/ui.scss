@@ -617,6 +617,10 @@ body {
     padding-left: 30px;
   }
 
+  ul li + li {
+    margin-top: 8px;
+  }
+
   ul li::before {
     content: '';
     position: absolute;
@@ -641,5 +645,13 @@ body {
   a:hover {
     color: #fff;
     background: #faaf00;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  * + figure {
+    margin-top: 35px;
   }
 }
