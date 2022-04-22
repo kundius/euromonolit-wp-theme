@@ -197,6 +197,9 @@
     border-style: solid;
     border-color: #999999;
   }
+  .ya-share2__item:hover .ya-share2__badge .ya-share2__icon {
+    filter: brightness(1);
+  }
   .ya-share2__item_service_vkontakte .ya-share2__badge {
     background-color: transparent;
   }
