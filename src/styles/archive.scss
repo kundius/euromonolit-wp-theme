@@ -21,33 +21,20 @@
 
 .archive-layout {
   display: flex;
-  margin-left: -30px;
-
-  @include below(lg) {
-    margin-left: -20px;
-  }
 }
 
 .archive-layout__content {
-  padding-left: 30px;
-  width: calc(100% / 3 * 2);
-
-  @include below(lg) {
-    padding-left: 20px;
-  }
-
-  @include below(md) {
-    width: 100%;
-  }
+  flex-grow: 1;
 }
 
 .archive-layout__side {
   position: relative;
-  padding-left: 30px;
+  margin-left: 30px;
+  max-width: 370px;
   width: calc(100% / 3);
 
   @include below(lg) {
-    padding-left: 20px;
+    margin-left: 20px;
   }
 
   @include below(md) {
