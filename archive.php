@@ -15,32 +15,32 @@
         </div>
       </div>
 
-      <div class="blog-body">
+      <div class="archive-body">
         <div class="ui-container">
-          <h1 class="blog-body__title"><?php single_cat_title()?></h1>
-          <div class="blog-layout">
-            <div class="blog-layout__content">
+          <h1 class="archive-body__title"><?php single_cat_title()?></h1>
+          <div class="archive-layout">
+            <div class="archive-layout__content">
               <?php if (have_posts()): ?>
-              <div class="blog-grid">
+              <div class="archive-grid">
                 <?php while (have_posts()): ?>
                 <?php the_post()?>
-                <div class="blog-grid__cell">
-                  <article class="blog-card">
-                    <figure class="blog-card__image">
+                <div class="archive-grid__cell">
+                  <article class="archive-card">
+                    <figure class="archive-card__image">
                       <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
                     </figure>
-                      <div class="blog-card__body">
-                        <div class="blog-card__date">
+                      <div class="archive-card__body">
+                        <div class="archive-card__date">
                           <?php the_date('d.m.Y')?>
                         </div>
-                        <h2 class="blog-card__title">
+                        <h2 class="archive-card__title">
                           <a href="<?php the_permalink()?>"><?php the_title()?></a>
                         </h2>
-                        <div class="blog-card__excerpt">
+                        <div class="archive-card__excerpt">
                           <?php the_excerpt()?>
                         </div>
                       </div>
-                      <div class="blog-card__tags">
+                      <div class="archive-card__tags">
                         <?php the_tags('')?>
                       </div>
                   </article>
@@ -54,8 +54,8 @@
                 <p>Извините, ничего не найдено.</p>
               <?php endif?>
             </div>
-            <div class="blog-layout__side">
-              <div class="blog-layout__side-sicky">
+            <div class="archive-layout__side">
+              <div class="archive-layout__side-sicky">
                 <?php get_template_part('partials/side-news')?>
                 <?php get_template_part('partials/side-subscribe')?>
               </div>

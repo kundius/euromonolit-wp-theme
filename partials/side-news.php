@@ -13,7 +13,7 @@ $articles = new WP_Query([
 ]);
 ?>
 <div class="side-news">
-  <div class="side-news__title">Новости</div>
+  <div class="side-news__title">Акции</div>
 
   <?php if ($articles->have_posts()): ?>
   <div class="side-news__articles">
