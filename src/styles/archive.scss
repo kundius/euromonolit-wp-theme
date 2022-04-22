@@ -1,4 +1,4 @@
-.archive-body {
+.archive-section {
   background: linear-gradient(to bottom, #f1f1f1 0, #f1f1f1 156px, #f6f6f6 156px, #f6f6f6 100%);
   position: relative;
   z-index: 20;
@@ -6,7 +6,7 @@
   padding-top: 14px;
 }
 
-.archive-body__title {
+.archive-section__title {
   font-weight: bold;
   font-size: 60px;
   line-height: 1;

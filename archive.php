@@ -15,9 +15,9 @@
         </div>
       </div>
 
-      <div class="archive-body">
+      <div class="archive-section">
         <div class="ui-container">
-          <h1 class="archive-body__title"><?php single_cat_title()?></h1>
+          <h1 class="archive-section__title"><?php single_cat_title()?></h1>
           <div class="archive-layout">
             <div class="archive-layout__content">
               <?php if (have_posts()): ?>
@@ -54,6 +54,7 @@
                 <p>Извините, ничего не найдено.</p>
               <?php endif?>
             </div>
+            
             <div class="archive-layout__side">
               <div class="archive-layout__side-sicky">
                 <?php get_template_part('partials/side-news')?>
