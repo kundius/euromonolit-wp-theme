@@ -48,7 +48,7 @@ $content = apply_filters('the_content', $content_parts['extended']);
                 <?php endif?>
 
                 <?php if ($excerpt): ?>
-                <div class="single-main__excerpt">
+                <div class="single-main__excerpt ui-content">
                   <?php echo $excerpt ?>
                 </div>
                 <?php endif?>
