@@ -1,8 +1,16 @@
 <?php
 global $post;
-$content_parts = get_extended($post->post_content);
-$excerpt = apply_filters('the_content', $content_parts['main']);
-$content = apply_filters('the_content', $content_parts['extended']);
+
+$excerpt = null;
+$content = null;
+
+if (strpos($post->post_content, '<!--more-->')) {
+    $content_parts = get_extended($post->post_content);
+    $excerpt = apply_filters('the_content', $content_parts['main']);
+    $content = apply_filters('the_content', $content_parts['extended']);
+} else {
+    $content = apply_filters('the_content', $post->post_content);
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
