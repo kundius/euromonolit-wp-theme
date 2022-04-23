@@ -103,24 +103,23 @@ $emulsifier = get_field('emulsifier');
 
           <?php if ($components = get_post(150)): ?>
           <div class="catalog-body__components">
-            <?php print_r($components) ?>
-            <article class="catalog-card">
-              <figure class="catalog-card__image">
+            <article class="catalog-card-h">
+              <figure class="catalog-card-h__image">
                 <img src="<?php echo get_the_post_thumbnail_url($components, 'theme-medium')?>" alt="<?php echo get_the_title($components)?>" />
               </figure>
-              <div class="catalog-card__body">
-                <div class="catalog-card__headline">
-                  <h2 class="catalog-card__title">
+              <div class="catalog-card-h__body">
+                <div class="catalog-card-h__headline">
+                  <h2 class="catalog-card-h__title">
                     <?php echo get_the_title($components)?>
                   </h2>
-                  <div class="catalog-card__subtitle">
+                  <div class="catalog-card-h__subtitle">
                     <?php the_field('product_price', $components)?>
                   </div>
                 </div>
-                <div class="catalog-card__description">
+                <div class="catalog-card-h__description">
                     <?php the_field('product_description', $components)?>
                 </div>
-                <div class="catalog-card__more">
+                <div class="catalog-card-h__more">
                   <a href="<?php the_permalink($components)?>" class="ui-button-more" data-hystmodal="#feedback">
                     Узнать больше
                     <span class="ui-arrow-right"></span>
