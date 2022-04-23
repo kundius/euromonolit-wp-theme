@@ -101,35 +101,35 @@ $emulsifier = get_field('emulsifier');
           </div>
           <?php endif?>
 
+          <?php if ($components = get_post(150)): ?>
           <div class="catalog-body__components">
-            <?php print_r(get_post(150)) ?>
-            <?php setup_postdata(get_post(150))?>
+            <?php print_r($components) ?>
             <article class="catalog-card">
               <figure class="catalog-card__image">
-                <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
+                <img src="<?php echo get_the_post_thumbnail_url($components, 'theme-medium')?>" alt="<?php echo get_the_title($components)?>" />
               </figure>
               <div class="catalog-card__body">
                 <div class="catalog-card__headline">
                   <h2 class="catalog-card__title">
-                    <?php the_title()?>
+                    <?php echo get_the_title($components)?>
                   </h2>
                   <div class="catalog-card__subtitle">
-                    <?php the_field('product_price')?>
+                    <?php the_field('product_price', $components)?>
                   </div>
                 </div>
                 <div class="catalog-card__description">
-                    <?php the_field('product_description')?>
+                    <?php the_field('product_description', $components)?>
                 </div>
                 <div class="catalog-card__more">
-                  <a href="<?php the_permalink()?>" class="ui-button-more" data-hystmodal="#feedback">
+                  <a href="<?php the_permalink($components)?>" class="ui-button-more" data-hystmodal="#feedback">
                     Узнать больше
                     <span class="ui-arrow-right"></span>
                   </a>
                 </div>
               </div>
             </article>
-            <?php wp_reset_postdata()?>
           </div>
+          <?php endif?>
 
           <?php if ($emulsifier && $emulsifier['show']): ?>
           <div class="catalog-body__emulsifier">
