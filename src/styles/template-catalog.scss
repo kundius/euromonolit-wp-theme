@@ -377,6 +377,8 @@
   @include below(md) {
     padding-left: 11px;
     font-size: 26px;
+    padding-bottom: 30px;
+    padding-top: 8px;
   }
 
   @include below(sm) {
@@ -415,6 +417,13 @@
   top: 50%;
   transform: translateY(-50%);
   letter-spacing: -.05em;
+
+  @include below(md) {
+    transform: none;
+    top: auto;
+    right: -4px;
+    bottom: 8px;
+  }
 
   @include below(sm) {
     bottom: 6px;
