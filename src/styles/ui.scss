@@ -163,9 +163,11 @@ body {
     height: 32px;
     flex-shrink: 0;
     align-self: flex-start;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 2px solid #e0e0e0;
     background: #fff;
+    margin-right: 8px;
+    position: relative;
     &::after {
       content: '';
       width: 8px;
