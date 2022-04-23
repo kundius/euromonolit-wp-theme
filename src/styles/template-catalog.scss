@@ -139,6 +139,7 @@
 .catalog-card__image {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .catalog-card__image img {
@@ -195,6 +196,14 @@
   text-align: center;
   margin-top: 9px;
 
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 16px;
+  }
+
   @include below(sm) {
     margin-top: 16px;
     line-height: 1;
@@ -216,6 +225,46 @@
   margin-left: 168px;
   margin-right: 168px;
   margin-top: 37px;
+}
+
+.catalog-card__order {
+  position: absolute;
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: .5s ease;
+}
+
+.catalog-card__order:hover {
+  border-color: rgb(45, 118, 166);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.17);
+  width: 268px;
+}
+
+.catalog-card__order::after {
+  content: '';
+  width: 18px;
+  height: 14px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19px' height='14px' viewBox='0 0 15 11' fill='%232d76a6'%3E%3Cpath d='M0.794,10.758 L14.325,10.758 C14.362,10.758 14.398,10.750 14.430,10.735 L9.794,6.388 L7.559,9.093 L5.325,6.388 L0.689,10.735 C0.721,10.750 0.757,10.758 0.794,10.758 ZM0.547,10.383 L4.580,5.486 L0.547,0.604 L0.547,10.383 ZM0.869,0.240 L0.985,0.328 L7.559,7.340 L14.134,0.328 L14.250,0.240 L0.869,0.240 ZM14.572,0.604 L10.539,5.486 L14.572,10.383 L14.572,0.604 Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.catalog-card__order span {
+  position: absolute;
+  font-size: 16px;
+  color: #007fcd;
+  line-height: 1;
+  right: 36px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .catalog-card-h {
@@ -267,11 +316,9 @@
 }
 
 .catalog-card-h__headline {
-  min-height: 84px;
 
   @include below(sm) {
     margin-top: 6px;
-    min-height: auto;
   }
 }
 
@@ -299,7 +346,15 @@
   color: rgb(31, 31, 31);
   line-height: 1.111;
   text-align: center;
-  margin-top: 9px;
+  margin-top: 25px;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 16px;
+  }
 
   @include below(sm) {
     margin-top: 16px;
