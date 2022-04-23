@@ -71,7 +71,9 @@
 
 .single-layout__side {
   position: relative;
-  padding-left: 30px;
+  margin-left: 30px;
+  max-width: 370px;
+  flex-shrink: 0;
   width: calc(100% / 3);
 
   @include below(lg) {
