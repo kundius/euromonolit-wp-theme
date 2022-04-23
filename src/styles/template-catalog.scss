@@ -245,10 +245,9 @@
   }
 }
 
-.catalog-body__components {
-  margin-left: 168px;
-  margin-right: 168px;
-  margin-top: 37px;
+.catalog-grid__cell-components {
+  padding: 33px;
+  width: calc(100% / 3 * 2);
 }
 
 .catalog-card__order {
@@ -468,6 +467,7 @@
   letter-spacing: -0.005em;
   text-align: center;
   width: 50%;
+  padding: 0 50px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
