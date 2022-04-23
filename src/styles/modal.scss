@@ -45,12 +45,12 @@
   visibility: hidden;
 }
 
-.hystmodal--active{
+.hystmodal--active {
   opacity: 1;
 }
 
 .hystmodal--moved,
-.hystmodal--active{
+.hystmodal--active {
   pointer-events: auto;
   visibility: visible;
 }
@@ -86,6 +86,11 @@
 
 .hystmodal--small .hystmodal__window {
   width: 340px;
+}
+
+.hystmodal--order .hystmodal__window {
+  width: 680px;
+  background-color: #fffdf4;
 }
 
 .hystmodal--active .hystmodal__window {

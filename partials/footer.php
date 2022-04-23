@@ -412,13 +412,13 @@
   </div>
 </div>
 
-<div class="hystmodal hystmodal--small" id="order" aria-hidden="true">
+<div class="hystmodal hystmodal--order" id="order" aria-hidden="true">
   <div class="hystmodal__wrap">
     <div class="hystmodal__window" role="dialog" aria-modal="true">
       <button data-hystclose class="hystmodal__close"></button>
 
       <form action="/wp-json/contact-form-7/v1/contact-forms/19/feedback" method="post" class="order-form js-form">
-        <div class="order-form__success">
+        <div class="order-form__process">
           <div class="order-form__title">
             Заказать аренду
           </div>
