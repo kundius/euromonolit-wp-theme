@@ -150,6 +150,60 @@ body {
   }
 }
 
+.ui-checkbox-field {
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  input {
+    display: none;
+  }
+  span {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    border-radius: 2px;
+    border: 2px solid #e0e0e0;
+    background: #fff;
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #c8c8c8;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+    &::before {
+      content: '';
+      width: 12px;
+      height: 8px;
+      border-left: 2px solid #1691d7;
+      border-bottom: 2px solid #1691d7;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-35deg);
+      display: none;
+    }
+  }
+  &:hover span {
+    border-color: #bdbdbb;
+  }
+  &:hover span::after {
+    display: block;
+  }
+  input:checked span {
+    border-color: #1691d7;
+  }
+  input:checked span::before {
+    display: block;
+  }
+}
+
 .ui-button-submit {
   border: none;
   display: inline-flex;
