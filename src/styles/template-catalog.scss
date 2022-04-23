@@ -518,6 +518,12 @@
   &:hover {
     color: #000;
   }
+
+  @include below(sm) {
+    top: auto;
+    transform: none;
+    bottom: 10px;
+  }
 }
 
 .special-offer-sm__close::before {
