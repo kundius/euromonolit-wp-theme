@@ -266,6 +266,10 @@
   @include below(md) {
     width: calc(100% / 2);
   }
+  
+  @include below(sm) {
+    width: 100%;
+  }
 }
 
 .catalog-card__order {
@@ -550,6 +554,10 @@
   z-index: 1;
   display: flex;
   align-items: center;
+
+  @include below(sm) {
+    flex-direction: column;
+  }
 }
 
 .emulsifier::before {
@@ -595,5 +603,9 @@
 
   p + p {
     margin-top: 26px;
+  }
+
+  @include below(sm) {
+    margin: 20px 10px 20px 10px;
   }
 }
