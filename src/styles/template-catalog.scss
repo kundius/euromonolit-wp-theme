@@ -194,10 +194,6 @@
   margin: 0;
   margin-top: 4px;
 
-  .catalog-card_horisontal & {
-    margin-top: 12px;
-  }
-
   @include below(sm) {
     font-size: 18px;
     margin-top: 10px;
@@ -214,6 +210,10 @@
   line-height: 1.111;
   text-align: center;
   margin-top: 9px;
+
+  .catalog-card_horisontal & {
+    margin-top: 25px;
+  }
 
   p {
     margin: 0;
