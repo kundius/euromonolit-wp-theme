@@ -102,7 +102,7 @@ $emulsifier = get_field('emulsifier');
           <?php endif?>
 
           <div class="catalog-body__components">
-            <?php setup_postdata(150)?>
+            <?php setup_postdata(get_post(150))?>
             <article class="catalog-card">
               <figure class="catalog-card__image">
                 <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
