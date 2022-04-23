@@ -38,6 +38,10 @@
   font-size: 60px;
   line-height: 1;
   margin: 0;
+
+  @include below(sm) {
+    font-size: 48px;
+  }
 }
 
 .page-headline__description {
@@ -46,6 +50,11 @@
   font-size: 20px;
   color: #3f3f3f;
   margin-top: 9px;
+
+  @include below(sm) {
+    font-size: 18px;
+    margin-top: 6px;
+  }
 }
 
 .page-body {
