@@ -412,7 +412,7 @@
   </div>
 </div>
 
-<div class="hystmodal hystmodal--order" id="order" aria-hidden="true">
+<div class="hystmodal hystmodal--order" id="modal-order" aria-hidden="true">
   <div class="hystmodal__wrap">
     <div class="hystmodal__window" role="dialog" aria-modal="true">
       <button data-hystclose class="hystmodal__close"></button>
@@ -422,6 +422,8 @@
           <div class="order-form-headline">
             <div class="order-form-headline__title">
               Заказать аренду
+            </div>
+            <div class="order-form-headline__subtitle">
             </div>
             <div class="order-form-headline__desc">
               Поля, отмеченные *, обязательны для заполнения
