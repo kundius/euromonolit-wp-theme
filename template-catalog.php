@@ -102,6 +102,7 @@ $emulsifier = get_field('emulsifier');
           <?php endif?>
 
           <div class="catalog-body__components">
+            <?php print_r(get_post(150)) ?>
             <?php setup_postdata(get_post(150))?>
             <article class="catalog-card">
               <figure class="catalog-card__image">
