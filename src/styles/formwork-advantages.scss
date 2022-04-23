@@ -16,6 +16,10 @@
   color: #6b6b6b;
   letter-spacing: 0.1em;
   line-height: 1;
+
+  @include below(sm) {
+    font-size: 32px;
+  }
 }
 
 .formwork-advantages__headline-second {
@@ -23,6 +27,10 @@
   color: #0d5c97;
   font-size: 36px;
   line-height: 1;
+
+  @include below(sm) {
+    font-size: 32px;
+  }
 }
 
 .formwork-advantages__headline-third {
@@ -31,6 +39,10 @@
   line-height: 1;
   letter-spacing: -0.025em;
   margin-top: 12px;
+
+  @include below(sm) {
+    font-size: 14px;
+  }
 }
 
 .formwork-advantages__items {
