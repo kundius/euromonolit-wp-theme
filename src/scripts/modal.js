@@ -13,7 +13,7 @@ modalOrderButtons.forEach((button) => {
 
     modalOrder.querySelector(".order-form-products").style.display = 'none'
     modalOrder.querySelector(".order-form-headline__subtitle").innerHTML = `
-    Вы выбрали вид «${button.dataset.hystmodalOrder}».<br />
+    Вы выбрали вид <strong>«${button.dataset.hystmodalOrder}»</strong>.<br />
     Осталось ввести контакты, по которым мы с Вами можем связаться
     `;
     modal.open("#modal-order");
