@@ -89,8 +89,9 @@
 }
 
 .hystmodal--order .hystmodal__window {
-  width: 680px;
+  width: 740px;
   background-color: #fffdf4;
+  padding: 28px;
 }
 
 .hystmodal--active .hystmodal__window {
@@ -313,6 +314,7 @@
   flex-wrap: wrap;
   margin-left: -8px;
   margin-top: -8px;
+  max-width: 560px;
 }
 
 .order-form-data__item {
@@ -322,12 +324,12 @@
 }
 
 .order-form-products {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .order-form-products__title {
@@ -361,11 +363,11 @@
 }
 
 .order-form-headline__desc {
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   color: #868686;
   line-height: 1;
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 .order-form__field {

@@ -455,28 +455,28 @@
             
             <div class="order-form-products__group">
               <div class="order-form-products__group-item">
-                <label clsss="ui-checkbox-field">
+                <label class="ui-checkbox-field">
                   <input type="checkbox" name="product" value="Мелкощитовую опалубку стен">
                   <span></span>
                   Мелкощитовую опалубку стен
                 </label>
               </div>
               <div class="order-form-products__group-item">
-                <label clsss="ui-checkbox-field">
+                <label class="ui-checkbox-field">
                   <input type="checkbox" name="product" value="Мелкощитовую опалубку стен">
                   <span></span>
                   Мелкощитовую опалубку стен
                 </label>
               </div>
               <div class="order-form-products__group-item">
-                <label clsss="ui-checkbox-field">
+                <label class="ui-checkbox-field">
                   <input type="checkbox" name="product" value="Мелкощитовую опалубку стен">
                   <span></span>
                   Мелкощитовую опалубку стен
                 </label>
               </div>
               <div class="order-form-products__group-item">
-                <label clsss="ui-checkbox-field">
+                <label class="ui-checkbox-field">
                   <input type="checkbox" name="product" value="Мелкощитовую опалубку стен">
                   <span></span>
                   Мелкощитовую опалубку стен
