@@ -419,12 +419,13 @@
 
       <form action="/wp-json/contact-form-7/v1/contact-forms/19/feedback" method="post" class="order-form js-form">
         <div class="order-form__process">
-          <div class="order-form__title">
-            Заказать аренду
-          </div>
-
-          <div class="order-form__note">
-            Поля, отмеченные *, обязательны для заполнения
+          <div class="order-form-headline">
+            <div class="order-form-headline__title">
+              Заказать аренду
+            </div>
+            <div class="order-form-headline__desc">
+              Поля, отмеченные *, обязательны для заполнения
+            </div>
           </div>
 
           <div class="order-form-data">

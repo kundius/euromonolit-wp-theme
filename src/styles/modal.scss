@@ -349,12 +349,23 @@
   width: 50%;
 }
 
-.order-form__title {
+.order-form-headline {
+  margin-bottom: 25px;
+}
+
+.order-form-headline__title {
   font-size: 24px;
   color: #3682b2;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 25px;
+}
+
+.order-form-headline__desc {
+  font-size: 12px;
+  font-style: italic;
+  color: #868686;
+  line-height: 1;
+  margin-top: 10px;
 }
 
 .order-form__field {
@@ -365,14 +376,6 @@
   margin-top: 12px;
 }
 
-.order-form__note {
-  font-size: 12px;
-  font-style: italic;
-  color: #868686;
-  line-height: 1;
-  margin-top: 10px;
-}
-
 .order-form__rules {
   margin-top: 12px;
   color: #404040;
@@ -381,8 +384,6 @@
 
 .order-form__submit {
   margin-top: 12px;
-  display: flex;
-  justify-content: center;
 }
 
 .order-form__loader {
