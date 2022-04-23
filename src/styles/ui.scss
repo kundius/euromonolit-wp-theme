@@ -204,6 +204,9 @@ body {
   input:checked + span::before {
     display: block;
   }
+  &:hover input:checked + span::after {
+    display: none;
+  }
 }
 
 .ui-button-submit {
