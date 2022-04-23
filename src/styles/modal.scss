@@ -354,15 +354,15 @@
   color: #3682b2;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
 }
 
-.order-form__field + .order-form__field {
-  margin-top: 7px;
+.order-form__field {
+  margin-top: 12px;
 }
 
 .order-form__file {
-  margin-top: 7px;
+  margin-top: 12px;
 }
 
 .order-form__note {
@@ -376,10 +376,11 @@
 .order-form__rules {
   margin-top: 12px;
   color: #404040;
+  max-width: 480px;
 }
 
 .order-form__submit {
-  margin-top: 10px;
+  margin-top: 12px;
   display: flex;
   justify-content: center;
 }

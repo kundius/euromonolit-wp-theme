@@ -423,6 +423,10 @@
             Заказать аренду
           </div>
 
+          <div class="order-form__note">
+            Поля, отмеченные *, обязательны для заполнения
+          </div>
+
           <div class="order-form-data">
             <div class="order-form-data__item">
               <input type="text" name="your-name" class="ui-input" placeholder="Имя:" />
@@ -497,10 +501,6 @@
                 <input type="file" name="your-file" class="ui-input-file__input" />
               </div>
             </span>
-          </div>
-
-          <div class="order-form__note">
-            Поля, отмеченные *, обязательны для заполнения
           </div>
 
           <div class="order-form__rules">
