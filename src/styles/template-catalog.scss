@@ -252,6 +252,10 @@
   @include below(lg) {
     padding: 15px 0 0 15px;
   }
+  
+  @include below(md) {
+    width: calc(100% / 2);
+  }
 }
 
 .catalog-card__order {
