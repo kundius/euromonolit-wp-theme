@@ -198,10 +198,10 @@ body {
   &:hover span::after {
     display: block;
   }
-  input:checked span {
+  input:checked + span {
     border-color: #1691d7;
   }
-  input:checked span::before {
+  input:checked + span::before {
     display: block;
   }
 }
