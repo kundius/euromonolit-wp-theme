@@ -101,6 +101,35 @@ $emulsifier = get_field('emulsifier');
           </div>
           <?php endif?>
 
+          <div class="catalog-body__components">
+            <?php setup_postdata(150)?>
+            <article class="catalog-card">
+              <figure class="catalog-card__image">
+                <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
+              </figure>
+              <div class="catalog-card__body">
+                <div class="catalog-card__headline">
+                  <h2 class="catalog-card__title">
+                    <?php the_title()?>
+                  </h2>
+                  <div class="catalog-card__subtitle">
+                    <?php the_field('product_price')?>
+                  </div>
+                </div>
+                <div class="catalog-card__description">
+                    <?php the_field('product_description')?>
+                </div>
+                <div class="catalog-card__more">
+                  <a href="<?php the_permalink()?>" class="ui-button-more" data-hystmodal="#feedback">
+                    Узнать больше
+                    <span class="ui-arrow-right"></span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <?php wp_reset_postdata()?>
+          </div>
+
           <?php if ($emulsifier && $emulsifier['show']): ?>
           <div class="catalog-body__emulsifier">
             <div class="emulsifier">
