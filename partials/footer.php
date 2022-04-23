@@ -412,4 +412,92 @@
   </div>
 </div>
 
+<div class="hystmodal hystmodal--small" id="order" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close"></button>
+
+      <form action="/wp-json/contact-form-7/v1/contact-forms/19/feedback" method="post" class="order-form js-form">
+        <div class="order-form__success">
+          <div class="order-form__title">
+            Заказать аренду
+          </div>
+
+          <div class="order-form__field">
+            <input type="text" name="your-name" class="ui-input" placeholder="Имя:" />
+          </div>
+
+          <div class="order-form__field">
+            <span class="wpcf7-form-control-wrap your-phone">
+              <input type="tel" name="your-phone" value="" class="ui-input" placeholder="Телефон*">
+            </span>
+          </div>
+
+          <div class="order-form__note">
+            Поля, отмеченные *, обязательны для заполнения
+          </div>
+
+          <div class="order-form__rules">
+            <span class="wpcf7-form-acceptance-wrap">
+              <label class="ui-rules">
+                <input type="checkbox" name="rules" value="1" class="form-checkbox">
+                <span></span>
+                Прочитал(-а) <a href="<?php the_permalink(49) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+              </label>
+            </span>
+          </div>
+
+          <div class="order-form__submit">
+            <button type="submit" class="ui-button-submit ui-button-submit_glare">
+              <span class="ui-loader-square order-form__loader"></span>
+              Отправить
+            </button>
+          </div>
+        </div>
+
+        <div class="order-form__success">
+          <div class="order-form-result order-form-result_success">
+            <div class="order-form-result__head">
+              <div class="order-form-result__head-icon"></div>
+              <div class="order-form-result__head-title">
+                Ваше сообщение
+                успешно отправлено
+              </div>
+            </div>
+            <div class="order-form-result__body">
+              <div class="order-form-result__body-text">
+                В ближайшее время<br />
+                мы свяжемся с вами.
+              </div>
+              <div class="order-form-result__body-close wpcf7-form-status-reset">
+                Закрыть окно
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-form__failed">
+          <div class="order-form-result order-form-result_failed">
+            <div class="order-form-result__head">
+              <div class="order-form-result__head-icon"></div>
+              <div class="order-form-result__head-title">
+                Возникла ошибка
+              </div>
+            </div>
+            <div class="order-form-result__body">
+              <div class="order-form-result__body-text">
+                Не удалось<br />
+                отправить сообщение
+              </div>
+              <div class="order-form-result__body-close wpcf7-form-status-reset">
+                Закрыть окно
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 <?php wp_footer();?>

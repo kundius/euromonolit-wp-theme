@@ -73,7 +73,7 @@ $emulsifier = get_field('emulsifier');
                 <article class="catalog-card">
                   <figure class="catalog-card__image">
                     <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
-                    <button class="catalog-card__order">
+                    <button class="catalog-card__order" data-hystmodal="#callback">
                       <span>Отправить заявку на аренду</span>
                     </button>
                   </figure>
@@ -109,7 +109,7 @@ $emulsifier = get_field('emulsifier');
             <article class="catalog-card catalog-card_horisontal">
               <figure class="catalog-card__image">
                 <img src="<?php echo get_the_post_thumbnail_url($components, 'theme-medium')?>" alt="<?php echo get_the_title($components)?>" />
-                <button class="catalog-card__order">
+                <button class="catalog-card__order" data-hystmodal="#callback">
                   <span>Отправить заявку на аренду</span>
                 </button>
               </figure>
