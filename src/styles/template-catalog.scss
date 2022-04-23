@@ -124,7 +124,9 @@
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
 
   &.catalog-card_horisontal {
-    display: flex;
+    @include above(md) {
+      display: flex;
+    }
   }
 
   &:hover {
@@ -140,11 +142,13 @@
   padding-right: 25px;
 
   .catalog-card_horisontal & {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
+    @include above(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
   }
 }
 
@@ -154,7 +158,9 @@
   position: relative;
   
   .catalog-card_horisontal & {
-    width: 50%;
+    @include above(md) {
+      width: 50%;
+    }
   }
 }
 
@@ -181,7 +187,9 @@
   min-height: 84px;
 
   .catalog-card_horisontal & {
-    min-height: auto;
+    @include above(md) {
+      min-height: auto;
+    }
   }
 
   @include below(sm) {
@@ -217,7 +225,9 @@
   margin-top: 9px;
 
   .catalog-card_horisontal & {
-    margin-top: 25px;
+    @include above(md) {
+      margin-top: 25px;
+    }
   }
 
   p {
