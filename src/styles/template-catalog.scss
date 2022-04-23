@@ -144,6 +144,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 50%;
   }
 }
 
@@ -151,6 +152,10 @@
   margin: 0;
   padding: 0;
   position: relative;
+  
+  .catalog-card_horisontal & {
+    width: 50%;
+  }
 }
 
 .catalog-card__image img {
