@@ -109,6 +109,9 @@ $emulsifier = get_field('emulsifier');
             <article class="catalog-card-h">
               <figure class="catalog-card-h__image">
                 <img src="<?php echo get_the_post_thumbnail_url($components, 'theme-medium')?>" alt="<?php echo get_the_title($components)?>" />
+                <button class="catalog-card__order">
+                  <span>Отправить заявку на аренду</span>
+                </button>
               </figure>
               <div class="catalog-card-h__body">
                 <div class="catalog-card-h__headline">
