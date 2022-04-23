@@ -4,8 +4,8 @@
 
 .formwork-advantages__headline {
   border-top: 1px solid #d5d6d7;
-  padding-top: 70px;
-  margin-bottom: 70px;
+  padding-top: 71px;
+  margin-bottom: 73px;
   text-align: center;
 }
 
@@ -23,6 +23,7 @@
   color: #0d5c97;
   font-size: 36px;
   line-height: 1;
+  margin-top: 12px;
 }
 
 .formwork-advantages__headline-third {
@@ -39,12 +40,12 @@
 .formwork-advantages__grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -90px;
+  margin-left: -50px;
   margin-top: -70px;
 }
 
 .formwork-advantages__grid-cell {
-  padding-left: 90px;
+  padding-left: 50px;
   padding-top: 70px;
   width: 50%;
 }
@@ -80,5 +81,5 @@
   font-size: 18px;
   line-height: 22px;
   color: #000;
-  margin-top: 8px;
+  margin-top: 9px;
 }
