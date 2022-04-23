@@ -67,19 +67,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -33px;
+  margin: -33px 0 0 -33px;
 
   @include below(lg) {
-    margin: -15px;
+    margin: -15px 0 0 -15px;
   }
 }
 
 .catalog-grid__cell {
-  padding: 33px;
+  padding: 33px 0 0 33px;
   width: calc(100% / 3);
 
   @include below(lg) {
-    padding: 15px;
+    padding: 15px 0 0 15px;
   }
   
   @include below(md) {
@@ -246,8 +246,12 @@
 }
 
 .catalog-grid__cell-components {
-  padding: 33px;
+  padding: 33px 0 0 33px;
   width: calc(100% / 3 * 2);
+
+  @include below(lg) {
+    padding: 15px 0 0 15px;
+  }
 }
 
 .catalog-card__order {
