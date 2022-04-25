@@ -56,7 +56,7 @@ if (strlen($title) > 100) {
                 <?php foreach ($gallery as $item): ?>
                 <figure class="product-gallery__thumb">
                   <a href="<?php echo $item['url'] ?>" class="product-gallery__thumb-link">
-                    <img src="<?php echo $item['sizes']['thumbnail'] ?>" alt="<?php echo $item['title'] ?>" />
+                    <img src="<?php echo $item['sizes']['theme-medium'] ?>" alt="<?php echo $item['title'] ?>" />
                   </a>
                 </figure>
                 <?php endforeach ?>
