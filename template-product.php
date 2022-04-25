@@ -42,7 +42,7 @@ if (strlen($title) > 100) {
       <div class="page-body product-body">
         <div class="ui-container">
           <div class="product-layout">
-            <?php if ($gallery = get_field('product_gallery')): print_r($gallery) ?>
+            <?php if ($gallery = get_field('product_gallery')): ?>
             <div class="product-layout__gallery">
               <div class="product-gallery">
                 <figure class="product-gallery__main">
