@@ -90,7 +90,7 @@ $emulsifier = get_field('emulsifier');
                         <?php the_field('product_description')?>
                     </div>
                     <div class="catalog-card__more">
-                      <a href="<?php the_permalink()?>" class="ui-button-more" data-hystmodal="#feedback">
+                      <a href="<?php the_permalink()?>" class="ui-button-more">
                         Узнать больше
                         <span class="ui-arrow-right"></span>
                       </a>
