@@ -41,6 +41,11 @@
 
 .product-gallery__main-link {
   display: block;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .product-gallery__main-order {
@@ -96,7 +101,12 @@
 }
 
 .product-gallery__thumb-link {
-
+  display: block;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .product-intro {
