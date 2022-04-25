@@ -3,11 +3,11 @@
 Template Name: Продукт
 */
 $title = get_the_title();
-$title_size = 'noramal';
-if (strlen($title > 50)) {
+$title_size = 'normal';
+if (strlen($title) > 50) {
   $title_size = 'medium';
 }
-if (strlen($title > 100)) {
+if (strlen($title) > 100) {
   $title_size = 'small';
 }
 ?>
