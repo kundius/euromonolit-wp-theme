@@ -37,6 +37,34 @@ if (strlen($title) > 100) {
         </div>
       </div>
 
+
+
+      <div class="page-body product-body">
+        <div class="ui-container">
+          <div class="product-layout">
+            <?php $gallery = get_field('product_gallery'): ?>
+            <div class="product-layout__gallery">
+<?php print_r($gallery) ?>
+            </div>
+            <?php endif ?>
+            <div class="product-layout__intro">
+              <div class="product-intro">
+                <?php $introtext = get_field('product_introtext'): ?>
+                <div class="product-intro__text">
+                  <?php echo $introtext ?>
+                </div>
+                <?php endif ?>
+                <div class="product-intro__more">
+                  <button class="ui-button-more" data-hystmodal="#modal-order">
+                    Заказать аренду
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <?php get_template_part('partials/section-formwork-advantages') ?>
 
       <?php get_template_part('partials/section-how-we-work') ?>
