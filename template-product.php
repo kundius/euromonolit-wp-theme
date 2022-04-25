@@ -42,11 +42,11 @@ if (strlen($title) > 100) {
       <div class="page-body product-body">
         <div class="ui-container">
           <div class="product-layout">
-            <?php if ($gallery = get_field('product_gallery')): ?>
+            <?php if ($gallery = get_field('product_gallery')): print_r($gallery) ?>
             <div class="product-layout__gallery">
               <div class="product-gallery">
                 <figure class="product-gallery__main">
-                  <a href="<?php the_post_thumbnail_url() ?>" class="product-gallery__main-link">
+                  <a href="<?php the_post_thumbnail_url('full') ?>" class="product-gallery__main-link">
                     <img src="<?php the_post_thumbnail_url('theme-medium') ?>" alt="<?php the_title() ?>" />
                   </a>
                   <button class="product-gallery__main-order" data-hystmodal="#modal-order">
