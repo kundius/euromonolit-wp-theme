@@ -42,18 +42,33 @@ if (strlen($title) > 100) {
       <div class="page-body product-body">
         <div class="ui-container">
           <div class="product-layout">
-            <?php $gallery = get_field('product_gallery'): ?>
+            <?php if ($gallery = get_field('product_gallery')): ?>
             <div class="product-layout__gallery">
-<?php print_r($gallery) ?>
+              <div class="product-gallery">
+                <figure class="product-gallery__main">
+                  <a href="<?php the_post_thumbnail_url() ?>" class="product-gallery__main-link">
+                    <img src="<?php the_post_thumbnail_url('theme-medium') ?>" alt="<?php the_title() ?>" />
+                  </a>
+                  <button class="product-gallery__main-order" data-hystmodal="#modal-order">
+                    <span>Отправить заявку на аренду</span>
+                  </button>
+                </figure>
+                <?php foreach ($gallery as $item): ?>
+                <figure class="product-gallery__thumb">
+                  <a href="<?php echo $item['url'] ?>" class="product-gallery__thumb-link">
+                    <img src="<?php echo $item['sizes']['thumbnail'] ?>" alt="<?php echo $item['title'] ?>" />
+                  </a>
+                </figure>
+                <?php endforeach ?>
+              </div>
             </div>
             <?php endif ?>
+            <?php if ($introtext = get_field('product_introtext')): ?>
             <div class="product-layout__intro">
               <div class="product-intro">
-                <?php $introtext = get_field('product_introtext'): ?>
                 <div class="product-intro__text">
                   <?php echo $introtext ?>
                 </div>
-                <?php endif ?>
                 <div class="product-intro__more">
                   <button class="ui-button-more" data-hystmodal="#modal-order">
                     Заказать аренду
@@ -61,6 +76,13 @@ if (strlen($title) > 100) {
                 </div>
               </div>
             </div>
+            <?php else: ?>
+            <div class="product-layout__order">
+              <button class="ui-button-more" data-hystmodal="#modal-order">
+                Заказать аренду
+              </button>
+            </div>
+            <?php endif ?>
           </div>
         </div>
       </div>
