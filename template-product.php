@@ -2,6 +2,7 @@
 /*
 Template Name: Продукт
 */
+$title = get_the_title();
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">
@@ -22,7 +23,7 @@ Template Name: Продукт
 
       <div class="page-headline">
         <div class="ui-container">
-          <h1 class="page-headline__title"><?php the_title() ?></h1>
+          <h1 class="page-headline__title"><?php echo $title ?> <?php echo strlen($title) ?></h1>
           <?php if ($description = get_field('page_description')): ?>
           <div class="page-headline__description"><?php echo $description ?></div>
           <?php endif ?>
