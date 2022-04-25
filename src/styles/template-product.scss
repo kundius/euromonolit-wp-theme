@@ -47,6 +47,7 @@
   border: 1px solid #f2f2f2;
   padding: 4px;
   height: 100%;
+  position: relative;
 
   &:hover {
     border-color: #dadada;
@@ -58,6 +59,21 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &::after {
+    content: '';
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background: rgba(29,29,33,0.4) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='15px' height='19px'%3E%3Cpath fill-rule='evenodd' fill='rgb(238, 238, 238)' d='M14.245,18.094 C13.580,18.568 12.664,18.402 12.200,17.722 L9.707,14.054 C6.907,15.117 3.657,14.191 1.868,11.574 C-0.255,8.469 0.490,4.192 3.532,2.024 C6.573,-0.144 10.761,0.616 12.884,3.721 C14.760,6.466 14.389,10.119 12.180,12.429 L14.609,16.005 C15.074,16.685 14.911,17.619 14.245,18.094 ZM11.369,4.891 C9.855,2.713 6.656,2.329 4.676,3.768 C2.697,5.208 2.213,8.047 3.594,10.109 C4.976,12.170 7.700,12.675 9.679,11.235 C11.658,9.796 12.883,7.069 11.369,4.891 Z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  &:hover::after {
+    background-color: rgba(29,29,33,0.8);
   }
 }
 
