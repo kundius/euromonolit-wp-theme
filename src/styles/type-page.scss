@@ -39,6 +39,14 @@
   line-height: 1;
   margin: 0;
 
+  &_medium {
+    font-size: 42px;
+  }
+
+  &_small {
+    font-size: 32px;
+  }
+
   @include below(sm) {
     font-size: 44px;
   }
