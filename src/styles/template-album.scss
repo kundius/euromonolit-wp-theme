@@ -38,14 +38,14 @@
     opacity: 0;
     transition: opacity .5s ease;
   }
+}
 
-  .album-item:hover & img {
-    opacity: .6;
-  }
+.album-item:hover .album-item__image img {
+  opacity: .6;
+}
 
-  .album-item:hover &::after {
-    opacity: 1;
-  }
+.album-item:hover .album-item__image::after {
+  opacity: 1;
 }
 
 .album-item__info {
