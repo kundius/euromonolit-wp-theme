@@ -385,6 +385,7 @@
   @include below(sm) {
     width: auto;
     padding: 0 10px;
+    margin: 0;
   }
 }
 
@@ -406,5 +407,6 @@
     margin-top: 4px;
     padding: 0 10px;
     text-align: left;
+    font-weight: 600;
   }
 }

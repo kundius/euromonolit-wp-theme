@@ -2,6 +2,17 @@
 // import "lazysizes/plugins/native-loading/ls.native-loading";
 // import "lazysizes/plugins/object-fit/ls.object-fit";
 // import "what-input";
+import lightGallery from 'lightgallery';
+
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+// import lgZoom from 'lightgallery/plugins/zoom';
+
+if (document.querySelector(".lightbox")) {
+  initLightbox(document.querySelector("body"), {
+    plugins: [lgThumbnail],
+    selector: ".lightbox",
+  });
+}
 
 import "./modal";
 import "./form";
