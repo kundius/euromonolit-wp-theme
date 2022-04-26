@@ -52,7 +52,6 @@ Template Name: Контакты
                     </div>
                   </div>
                 </div>
-
                 <div class="contacts-groups__group">
                   <div class="underground-contacts">
                     <div class="underground-contacts__title">Склад:</div>
@@ -65,11 +64,9 @@ Template Name: Контакты
                   </div>
                 </div>
               </div>
-
               <div class="contacts-email">
                 <a href="mailto:<?php the_field('theme_email', 'options') ?>"><?php the_field('theme_email', 'options') ?></a>
               </div>
-
             </div>
             <div class="contacts-body__maps">
 
