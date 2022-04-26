@@ -7,17 +7,12 @@
     <?php wp_body_open()?>
 
     <div class="ui-wrapper">
-      <?php get_template_part('partials/header')?>
-
-      <div class="page-breadcrumbs">
-        <div class="ui-container">
-          <?php bcn_display()?>
-        </div>
-      </div>
+      <?php get_template_part('partials/header') ?>
+      <?php get_template_part('partials/page-breadcrumbs') ?>
 
       <div class="archive-section">
         <div class="ui-container">
-          <h1 class="archive-section__title"><?php single_cat_title()?></h1>
+          <h1 class="archive-section__title"><?php single_cat_title() ?></h1>
           <div class="archive-layout">
             <div class="archive-layout__content">
               <?php if (have_posts()): ?>

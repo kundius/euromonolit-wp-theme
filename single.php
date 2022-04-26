@@ -21,13 +21,8 @@ if (strpos($post->post_content, '<!--more-->')) {
     <?php wp_body_open()?>
 
     <div class="ui-wrapper">
-      <?php get_template_part('partials/header')?>
-
-      <div class="page-breadcrumbs">
-        <div class="ui-container">
-          <?php bcn_display()?>
-        </div>
-      </div>
+      <?php get_template_part('partials/header') ?>
+      <?php get_template_part('partials/page-breadcrumbs') ?>
 
       <div class="single-body">
         <div class="ui-container">

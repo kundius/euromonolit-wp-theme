@@ -21,22 +21,9 @@ $emulsifier = get_field('emulsifier');
     <?php wp_body_open();?>
 
     <div class="ui-wrapper">
-      <?php get_template_part('partials/header')?>
-
-      <div class="page-breadcrumbs">
-        <div class="ui-container">
-          <?php bcn_display()?>
-        </div>
-      </div>
-
-      <div class="page-headline">
-        <div class="ui-container">
-          <h1 class="page-headline__title"><?php the_title()?></h1>
-          <?php if ($description = get_field('page_description')): ?>
-          <div class="page-headline__description"><?php echo $description ?></div>
-          <?php endif?>
-        </div>
-      </div>
+      <?php get_template_part('partials/header') ?>
+      <?php get_template_part('partials/page-breadcrumbs') ?>
+      <?php get_template_part('partials/page-headline') ?>
 
       <div class="page-body catalog-body">
         <div class="ui-container">

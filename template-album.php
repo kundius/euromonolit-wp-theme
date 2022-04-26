@@ -1,5 +1,10 @@
+<?php
+/*
+Template Name: Альбом
+ */
+?>
 <!DOCTYPE html>
-<html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">
+<html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
   <head>
     <?php get_template_part('partials/head');?>
   </head>
@@ -11,6 +16,10 @@
       <?php get_template_part('partials/page-breadcrumbs') ?>
       <?php get_template_part('partials/page-headline') ?>
 
+      <div class="album">
+      album
+      </div>
+
       <div class="page-body">
         <div class="ui-container">
           <div class="page-body__content ui-content">
@@ -19,7 +28,7 @@
         </div>
       </div>
 
-      <?php get_template_part('partials/footer');?>
+      <?php get_template_part('partials/footer')?>
     </div>
   </body>
 </html>
