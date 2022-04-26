@@ -396,7 +396,7 @@ $products = new WP_Query([
         <div class="ui-container">
           <div class="news__title">
             Новости
-            <a href="#" class="news__more">смотреть все</a>
+            <a href="<?php echo get_term_link(7) ?>" class="news__more">смотреть все</a>
           </div>
 
           <div class="news__items">
