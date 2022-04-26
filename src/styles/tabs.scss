@@ -1,6 +1,4 @@
 $nav-scroller-scrollbar: 30px;
-$nav-item-angle-height: 20px;
-$nav-item-height: 82px;
 
 .tabs {
   background-color: rgb(255, 255, 255);
@@ -28,8 +26,13 @@ $nav-item-height: 82px;
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: $nav-item-angle-height + $nav-item-height;
-  margin-bottom: -$nav-item-angle-height;
+  height: 102px;
+  margin-bottom: -20px;
+
+  @include below(sm) {
+    height: 80px;
+    margin-bottom: -12px;
+  }
 }
   
 .tabs-nav__wrapper {
@@ -51,11 +54,15 @@ $nav-item-height: 82px;
 }
   
 .tabs-nav__content {
-  min-height: $nav-item-height;
+  min-height: 82px;
   will-change: transform;
 
   &:not(.no-transition) {
     transition: transform .25s cubic-bezier(0.645, 0.045, 0.355, 1.000); // easeInOutCubic
+  }
+
+  @include below(sm) {
+    min-height: 68px;
   }
 }
   
@@ -108,6 +115,12 @@ ul.tabs-nav__content {
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
       border-top: 20px solid #2e82b9;
+
+      @include below(sm) {
+        border-left-width: 12px;
+        border-right-width: 12px;
+        border-top-width: 12px;
+      }
     }
 
     &:hover {
@@ -131,7 +144,7 @@ ul.tabs-nav__content {
   top: 0;
   z-index: 10;
   width: 24px;
-  height: $nav-item-height;
+  height: 82px;
   color: #000;
   background: #fff;
   border: 1px solid #ddd;
@@ -149,6 +162,10 @@ ul.tabs-nav__content {
   &:not(.active) {
     opacity: 0;
     pointer-events: none;
+  }
+
+  @include below(sm) {
+    height: 68px;
   }
 }
 
