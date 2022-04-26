@@ -155,6 +155,7 @@
   line-height: 1;
   color: #333333;
   font-weight: 700;
+  margin-bottom: 14px;
 }
 
 .contacts-form__fields {
@@ -173,14 +174,6 @@
   margin-top: 7px;
 }
 
-.contacts-form__note {
-  font-size: 12px;
-  font-style: italic;
-  color: #868686;
-  line-height: 1;
-  margin-top: 10px;
-}
-
 .contacts-form__rules {
   margin-top: 12px;
   color: #404040;
@@ -188,8 +181,6 @@
 
 .contacts-form__submit {
   margin-top: 10px;
-  display: flex;
-  justify-content: center;
 }
 
 .contacts-form__loader {
@@ -199,12 +190,17 @@
   }
 }
 
+.contacts-form__process {
+  display: block;
+  ._mail-sent & {
+    display: none;
+  }
+  ._mail-failed & {
+    display: none;
+  }
+}
+
 .contacts-form__success {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
   display: none;
   ._mail-sent & {
     display: block;
@@ -212,11 +208,6 @@
 }
 
 .contacts-form__failed {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
   display: none;
   ._mail-failed & {
     display: block;

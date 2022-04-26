@@ -71,45 +71,47 @@ Template Name: Контакты
               </div>
 
               <form action="/wp-json/contact-form-7/v1/contact-forms/12/feedback" method="post" class="contacts-form js-form">
-                <div class="contacts-form__title">
-                  Обратная связь
-                </div>
-
-                <div class="contacts-form__fields">
-                  <div class="contacts-form__field">
-                    <input type="text" name="your-name" class="ui-input ui-input_small" placeholder="Имя:" />
+                <div class="contacts-form__process">
+                  <div class="contacts-form__title">
+                    Обратная связь
                   </div>
 
-                  <div class="contacts-form__field">
-                    <span class="wpcf7-form-control-wrap your-phone">
-                      <input type="tel" name="your-phone" value="" class="ui-input ui-input_small" placeholder="Телефон*">
+                  <div class="contacts-form__fields">
+                    <div class="contacts-form__field">
+                      <input type="text" name="your-name" class="ui-input ui-input_small" placeholder="Имя:" />
+                    </div>
+
+                    <div class="contacts-form__field">
+                      <span class="wpcf7-form-control-wrap your-phone">
+                        <input type="tel" name="your-phone" value="" class="ui-input ui-input_small" placeholder="Телефон*">
+                      </span>
+                    </div>
+
+                    <div class="contacts-form__field">
+                      <input type="email" name="your-email" class="ui-input ui-input_small" placeholder="E-mail:" />
+                    </div>
+
+                    <div class="contacts-form__field">
+                      <textarea rows="4" name="your-message" class="ui-textarea ui-textarea_small" placeholder="Текст сообщения:"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="contacts-form__rules">
+                    <span class="wpcf7-form-acceptance-wrap">
+                      <label class="ui-rules">
+                        <input type="checkbox" name="rules" value="1" class="form-checkbox">
+                        <span></span>
+                        Прочитал(-а) <a href="<?php the_permalink(49) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+                      </label>
                     </span>
                   </div>
 
-                  <div class="contacts-form__field">
-                    <input type="email" name="your-email" class="ui-input ui-input_small" placeholder="E-mail:" />
+                  <div class="contacts-form__submit">
+                    <button type="submit" class="ui-button-submit ui-button-submit_glare">
+                      <span class="ui-loader-square contacts-form__loader"></span>
+                      Отправить
+                    </button>
                   </div>
-
-                  <div class="contacts-form__field">
-                    <textarea rows="4" name="your-message" class="ui-textarea ui-textarea_small" placeholder="Текст сообщения:"></textarea>
-                  </div>
-                </div>
-
-                <div class="contacts-form__rules">
-                  <span class="wpcf7-form-acceptance-wrap">
-                    <label class="ui-rules">
-                      <input type="checkbox" name="rules" value="1" class="form-checkbox">
-                      <span></span>
-                      Прочитал(-а) <a href="<?php the_permalink(49) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
-                    </label>
-                  </span>
-                </div>
-
-                <div class="contacts-form__submit">
-                  <button type="submit" class="ui-button-submit ui-button-submit_glare">
-                    <span class="ui-loader-square contacts-form__loader"></span>
-                    Отправить
-                  </button>
                 </div>
 
                 <div class="contacts-form__success">
