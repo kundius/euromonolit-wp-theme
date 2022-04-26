@@ -185,18 +185,28 @@
 
 .content-construction {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .content-construction__number {
-
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  border-top: 1px solid #bababa;
+  padding: 0 20px;
 }
 
 .content-construction__description {
-
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  border-top: 1px solid #bababa;
+  padding: 0 20px;
 }
 
 .content-construction__image {
-
+  border-top: 1px solid #bababa;
+  padding: 0 20px;
 }
 
 .content-specifications {
