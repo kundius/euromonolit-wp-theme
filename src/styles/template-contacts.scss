@@ -68,7 +68,8 @@
 .contacts-map__tab {
   cursor: pointer;
   display: inline-flex;
-  background-color: rgba(255,255,255,0.8392156862745098);
+  flex-grow: 1;
+  background-color: rgba(255,255,255,0.8);
   font-size: 18px;
   color: #696969;
   font-weight: 500;
@@ -78,14 +79,8 @@
 }
 
 .contacts-map__panels {
-  background:#fffffff6;
-  box-shadow: 0 2rem 2rem #00000080;
-  min-height:200px;
-  width:100%;
-  max-width:500px;
-  border-radius:3px;
-  overflow:hidden;
-  padding:20px;  
+  width: 100%;
+  overflow: hidden;
 }
 
 .contacts-map__panel {
