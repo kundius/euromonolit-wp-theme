@@ -1,6 +1,8 @@
 $nav-scroller-btn-width: 44px;
 $nav-scroller-btn-height: 44px;
 $nav-scroller-scrollbar: 30px;
+$nav-scroller-angle-height: 16px;
+$nav-scroller-item-height: 82px;
 
 // ----- Component -----
 .nav-scroller, .nav-scroller-wrapper {
@@ -11,6 +13,7 @@ $nav-scroller-scrollbar: 30px;
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: $nav-scroller-angle-height + $nav-scroller-item-height;
 }
   
 .nav-scroller-nav {
@@ -62,11 +65,20 @@ ul.nav-scroller-content {
   font-size: 16px;
   line-height: 1;
   text-align: center;
-  border-left: 1px solid transparent; // border on both sides so all items are spaced evenly
+  border-left: 1px solid #fff; // border on both sides so all items are spaced evenly
   border-right: 1px solid #fff;
+
+  &:first-child {
+    border-left-color: transparent;
+  }
 
   &:last-child {
     border-right-color: transparent;
+  }
+
+  &:hover {
+    background: #dfdfdf;
+    color: #000;
   }
 
   &_active {
@@ -85,11 +97,14 @@ ul.nav-scroller-content {
       border-right: 20px solid transparent;
       border-top: 20px solid #2e82b9;
     }
-  }
 
-  &:hover {
-    background: #dfdfdf;
-    color: #000;
+    &:hover {
+      background: #268dd1;
+
+      &::after {
+        border-top-color: #268dd1;
+      }
+    }
   }
 }
   
