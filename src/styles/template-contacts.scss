@@ -34,14 +34,37 @@
 
 .contacts-groups {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contacts-groups__group {
   width: 50%;
+
+  @include below(sm) {
+    width: 100%;
+    .underground-contacts__address,
+    .underground-contacts__title {
+      text-align: left;
+    }
+    .underground-contacts__phone {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.contacts-groups__group + .contacts-groups__group {
+
+  @include below(sm) {
+    margin-top: 20px;
+  }
 }
 
 .contacts-email {
   margin-top: 5px;
+
+  @include below(sm) {
+    margin-top: 20px;
+  }
 }
 
 .contacts-email a {
@@ -90,6 +113,10 @@
   min-height: 82px;
   position: relative;
   z-index: 20;
+
+  @include below(sm) {
+    min-height: 64px;
+  }
 }
 
 .contacts-map__tab {
@@ -104,6 +131,11 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+
+  @include below(sm) {
+    font-size: 14px;
+    padding: 12px;
+  }
 }
 
 .contacts-map__panels {
@@ -217,11 +249,17 @@
 .contacts-form__process {
   padding: 30px 35px;
   display: block;
+
   ._mail-sent & {
     display: none;
   }
+
   ._mail-failed & {
     display: none;
+  }
+
+  @include below(sm) {
+    padding: 12px;
   }
 }
 
