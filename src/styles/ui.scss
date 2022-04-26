@@ -602,6 +602,10 @@ body {
   line-height: 26px;
   color: #000;
 
+  * + * {
+    margin-top: 1.5em;
+  }
+
   h2 {
     font-size: 30px;
     line-height: 36px;
@@ -712,16 +716,16 @@ body {
     top: 9px;
   }
 
-  a {
+  a:not(.wp-block-button__link) {
     color: #3681b3;
     text-decoration: underline;
   }
 
-  a:visited {
+  a:not(.wp-block-button__link):visited {
     color: #846bb2;
   }
 
-  a:hover {
+  a:not(.wp-block-button__link):hover {
     color: #fff;
     background: #faaf00;
     text-decoration: none;
