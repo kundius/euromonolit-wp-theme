@@ -238,6 +238,11 @@
   border-bottom: 1px solid #bababa;
 }
 
+.content-specifications__info {
+  display: flex;
+  flex-grow: 1;
+}
+
 .content-specifications__row {
   display: flex;
   border-top: 1px solid #bababa;

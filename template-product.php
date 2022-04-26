@@ -146,11 +146,13 @@ if (strlen($title) > 100) {
                   <div class="content-specifications">
                     <?php foreach($item['content-specifications'] as $key => $row): ?>
                     <div class="content-specifications__row">
-                      <div class="content-specifications__number">
-                        <?php echo ($key + 1) ?>.
-                      </div>
-                      <div class="content-specifications__name">
-                        <?php echo $row['name'] ?>
+                      <div class="content-specifications__info">
+                        <div class="content-specifications__number">
+                          <?php echo ($key + 1) ?>.
+                        </div>
+                        <div class="content-specifications__name">
+                          <?php echo $row['name'] ?>
+                        </div>
                       </div>
                       <div class="content-specifications__value">
                         <?php echo $row['value'] ?>
