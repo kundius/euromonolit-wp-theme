@@ -55,6 +55,10 @@
 .contacts-email {
   margin-top: 5px;
 
+  @include below(md) {
+    margin-top: 20px;
+  }
+
   @include below(sm) {
     margin-top: 30px;
   }
