@@ -127,10 +127,8 @@ ul.tabs-nav__content {
   transform: translateY(-50%);
   z-index: 10;
   width: 20px;
-  min-height: $nav-item-height;
+  height: $nav-item-height;
   height: 100%;
-  padding: .5rem;
-  font-size: 1.25rem;
   color: #000;
   background: #fff;
   border: 1px solid #ddd;
@@ -154,6 +152,18 @@ ul.tabs-nav__content {
 
 .tabs-nav__btn_left {
   left: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 16px;
+    height: 16px;
+    border-left: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+  }
 }
 
 .tabs-nav__btn_right {
