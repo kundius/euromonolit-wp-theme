@@ -55,12 +55,17 @@
   box-shadow: 0 0 5px rgba(0,0,0,0.24);
   background-color: #ffffff;
   border: 1px solid rgba(255,255,255,0.6);
-  margin-top: -82px;
+  margin-top: -112px;
+  min-height: calc(100% + 112px);
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts-map__tabs {
   display: flex;
   min-height: 82px;
+  position: relative;
+  z-index: 20;
 }
 
 .contacts-map__tab {
@@ -80,11 +85,19 @@
 .contacts-map__panels {
   width: 100%;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
+  flex-grow: 1;
+  display: flex;
 }
 
 .contacts-map__panel {
   display: none;
   animation: fadein .8s;
+
+  > ymaps {
+    height: 100% !important;
+  }
 }
 
 @keyframes fadein {
