@@ -22,7 +22,7 @@
 }
 
 .contacts-email {
-
+  margin-right: 20px;
 }
 
 .contacts-email a {
@@ -49,4 +49,63 @@
   &:hover {
     color: #faaf00;
   }
+}
+
+.contacts-map {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts-map__tab {
+  cursor: pointer;
+  padding:10px 20px;
+  margin:0px 2px;
+  background:#000;
+  display:inline-block;
+  color:#fff;
+  border-radius:3px 3px 0px 0px;
+  box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+
+.contacts-map__panels {
+  background:#fffffff6;
+  box-shadow: 0 2rem 2rem #00000080;
+  min-height:200px;
+  width:100%;
+  max-width:500px;
+  border-radius:3px;
+  overflow:hidden;
+  padding:20px;  
+}
+
+.contacts-map__panel {
+  display:none;
+  animation: fadein .8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.contacts-map__radio {
+  display: none;
+}
+
+#one:checked ~ .contacts-map__panels #one-panel,
+#two:checked ~ .contacts-map__panels #two-panel,
+#three:checked ~ .contacts-map__panels #three-panel{
+  display:block
+}
+#one:checked ~ .contacts-map__tabs #one-tab,
+#two:checked ~ .contacts-map__tabs #two-tab,
+#three:checked ~ .contacts-map__tabs #three-tab{
+  background:#fffffff6;
+  color:#000;
+  border-top: 3px solid #000;
 }
