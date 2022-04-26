@@ -39,7 +39,7 @@
     transition: opacity .5s ease;
   }
 
-  .album-item:hover img {
+  .album-item:hover & img {
     opacity: .6;
   }
 
