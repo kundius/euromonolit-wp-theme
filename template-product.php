@@ -84,32 +84,28 @@ if (strlen($title) > 100) {
           </div>
 
           <?php if ($tabs = get_field('product_tabs')): ?>
-          <div class="tabs">
-
-            <div class="tabs-nav">
-
-              <div class="tabs-nav__wrapper">
-                <div class="tabs-nav__content">
-                  <?php foreach ($tabs as $key => $item): ?>
-                  <button class="tabs-nav__item<?php echo ($key == 0 ? ' tabs-nav__item_active' : '') ?>">
-                    <?php echo $item['name'] ?>
-                  </button>
-                  <?php endforeach ?>
+          <div class="product-body__tabs">
+            <div class="tabs">
+              <div class="tabs-nav">
+                <div class="tabs-nav__wrapper">
+                  <div class="tabs-nav__content">
+                    <?php foreach ($tabs as $key => $item): ?>
+                    <button class="tabs-nav__item<?php echo ($key == 0 ? ' tabs-nav__item_active' : '') ?>">
+                      <?php echo $item['name'] ?>
+                    </button>
+                    <?php endforeach ?>
+                  </div>
                 </div>
+                <button class="tabs-nav__btn tabs-nav__btn_left"></button>
+                <button class="tabs-nav__btn tabs-nav__btn_right"></button>
               </div>
-
-              <button class="tabs-nav__btn tabs-nav__btn_left"></button>
-
-              <button class="tabs-nav__btn tabs-nav__btn_right"></button>
-
-            </div>
-
-            <div class="tabs-body">
-              <?php foreach ($tabs as $key => $item): ?>
-              <div class="tabs-body__item<?php echo ($key == 0 ? ' tabs-body__item_active' : '') ?>">
-                <?php echo $item['name'] ?>
+              <div class="tabs-body">
+                <?php foreach ($tabs as $key => $item): ?>
+                <div class="tabs-body__item<?php echo ($key == 0 ? ' tabs-body__item_active' : '') ?>">
+                  <?php print_r($item) ?>
+                </div>
+                <?php endforeach ?>
               </div>
-              <?php endforeach ?>
             </div>
           </div>
           <?php endif ?>
