@@ -65,7 +65,9 @@ Template Name: Контакты
                 </div>
               </div>
               <div class="contacts-email">
-                <a href="mailto:<?php the_field('theme_email', 'options') ?>"><?php the_field('theme_email', 'options') ?></a>
+                <a href="mailto:<?php the_field('theme_email', 'options') ?>">
+                  <span><?php the_field('theme_email', 'options') ?></span>
+                </a>
               </div>
             </div>
             <div class="contacts-body__maps">
