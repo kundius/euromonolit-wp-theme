@@ -1,6 +1,6 @@
 .product-body {
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 60px;
 }
 
 .product-body__tabs {
@@ -178,17 +178,33 @@
   font-size: 18px;
   line-height: 1.4;
 
+  h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    color: #f90;
+  }
+
   p {
     margin: 0;
   }
 
-  * + P {
+  * + * {
     margin-top: 1em;
+  }
+
+  @include below(md) {
+    font-size: 16px;
+    line-height: 1.25;
   }
 }
 
 .product-intro__more {
   margin-top: 37px;
+
+  @include below(md) {
+    margin-top: 1em;
+  }
 }
 
 .content-appointment {
