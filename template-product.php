@@ -102,7 +102,59 @@ if (strlen($title) > 100) {
               <div class="tabs-body">
                 <?php foreach ($tabs as $key => $item): ?>
                 <div class="tabs-body__item<?php echo ($key == 0 ? ' tabs-body__item_active' : '') ?>">
-                  <?php print_r($item) ?>
+                  <?php if ($item['content-type'] == 'content-custom'): ?>
+                  <div class="ui-content">
+                    <?php echo $item['content-custom'] ?>
+                  </div>
+                  <?php endif ?>
+                  <?php if ($item['content-type'] == 'content-appointment'): ?>
+                  <div class="content-appointment">
+                    <?php if ($image == $item['content-appointment']['image']): ?>
+                    <div class="content-appointment__image">
+                      <img src="<?php echo $image['url'] ?>" alt="">
+                    </div>
+                    <?php endif ?>
+                    <div class="content-appointment__description">
+                      <?php echo $item['content-appointment']['description'] ?>
+                    </div>
+                  </div>
+                  <?php endif ?>
+                  <?php if ($item['content-type'] == 'content-construction'): ?>
+                  <div class="content-construction">
+                    <?php foreach($item['content-construction'] as $key => $row): ?>
+                    <!-- <div class="content-construction__row"> -->
+                      <div class="content-construction__number">
+                        <?php echo $key ?>
+                      </div>
+                      <div class="content-construction__description">
+                        <?php echo $row['description'] ?>
+                      </div>
+                      <div class="content-construction__image">
+                        <?php if ($image == $row['image']): ?>
+                        <img src="<?php echo $image['url'] ?>" alt="">
+                        <?php endif ?>
+                      </div>
+                    <!-- </div> -->
+                    <?php endforeach ?>
+                  </div>
+                  <?php endif ?>
+                  <?php if ($item['content-type'] == 'content-specifications'): ?>
+                  <div class="content-specifications">
+                    <?php foreach($item['content-specifications'] as $key => $row): ?>
+                    <!-- <div class="content-specifications__row"> -->
+                      <div class="content-specifications__number">
+                        <?php echo $key ?>
+                      </div>
+                      <div class="content-specifications__name">
+                        <?php echo $row['name'] ?>
+                      </div>
+                      <div class="content-specifications__value">
+                        <?php echo $row['value'] ?>
+                      </div>
+                    <!-- </div> -->
+                    <?php endforeach ?>
+                  </div>
+                  <?php endif ?>
                 </div>
                 <?php endforeach ?>
               </div>
