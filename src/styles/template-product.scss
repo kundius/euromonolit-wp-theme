@@ -176,11 +176,14 @@
 }
 
 .content-appointment__image {
-
+  margin-right: 60px;
 }
 
 .content-appointment__description {
-
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  flex-grow: 1;
 }
 
 .content-construction {
