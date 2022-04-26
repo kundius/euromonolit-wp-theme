@@ -2,6 +2,12 @@
 /*
 Template Name: Главная
 */
+$products = new WP_Query([
+  'post_type' => 'page',
+  'post_parent' => 52,
+  'order' => 'ASC',
+  'orderby' => 'menu_order',
+]);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">
@@ -142,81 +148,39 @@ Template Name: Главная
 
           <div class="landing-catalog__items">
             <div class="landing-catalog__grid">
+              <?php while ($products->have_posts()): ?>
+              <?php $products->the_post()?>
               <div class="landing-catalog__grid-cell">
-                <article class="landing-catalog-card">
-                  <figure class="landing-catalog-card__image">
-                    <img src="<?php bloginfo('template_url')?>/dist/images/catalog-1.jpg" alt="" />
+                <article class="catalog-card">
+                  <figure class="catalog-card__image">
+                    <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
+                    <button class="catalog-card__order" data-hystmodal-order="<?php the_title()?>">
+                      <span>Отправить заявку на аренду</span>
+                    </button>
                   </figure>
-                  <div class="landing-catalog-card__headline">
-                    <h2 class="landing-catalog-card__title">
-                      Мелкощитовая Опалубка стен
-                    </h2>
-                    <div class="landing-catalog-card__subtitle">
-                      от 15,0 руб./м<sup>2</sup>
+                  <div class="catalog-card__body">
+                    <div class="catalog-card__headline">
+                      <h2 class="catalog-card__title">
+                        <?php the_title()?>
+                      </h2>
+                      <div class="catalog-card__subtitle">
+                        <?php the_field('product_price')?>
+                      </div>
                     </div>
-                  </div>
-                  <div class="landing-catalog-card__description">
-                    <strong>(облегченная) рамная опалубка –</strong><br />
-                    монтируется без крана
-                  </div>
-                  <div class="landing-catalog-card__more">
-                    <a href="#" class="ui-button-more" data-hystmodal="#feedback">
-                      Узнать больше
-                      <span class="ui-arrow-right"></span>
-                    </a>
+                    <div class="catalog-card__description">
+                        <?php the_field('product_description')?>
+                    </div>
+                    <div class="catalog-card__more">
+                      <a href="<?php the_permalink()?>" class="ui-button-more">
+                        Узнать больше
+                        <span class="ui-arrow-right"></span>
+                      </a>
+                    </div>
                   </div>
                 </article>
               </div>
-              <div class="landing-catalog__grid-cell">
-                <article class="landing-catalog-card">
-                  <figure class="landing-catalog-card__image">
-                    <img src="<?php bloginfo('template_url')?>/dist/images/catalog-2.jpg" alt="" />
-                  </figure>
-                  <div class="landing-catalog-card__headline">
-                    <h2 class="landing-catalog-card__title">
-                      Опалубка перекрытия
-                    </h2>
-                    <div class="landing-catalog-card__subtitle">
-                      от 8,0 руб./м<sup>2</sup>
-                    </div>
-                  </div>
-                  <div class="landing-catalog-card__description">
-                    <strong>горизонтальная опалубка</strong><br />
-                    (на телескопических стойках)
-                  </div>
-                  <div class="landing-catalog-card__more">
-                    <a href="#" class="ui-button-more" data-hystmodal="#feedback">
-                      Узнать больше
-                      <span class="ui-arrow-right"></span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <div class="landing-catalog__grid-cell">
-                <article class="landing-catalog-card">
-                  <figure class="landing-catalog-card__image">
-                    <img src="<?php bloginfo('template_url')?>/dist/images/catalog-3.jpg" alt="" />
-                  </figure>
-                  <div class="landing-catalog-card__headline">
-                    <h2 class="landing-catalog-card__title">
-                      Ламинированная фанера
-                    </h2>
-                    <div class="landing-catalog-card__subtitle">
-                      от 10,0 руб./м<sup>2</sup>
-                    </div>
-                  </div>
-                  <div class="landing-catalog-card__description">
-                    <strong>ламинированная фанера –</strong><br />
-                    для перекрытий
-                  </div>
-                  <div class="landing-catalog-card__more">
-                    <a href="#" class="ui-button-more" data-hystmodal="#feedback">
-                      Узнать больше
-                      <span class="ui-arrow-right"></span>
-                    </a>
-                  </div>
-                </article>
-              </div>
+              <?php endwhile?>
+              <?php wp_reset_postdata()?>
             </div>
           </div>
 
