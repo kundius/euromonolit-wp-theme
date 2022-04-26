@@ -111,7 +111,7 @@ if (strlen($title) > 100) {
                   <div class="content-appointment">
                     <?php if ($image = $item['content-appointment']['image']): ?>
                     <div class="content-appointment__image">
-                      <img src="<?php echo $image['url'] ?>" alt="">
+                      <span><img src="<?php echo $image['url'] ?>" alt=""></span>
                     </div>
                     <?php endif ?>
                     <div class="content-appointment__description">

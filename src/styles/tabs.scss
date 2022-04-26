@@ -18,6 +18,10 @@ $nav-item-height: 82px;
   &_active {
     display: block;
   }
+
+  @include below(lg) {
+    padding: 40px;
+  }
 }
   
 .tabs-nav {
