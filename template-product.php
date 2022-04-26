@@ -44,7 +44,7 @@ if (strlen($title) > 100) {
             <div class="product-layout__gallery">
               <div class="product-gallery">
                 <figure class="product-gallery__main">
-                  <a href="<?php the_post_thumbnail_url('full') ?>" class="product-gallery__main-link lightbox">
+                  <a href="<?php the_post_thumbnail_url('full') ?>" class="product-gallery__main-link" data-fslightbox="product">
                     <img src="<?php the_post_thumbnail_url('theme-medium') ?>" alt="<?php the_title() ?>" />
                   </a>
                   <button class="product-gallery__main-order" data-hystmodal="#modal-order">
@@ -53,7 +53,7 @@ if (strlen($title) > 100) {
                 </figure>
                 <?php foreach ($gallery as $item): ?>
                 <figure class="product-gallery__thumb">
-                  <a href="<?php echo $item['url'] ?>" class="product-gallery__thumb-link lightbox">
+                  <a href="<?php echo $item['url'] ?>" class="product-gallery__thumb-link" data-fslightbox="product">
                     <img src="<?php echo $item['sizes']['theme-medium'] ?>" alt="<?php echo $item['title'] ?>" />
                   </a>
                 </figure>
