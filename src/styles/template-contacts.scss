@@ -154,7 +154,6 @@
 
 .contacts-form {
   background: #f6f6f6;
-  padding: 30px 35px;
   margin-top: 20px;
 }
 
@@ -199,6 +198,7 @@
 }
 
 .contacts-form__process {
+  padding: 30px 35px;
   display: block;
   ._mail-sent & {
     display: none;
@@ -276,7 +276,7 @@
 }
 
 .contacts-form-result__body {
-  background: #fff;
+  background: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: center;
