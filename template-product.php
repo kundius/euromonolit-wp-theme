@@ -85,22 +85,32 @@ if (strlen($title) > 100) {
             <?php endif ?>
           </div>
 
-          <div class="nav-scroller">
+          <div class="nav-scroller" data-target="#tabs">
 
-            <nav class="nav-scroller-nav">
+            <div class="nav-scroller-nav">
               <div class="nav-scroller-content">
-                <a href="#" class="nav-scroller-item">Item 1</a>
-                <a href="#" class="nav-scroller-item">Item 2</a>
-                <a href="#" class="nav-scroller-item">Item 3</a>
+                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item">Item 2</button>
+                <button class="nav-scroller-item">Item 3</button>
               </div>
-            </nav>
+            </div>
 
-            <button class="nav-scroller-btn nav-scroller-btn--left">
-            </button>
+            <button class="nav-scroller-btn nav-scroller-btn--left"></button>
 
-            <button class="nav-scroller-btn nav-scroller-btn--right">
-            </button>
+            <button class="nav-scroller-btn nav-scroller-btn--right"></button>
 
+          </div>
+
+          <div id="tabs">
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
           </div>
 
         </div>
