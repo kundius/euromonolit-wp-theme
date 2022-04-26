@@ -89,7 +89,7 @@ if (strlen($title) > 100) {
 
             <div class="nav-scroller-nav">
               <div class="nav-scroller-content">
-                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item nav-scroller-item_active">Item 1</button>
                 <button class="nav-scroller-item">Item 2</button>
                 <button class="nav-scroller-item">Item 3</button>
                 <button class="nav-scroller-item">Item 1</button>

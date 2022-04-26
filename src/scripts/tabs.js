@@ -12,8 +12,13 @@ navScrollers.forEach((scroller) => {
       buttons.forEach((button, buttonIndex) => {
         button.addEventListener('click', (e) => {
           e.preventDefault()
+
+          buttons.forEach((sibling) => {
+            sibling.classList.remove('nav-scroller-item_active')
+          })
+          button.classList.add('nav-scroller-item_active')
+
           Array.from(tabs.children).forEach((tab, tabIndex) => {
-            // tab.setAttribute('hidden', buttonIndex !== tabIndex)
             tab.hidden = buttonIndex !== tabIndex
           })
         })
