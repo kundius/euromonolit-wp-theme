@@ -33,12 +33,14 @@ $total_pages = ceil(count($gallery) / $per_page);
       </div>
 
       <div class="album-pagination">
-        <?php echo paginate_links([
+        <?php echo _navigation_markup(paginate_links([
+				  'mid_size' => 1,
+				  'class' => 'pagination',
           'prev_text' => '',
           'next_text' => '',
           'total' => $total_pages,
           'current' => $current_page,
-        ]) ?>
+        ]), 'pagination') ?>
       </div>
 
       <div class="page-body album-body">
