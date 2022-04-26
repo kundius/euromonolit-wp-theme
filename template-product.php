@@ -132,8 +132,11 @@ if (strlen($title) > 100) {
               <div class="tabs-body__item">
               Item 3
               </div>
-              <div>
-              Item 1
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
               </div>
               <div class="tabs-body__item">
               Item 2
@@ -141,8 +144,11 @@ if (strlen($title) > 100) {
               <div class="tabs-body__item">
               Item 3
               </div>
-              <div>
-              Item 1
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
               </div>
               <div class="tabs-body__item">
               Item 2
@@ -150,8 +156,11 @@ if (strlen($title) > 100) {
               <div class="tabs-body__item">
               Item 3
               </div>
-              <div>
-              Item 1
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
               </div>
               <div class="tabs-body__item">
               Item 2
@@ -159,44 +168,11 @@ if (strlen($title) > 100) {
               <div class="tabs-body__item">
               Item 3
               </div>
-              <div>
-              Item 1
-              </div>
               <div class="tabs-body__item">
               Item 2
               </div>
               <div class="tabs-body__item">
               Item 3
-              </div>
-              <div>
-              Item 1
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div>
-              Item 1
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div>
-              Item 1
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div>
-              Item 1
               </div>
               <div class="tabs-body__item">
               Item 2
