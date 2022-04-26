@@ -31,7 +31,7 @@ $links = paginate_links([
       <?php get_template_part('partials/page-headline') ?>
 
       <div class="album">
-        <?php foreach($paged_gallery as $item): ?>
+        <?php foreach($paged_gallery as $item): print_r($item) ?>
         <div class="album-item">
           <div class="album-item__image">
             <img src="<?php echo $item['sizes']['theme-medium'] ?>" alt="" />
