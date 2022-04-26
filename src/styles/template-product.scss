@@ -250,8 +250,8 @@
 }
 
 .content-construction__number {
-  width: 70px;
-  margin-right: 20px;
+  width: calc(70em / 22);
+  margin-right: calc(20em / 22);
   text-align: center;
   flex-shrink: 0;
 }
@@ -309,8 +309,8 @@
 }
 
 .content-specifications__number {
-  width: 70px;
-  margin-right: 20px;
+  width: calc(70em / 22);
+  margin-right: calc(20em / 22);
   text-align: center;
   flex-shrink: 0;
 }
