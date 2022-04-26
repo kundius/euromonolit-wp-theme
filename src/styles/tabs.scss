@@ -21,6 +21,7 @@ $nav-item-height: 82px;
 }
   
 .tabs-nav {
+  scroll-snap-type: x proximity;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -46,6 +47,7 @@ $nav-item-height: 82px;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  padding: 0 24px;
 }
   
 .tabs-nav__content {
