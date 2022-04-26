@@ -7,7 +7,7 @@ $current_page = get_query_var('paged') ? get_query_var('paged') : 1;
 $offset = $per_page * $current_page - $per_page;
 $gallery = get_field('album_gallery');
 $paged_gallery = array_slice($gallery, $offset, $per_page);
-$total_pages = ceil($gallery / $per_page);
+$total_pages = ceil(count($gallery) / $per_page);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
