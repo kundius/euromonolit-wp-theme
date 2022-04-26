@@ -2,6 +2,11 @@
 /*
 Template Name: Главная
 */
+$news = new WP_Query([
+  'post_type' => 'post',
+  'order' => 'DESC',
+  'orderby' => 'date',
+]);
 $products = new WP_Query([
   'post_type' => 'page',
   'post_parent' => 52,
@@ -394,49 +399,24 @@ $products = new WP_Query([
 
           <div class="news__items">
             <div class="news__grid">
+              <?php while ($news->have_posts()): ?>
+              <?php $news->the_post()?>
               <div class="news__grid-cell">
                 <article class="news-item">
-                  <div class="news-item__date">11.04.2022</div>
+                  <div class="news-item__date"><?php the_date('d.m.Y')?></div>
                   <div class="news-item__title">
-                    <a href="#">Приоритетное развитие направления «Загородное строительство»</a>
+                    <a href="<?php the_permalink()?>"><?php the_title()?></a>
                   </div>
                   <div class="news-item__desc">
-                    В связи с большим количеством запросов на опалубку для загородного строительства принято решение о приоритетном развитии направления «Загородное строительство»...
+                    <?php the_excerpt()?>
                   </div>
                   <div class="news-item__more">
-                    <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
+                    <a href="<?php the_permalink()?>">Читать далее <span class="ui-arrow-right"></span></a>
                   </div>
                 </article>
               </div>
-              <div class="news__grid-cell">
-                <article class="news-item">
-                  <div class="news-item__date">11.04.2022</div>
-                  <div class="news-item__title">
-                    <a href="#"> Летняя акция. Аренда оборудования</a>
-                  </div>
-                  <div class="news-item__desc">
-                    Уважаемые партнеры!<br />
-                    Компания «Евромонолит» устраивает летнюю акцию и предлагает в аренду опалубку...
-                  </div>
-                  <div class="news-item__more">
-                    <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
-                  </div>
-              </div>
-              </article>
-              <div class="news__grid-cell">
-                <article class="news-item">
-                  <div class="news-item__date">11.04.2022</div>
-                  <div class="news-item__title">
-                    <a href="#">Вакансия</a>
-                  </div>
-                  <div class="news-item__desc">
-                    В связи с расширением деятельности открыта вакансия по позиции Менеджер по аренде строительного оборудования (опалубка)...
-                  </div>
-                  <div class="news-item__more">
-                    <a href="#">Читать далее <span class="ui-arrow-right"></span></a>
-                  </div>
-                </article>
-              </div>
+              <?php endwhile?>
+              <?php wp_reset_postdata()?>
             </div>
           </div>
         </div>
