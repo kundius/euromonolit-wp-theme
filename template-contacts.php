@@ -77,21 +77,21 @@ Template Name: Контакты
 
                 <div class="contacts-form__fields">
                   <div class="contacts-form__field">
-                    <input type="text" name="your-name" class="ui-input" placeholder="Имя:" />
+                    <input type="text" name="your-name" class="ui-input ui-input_small" placeholder="Имя:" />
                   </div>
 
                   <div class="contacts-form__field">
                     <span class="wpcf7-form-control-wrap your-phone">
-                      <input type="tel" name="your-phone" value="" class="ui-input" placeholder="Телефон*">
+                      <input type="tel" name="your-phone" value="" class="ui-input ui-input_small" placeholder="Телефон*">
                     </span>
                   </div>
 
                   <div class="contacts-form__field">
-                    <input type="email" name="your-email" class="ui-input" placeholder="E-mail:" />
+                    <input type="email" name="your-email" class="ui-input ui-input_small" placeholder="E-mail:" />
                   </div>
 
                   <div class="contacts-form__field">
-                    <textarea rows="4" name="your-message" class="ui-textarea" placeholder="Текст сообщения:"></textarea>
+                    <textarea rows="4" name="your-message" class="ui-textarea ui-textarea_small" placeholder="Текст сообщения:"></textarea>
                   </div>
                 </div>
 

@@ -134,10 +134,15 @@ body {
   width: 100%;
   display: block;
   box-sizing: border-box;
+  
   ._error & {
     color: #e60f0f;
     background-color: #ffe5e5;
     border-color: #e24646;
+  }
+
+  &_small {
+    font-size: 14px;
   }
 }
 
@@ -152,10 +157,15 @@ body {
   width: 100%;
   display: block;
   box-sizing: border-box;
+
   ._error & {
     color: #e60f0f;
     background-color: #ffe5e5;
     border-color: #e24646;
+  }
+
+  &_small {
+    font-size: 14px;
   }
 }
 
