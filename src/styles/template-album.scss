@@ -1,3 +1,79 @@
 .album-body {
     background: #f1f1f1;
 }
+
+.album {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.album-item {
+  width: 25%;
+  position: relative;
+  background: #000;
+}
+
+.album-item__image {
+  display: block;
+  position: relative;
+  z-index: 10;
+  transition: opacity .5s ease;
+
+  .album-item:hover & {
+    opacity: .8;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.album-item__info {
+  position: absolute;
+  z-index: 20;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: opacity .5s ease;
+
+  .album-item:hover & {
+    opacity: 1;
+  }
+}
+
+.album-item__title {
+  font-size: 20px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0px 2px 2.5px rgba(0,0,0,0.44);
+}
+
+.album-item__date {
+  letter-spacing: 4px;
+  color: #ffffff;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 220px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.4);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+}

@@ -34,7 +34,7 @@ $links = paginate_links([
         <?php foreach($paged_gallery as $item): ?>
         <div class="album-item">
           <div class="album-item__image">
-            <img src="<?php echo $item['sizes']['large'] ?>" alt="" />
+            <img src="<?php echo $item['sizes']['theme-medium'] ?>" alt="" />
           </div>
           <div class="album-item__info">
             <div class="album-item__title"><?php echo $item['title'] ?></div>
