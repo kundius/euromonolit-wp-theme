@@ -168,6 +168,9 @@ if (strlen($title) > 100) {
           </div>
           <?php endif ?>
 
+          <div class="product-body__content ui-content">
+            <?php the_content() ?>
+          </div>
         </div>
       </div>
 
