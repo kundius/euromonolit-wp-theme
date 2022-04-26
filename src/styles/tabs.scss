@@ -46,7 +46,6 @@ $nav-item-height: 82px;
 .tabs-nav__content {
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;
 }
   
 .tabs-nav__content {
@@ -65,7 +64,7 @@ ul.tabs-nav__content {
 }
   
 .tabs-nav__item {
-  flex: 1 0 auto;
+  // flex: 1 0 auto;
   display: flex;
   padding: 0 16px;
   position: relative;
