@@ -84,6 +84,25 @@ if (strlen($title) > 100) {
             </div>
             <?php endif ?>
           </div>
+
+          <div class="nav-scroller">
+
+            <nav class="nav-scroller-nav">
+              <div class="nav-scroller-content">
+                <a href="#" class="nav-scroller-item">Item 1</a>
+                <a href="#" class="nav-scroller-item">Item 2</a>
+                <a href="#" class="nav-scroller-item">Item 3</a>
+              </div>
+            </nav>
+
+            <button class="nav-scroller-btn nav-scroller-btn--left">
+            </button>
+
+            <button class="nav-scroller-btn nav-scroller-btn--right">
+            </button>
+
+          </div>
+
         </div>
       </div>
 

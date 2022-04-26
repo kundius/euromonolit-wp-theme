@@ -30,6 +30,7 @@
     "hystmodal": "^0.5.1",
     "lazysizes": "^5.3.2",
     "normalize.css": "^8.0.1",
+    "priority-nav-scroller": "^2.0.0",
     "what-input": "^5.2.10"
   }
 }
