@@ -3,9 +3,11 @@
 Template Name: Главная
 */
 $news = new WP_Query([
+	'posts_per_page' => 3,
   'post_type' => 'post',
   'order' => 'DESC',
   'orderby' => 'date',
+  'cat' => 7,
 ]);
 $products = new WP_Query([
   'post_type' => 'page',
