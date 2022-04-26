@@ -208,6 +208,11 @@
     max-width: 100%;
     height: auto;
   }
+
+  @include below(md) {
+    width: 50%;
+    margin-right: 30px;
+  }
 }
 
 .content-appointment__description {
@@ -266,6 +271,11 @@
   justify-content: center;
   width: 50%;
   flex-shrink: 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 .content-specifications {
