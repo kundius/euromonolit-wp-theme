@@ -24,7 +24,7 @@ if (strlen($title) > 100) {
 
       <div class="page-breadcrumbs">
         <div class="ui-container">
-          <?php bcn_display(true) ?>
+          <?php bcn_display() ?>
         </div>
       </div>
 

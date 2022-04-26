@@ -424,6 +424,10 @@ $products = new WP_Query([
         </div>
       </section>
 
+      <section class="section-map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af35372aecc6daf7269a14f23dd0162eca35df6f7bc4c1810693c2e6d5328dbe4&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+      </section>
+      
       <?php get_template_part('partials/footer');?>
     </div>
   </body>

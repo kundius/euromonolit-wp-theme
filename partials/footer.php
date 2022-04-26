@@ -1,7 +1,3 @@
-<section class="section-map">
-  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af35372aecc6daf7269a14f23dd0162eca35df6f7bc4c1810693c2e6d5328dbe4&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-</section>
-
 <section class="underground" id="underground">
   <div class="ui-container">
 
@@ -29,13 +25,11 @@
             <?php the_field('theme_phone', 'options') ?>
           </div>
           <div class="underground-contacts__address">
-            197341, г. Санкт - Петербург,<br />
-            ул. Афонская д. 2, офис 154<br />
-            тел: +7 (921) 771-42-43
+            <?php the_field('theme_address-office', 'options') ?>
           </div>
           <div class="underground-contacts__address">
             <strong>График работы:</strong><br />
-            Пн-Пт: с 9.00-18.00, Сб, вс: выходной
+            <?php the_field('theme_schedule', 'options') ?>
           </div>
         </div>
       </div>
@@ -47,9 +41,7 @@
             &nbsp;
           </div>
           <div class="underground-contacts__address">
-            188671, Ленинградская область,<br />
-            Всеволожский район,<br />
-            пос. Лепсари, Промзона “Спутник” 3-75
+            <?php the_field('theme_map-warehouse', 'options') ?>
           </div>
         </div>
       </div>
@@ -95,30 +87,10 @@
 <section class="footer">
   <div class="ui-container footer__container">
     <div class="footer__copyright">
-      ©  2001-2022, ООО “ЕВРОМОНОЛИТ” - Продажа и аренда опалубки. Поставка опалубки по всей России. Аренда в СЗФО.
+      <?php the_field('theme_copyright', 'options') ?>
     </div>
     <div class="footer__counters">
-      <!-- Yandex.Metrika informer -->
-      <a href="https://metrika.yandex.ru/stat/?id=88353102&amp;from=informer"
-      target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/88353102/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
-      style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="88353102" data-lang="ru" /></a>
-      <!-- /Yandex.Metrika informer -->
-
-      <!-- Yandex.Metrika counter -->
-      <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(88353102, "init", {
-              clickmap:true,
-              trackLinks:true,
-              accurateTrackBounce:true,
-              webvisor:true
-        });
-      </script>
-      <noscript><div><img src="https://mc.yandex.ru/watch/88353102" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-      <!-- /Yandex.Metrika counter -->
+      <?php the_field('theme_counters', 'options') ?>
     </div>
     <div class="footer__map">
       <a href="#">Карта сайта</a>
@@ -143,8 +115,8 @@
           <a href="/" class="drawer-headline__logo">
             <img src="<?php bloginfo('template_url')?>/dist/images/logo.png" alt="<?php bloginfo('name')?>" />
           </a>
-          <a href="tel:78124541104" class="drawer-headline__phone">
-            +7 (812) 454-11-04
+          <a href="tel:<?php the_field('theme_phone', 'options') ?>" class="drawer-headline__phone">
+            <?php the_field('theme_phone', 'options') ?>
           </a>
         </div>
         <button class="drawer-headline__feedback">
@@ -171,8 +143,7 @@
         </a>
         <div class="drawer-contacts__time">
           <strong>График работы:</strong><br />
-          Пн-Пт: 9.00-18.00;<br />
-          Сб, вс: выходной
+            <?php the_field('theme_schedule', 'options') ?>
         </div>
       </div>
 
@@ -186,9 +157,7 @@
           <div class="drawer-addess__item-body">
             <div class="drawer-addess__item-title">Офис:</div>
             <div class="drawer-addess__item-content">
-              197341, г. Санкт - Петербург,<br />
-              ул. Афонская д. 2, офис 154<br />
-              тел: +7 (921) 771-42-43
+              <?php the_field('theme_map-office', 'options') ?>
             </div>
           </div>
         </div>
@@ -201,9 +170,7 @@
           <div class="drawer-addess__item-body">
             <div class="drawer-addess__item-title">Склад:</div>
             <div class="drawer-addess__item-content">
-              188671, Ленинградская область,<br />
-              Всеволожский район,<br />
-              пос. Лепсари, Промзона “Спутник” 3-75
+              <?php the_field('theme_map-warehouse', 'options') ?>
             </div>
           </div>
         </div>
