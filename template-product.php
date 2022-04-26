@@ -123,11 +123,13 @@ if (strlen($title) > 100) {
                   <div class="content-construction">
                     <?php foreach($item['content-construction'] as $key => $row): ?>
                     <div class="content-construction__row">
-                      <div class="content-construction__number">
-                        <?php echo ($key + 1) ?>
-                      </div>
-                      <div class="content-construction__description">
-                        <?php echo $row['description'] ?>
+                      <div class="content-construction__info">
+                        <div class="content-construction__number">
+                          <?php echo ($key + 1) ?>
+                        </div>
+                        <div class="content-construction__description">
+                          <?php echo $row['description'] ?>
+                        </div>
                       </div>
                       <div class="content-construction__image">
                         <?php if ($image = $row['image']): ?>
