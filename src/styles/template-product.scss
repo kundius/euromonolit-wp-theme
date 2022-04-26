@@ -20,6 +20,10 @@
 
 .product-layout {
   display: flex;
+
+  @include below(sm) {
+    flex-direction: column;
+  }
 }
 
 .product-layout__gallery {
@@ -30,6 +34,12 @@
 
   @include below(md) {
     margin-right: 25px;
+  }
+
+  @include below(sm) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -213,6 +223,10 @@
 .content-appointment {
   display: flex;
   align-items: center;
+
+  @include below(sm) {
+    flex-direction: column;
+  }
 }
 
 .content-appointment__image {
@@ -231,6 +245,12 @@
   @include below(md) {
     width: 50%;
     margin-right: 30px;
+  }
+
+  @include below(sm) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -261,6 +281,11 @@
 
   @include below(md) {
     font-size: 18px;
+  }
+
+  @include below(sm) {
+    font-size: 16px;
+    line-height: 25px;
   }
 }
 
@@ -326,6 +351,11 @@
 
   @include below(md) {
     font-size: 18px;
+  }
+
+  @include below(sm) {
+    font-size: 16px;
+    line-height: 25px;
   }
 }
 
