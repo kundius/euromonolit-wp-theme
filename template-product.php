@@ -83,7 +83,6 @@ if (strlen($title) > 100) {
             <?php endif ?>
           </div>
 
-          
           <?php if ($tabs = get_field('product_tabs')): ?>
           <div class="product-body__tabs">
             <div class="tabs">

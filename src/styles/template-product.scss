@@ -381,10 +381,19 @@
   margin-right: calc(20em / 22);
   text-align: center;
   flex-shrink: 0;
+
+  @include below(sm) {
+    width: auto;
+    padding: 0 10px;
+  }
 }
 
 .content-specifications__name {
   flex-grow: 1;
+
+  @include below(sm) {
+    padding: 0 10px;
+  }
 }
 
 .content-specifications__value {
@@ -395,5 +404,7 @@
   @include below(sm) {
     width: 100%;
     margin-top: 4px;
+    padding: 0 10px;
+    text-align: left;
   }
 }
