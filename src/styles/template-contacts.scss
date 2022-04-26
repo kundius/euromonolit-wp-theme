@@ -52,20 +52,29 @@
 }
 
 .contacts-map {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.24);
+  background-color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.contacts-map__tabs {
+  display: flex;
+  min-height: 82px;
 }
 
 .contacts-map__tab {
   cursor: pointer;
-  padding:10px 20px;
-  margin:0px 2px;
-  background:#000;
-  display:inline-block;
-  color:#fff;
-  border-radius:3px 3px 0px 0px;
-  box-shadow: 0 0.5rem 0.8rem #00000080;
+  display: inline-flex;
+  background-color: rgba(255,255,255,0.8392156862745098);
+  font-size: 18px;
+  color: #696969;
+  font-weight: 500;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .contacts-map__panels {
@@ -80,7 +89,7 @@
 }
 
 .contacts-map__panel {
-  display:none;
+  display: none;
   animation: fadein .8s;
 }
 
@@ -104,20 +113,26 @@
 
 .contacts-map__radio:nth-child(1):checked ~ .contacts-map__tabs .contacts-map__tab:nth-child(1),
 .contacts-map__radio:nth-child(2):checked ~ .contacts-map__tabs .contacts-map__tab:nth-child(2) {
-  background:#fffffff6;
-  color:#000;
-  border-top: 3px solid #000;
-}
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0px 2px 2px rgba(0,0,0,0.19);
+  background: #2e82b9;
+  position: relative;
 
-// #one:checked ~ .contacts-map__panels #one-panel,
-// #two:checked ~ .contacts-map__panels #two-panel,
-// #three:checked ~ .contacts-map__panels #three-panel{
-//   display:block
-// }
-// #one:checked ~ .contacts-map__tabs #one-tab,
-// #two:checked ~ .contacts-map__tabs #two-tab,
-// #three:checked ~ .contacts-map__tabs #three-tab{
-//   background:#fffffff6;
-//   color:#000;
-//   border-top: 3px solid #000;
-// }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #2e82b9;
+
+    @include below(sm) {
+      border-left-width: 12px;
+      border-right-width: 12px;
+      border-top-width: 12px;
+    }
+  }
+}
