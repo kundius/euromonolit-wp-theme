@@ -22,8 +22,12 @@ $total_pages = ceil(count($gallery) / $per_page);
       <?php get_template_part('partials/page-breadcrumbs') ?>
       <?php get_template_part('partials/page-headline') ?>
 
-        <?php print_r($current_page) ?>
-        <?php print_r(count($paged_gallery)) ?>
+        <?php print_r([
+          'prev_text' => '',
+          'next_text' => '',
+          'total' => $total_pages,
+          'current' => $current_page,
+        ]) ?>
       <div class="album">
         <?php print_r($paged_gallery) ?>
       </div>
