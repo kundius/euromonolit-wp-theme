@@ -122,7 +122,7 @@ if (strlen($title) > 100) {
                   <?php if ($item['content-type'] == 'content-construction'): ?>
                   <div class="content-construction">
                     <?php foreach($item['content-construction'] as $key => $row): ?>
-                    <!-- <div class="content-construction__row"> -->
+                    <div class="content-construction__row">
                       <div class="content-construction__number">
                         <?php echo ($key + 1) ?>
                       </div>
@@ -131,10 +131,12 @@ if (strlen($title) > 100) {
                       </div>
                       <div class="content-construction__image">
                         <?php if ($image = $row['image']): ?>
-                        <img src="<?php echo $image['url'] ?>" alt="">
+                        <span>
+                          <img src="<?php echo $image['url'] ?>" alt="">
+                        </span>
                         <?php endif ?>
                       </div>
-                    <!-- </div> -->
+                    </div>
                     <?php endforeach ?>
                   </div>
                   <?php endif ?>
