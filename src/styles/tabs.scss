@@ -20,6 +20,14 @@ $nav-scroller-scrollbar: 30px;
   @include below(lg) {
     padding: 40px;
   }
+
+  @include below(md) {
+    padding: 24px;
+  }
+
+  @include below(sm) {
+    padding: 12px;
+  }
 }
   
 .tabs-nav {
