@@ -106,9 +106,9 @@ if (strlen($title) > 100) {
 
             <div class="tabs-body">
               <?php foreach ($tabs as $key => $item): ?>
-              <button class="tabs-body__item<?php echo ($key == 0 ? ' tabs-body__item_active' : '') ?>">
+              <div class="tabs-body__item<?php echo ($key == 0 ? ' tabs-body__item_active' : '') ?>">
                 <?php echo $item['name'] ?>
-              </button>
+              </div>
               <?php endforeach ?>
             </div>
           </div>
