@@ -8,7 +8,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 // import lgZoom from 'lightgallery/plugins/zoom';
 
 if (document.querySelector(".lightbox")) {
-  initLightbox(document.querySelector("body"), {
+  lightGallery(document.querySelector("body"), {
     plugins: [lgThumbnail],
     selector: ".lightbox",
   });
