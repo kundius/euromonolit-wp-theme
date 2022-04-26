@@ -33,7 +33,7 @@ $total_pages = ceil(count($gallery) / $per_page);
       </div>
 
       <div class="album-pagination">
-        <?php the_posts_pagination([
+        <?php paginate_links([
           'prev_text' => '',
           'next_text' => '',
           'total' => $total_pages,
