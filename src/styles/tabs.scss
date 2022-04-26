@@ -47,7 +47,7 @@ $nav-item-height: 82px;
 }
   
 .tabs-nav__content {
-  min-height: $nav-item-height; // Ensures full button is visible
+  min-height: $nav-item-height;
   will-change: transform;
 
   &:not(.no-transition) {
@@ -62,14 +62,12 @@ ul.tabs-nav__content {
 }
   
 .tabs-nav__item {
-  // flex: 1 0 auto;
   display: flex;
-  padding: 0 16px;
+  padding: 16px;
   position: relative;
   border: none;
   align-items: center;
   justify-content: center;
-  min-height: 82px;
   background: #f6f6f6;
   color: #696969;
   font-size: 16px;
@@ -116,6 +114,11 @@ ul.tabs-nav__content {
         border-top-color: #268dd1;
       }
     }
+  }
+
+  @include below(lg) {
+    font-size: 14px;
+    padding: 12px;
   }
 }
   
