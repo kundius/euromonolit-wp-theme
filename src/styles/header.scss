@@ -311,6 +311,8 @@
 .header__menu {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+  display: flex;
+  justify-content: flex-end;
 
   @include below(md) {
     grid-row: 2 / 3;

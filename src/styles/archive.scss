@@ -14,7 +14,7 @@
   margin: 0;
   margin-bottom: 22px;
 
-  @include below(lg) {
+  @include below(md) {
     font-size: 48px;
   }
 }
