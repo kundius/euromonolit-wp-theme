@@ -46,10 +46,6 @@ Template Name: Контакты
                     <div class="underground-contacts__address">
                       <?php the_field('theme_address-office', 'options') ?>
                     </div>
-                    <div class="underground-contacts__address">
-                      <strong>График работы:</strong><br />
-                      <?php the_field('theme_schedule', 'options') ?>
-                    </div>
                   </div>
                 </div>
                 <div class="contacts-groups__group">

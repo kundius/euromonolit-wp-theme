@@ -32,16 +32,18 @@
   text-decoration: none;
   font-size: 16px;
   letter-spacing: 1px;
-  line-height: 1;
+  line-height: 24px;
 
   span {
     border-bottom: 1px dotted currentColor;
   }
 
   svg {
-    display: inline-block;
+    display: block;
     margin-right: 12px;
+    position: relative;
     fill: currentColor;
+    top: 2px;
   }
 
   &:hover {
