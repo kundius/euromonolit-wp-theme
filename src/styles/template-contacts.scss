@@ -146,20 +146,26 @@
 }
 
 .contacts-form {
-
+  background: #f6f6f6;
+  padding: 30px 35px;
 }
 
 .contacts-form__title {
-  font-size: 24px;
-  color: #333;
-  text-align: center;
-  font-weight: bold;
+  font-size: 16px;
   line-height: 1;
-  margin-bottom: 16px;
+  color: #333333;
+  font-weight: 700;
 }
 
-.contacts-form__field + .contacts-form__field {
-  margin-top: 7px;
+.contacts-form__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+}
+
+.contacts-form__field:last-child {
+  grid-row: span 3;
+  grid-column: 2 / span 1;
 }
 
 .contacts-form__file {
