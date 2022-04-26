@@ -12,6 +12,7 @@ $nav-item-height: 82px;
 }
 
 .tabs-body__item {
+  padding: 80px;
   display: none;
 
   &_active {
@@ -24,6 +25,7 @@ $nav-item-height: 82px;
   width: 100%;
   overflow: hidden;
   height: $nav-item-angle-height + $nav-item-height;
+  margin-bottom: $nav-item-angle-height + $nav-item-height * -1;
 }
   
 .tabs-nav__wrapper {
@@ -110,6 +112,7 @@ ul.tabs-nav__content {
 
     &:hover {
       background: #268dd1;
+      color: rgb(255, 255, 255);
 
       &::after {
         border-top-color: #268dd1;
