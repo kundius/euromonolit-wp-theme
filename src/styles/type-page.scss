@@ -88,3 +88,13 @@
   padding-top: 33px;
   padding-bottom: 30px;
 }
+
+.page-body__content {
+  margin-left: 168px;
+  margin-right: 168px;
+
+  @include below(lg) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

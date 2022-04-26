@@ -41,6 +41,11 @@
   100%{ box-shadow: 0 0.5em rgba(#fff, 0), 0.5em 0.5em rgba(#fff, 0), 0.5em 1em rgba(#fff, 0), 0px 1em rgba(#fff, 0) }
 }
 
+::selection {
+  background-color: #0a6fad;
+  color: #fff;
+}
+
 .ui-loader-square {
   width: 1em;
   height: 1em;
@@ -257,7 +262,7 @@ body {
   top: -150px;
   animation-timing-function: ease-in-out;
   animation-name: buttonGlare;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   transform: rotate(45deg);
   mix-blend-mode: color;
@@ -318,7 +323,7 @@ body {
   top: -150px;
   animation-timing-function: ease-in-out;
   animation-name: buttonGlare;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   transform: rotate(45deg);
   mix-blend-mode: color;

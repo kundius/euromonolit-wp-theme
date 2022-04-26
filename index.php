@@ -15,18 +15,22 @@
         </div>
       </div>
 
-      <?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
-            
-      <div class="ui-container">
-        <h1>
-            <?php the_title() ?>
-        </h1>
-        <?php the_content() ?>
+      <div class="page-headline">
+        <div class="ui-container">
+          <h1 class="page-headline__title"><?php the_title()?></h1>
+          <?php if ($description = get_field('page_description')): ?>
+          <div class="page-headline__description"><?php echo $description ?></div>
+          <?php endif?>
+        </div>
       </div>
 
-      <?php endwhile; else: ?>
-        <p>Извините, ничего не найдено.</p>
-      <?php endif; ?>
+      <div class="page-body">
+        <div class="ui-container">
+          <div class="page-body__content ui-content">
+            <?php the_content() ?>
+          </div>
+        </div>
+      </div>
 
       <?php get_template_part('partials/footer');?>
     </div>
