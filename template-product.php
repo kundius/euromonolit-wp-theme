@@ -37,8 +37,6 @@ if (strlen($title) > 100) {
         </div>
       </div>
 
-
-
       <div class="page-body product-body">
         <div class="ui-container">
           <div class="product-layout">
@@ -85,124 +83,127 @@ if (strlen($title) > 100) {
             <?php endif ?>
           </div>
 
-          <div class="nav-scroller" data-target="#tabs">
+          <div class="tabs">
 
-            <div class="nav-scroller-nav">
-              <div class="nav-scroller-content">
-                <button class="nav-scroller-item nav-scroller-item_active">Item 1</button>
-                <button class="nav-scroller-item">Item 2</button>
-                <button class="nav-scroller-item">Item 3</button>
-                <button class="nav-scroller-item">Item 1</button>
-                <button class="nav-scroller-item">Item 2</button>
-                <button class="nav-scroller-item">Item 3</button>
-                <button class="nav-scroller-item">Item 1</button>
-                <button class="nav-scroller-item">Item 2</button>
-                <button class="nav-scroller-item">Item 3</button>
-                <button class="nav-scroller-item">Item 1</button>
-                <button class="nav-scroller-item">Item 2</button>
-                <button class="nav-scroller-item">Item 3</button>
-                <button class="nav-scroller-item">Item 1</button>
-                <button class="nav-scroller-item">Item 2</button>
-                <button class="nav-scroller-item">Item 3</button>
-                <button class="nav-scroller-item">Item 1</button>
-                <button class="nav-scroller-item">Item 2</button>
-                <button class="nav-scroller-item">Item 3</button>
-                <button class="nav-scroller-item">Item 1</button>
-                <button class="nav-scroller-item">Item 2</button>
-                <button class="nav-scroller-item">Item 3</button>
-                <button class="nav-scroller-item">Item 1</button>
-                <button class="nav-scroller-item">Item 2</button>
-                <button class="nav-scroller-item">Item 3</button>
+            <div class="tabs-nav">
+
+              <div class="tabs-nav__wrapper">
+                <div class="tabs-nav__content">
+                  <button class="tabs-nav__item tabs-nav__item_active">Item 1</button>
+                  <button class="tabs-nav__item">Item 2</button>
+                  <button class="tabs-nav__item">Item 3</button>
+                  <button class="tabs-nav__item">Item 1</button>
+                  <button class="tabs-nav__item">Item 2</button>
+                  <button class="tabs-nav__item">Item 3</button>
+                  <button class="tabs-nav__item">Item 1</button>
+                  <button class="tabs-nav__item">Item 2</button>
+                  <button class="tabs-nav__item">Item 3</button>
+                  <button class="tabs-nav__item">Item 1</button>
+                  <button class="tabs-nav__item">Item 2</button>
+                  <button class="tabs-nav__item">Item 3</button>
+                  <button class="tabs-nav__item">Item 1</button>
+                  <button class="tabs-nav__item">Item 2</button>
+                  <button class="tabs-nav__item">Item 3</button>
+                  <button class="tabs-nav__item">Item 1</button>
+                  <button class="tabs-nav__item">Item 2</button>
+                  <button class="tabs-nav__item">Item 3</button>
+                  <button class="tabs-nav__item">Item 1</button>
+                  <button class="tabs-nav__item">Item 2</button>
+                  <button class="tabs-nav__item">Item 3</button>
+                  <button class="tabs-nav__item">Item 1</button>
+                  <button class="tabs-nav__item">Item 2</button>
+                  <button class="tabs-nav__item">Item 3</button>
+                </div>
               </div>
+
+              <button class="tabs-nav__btn tabs-nav__btn_left"></button>
+
+              <button class="tabs-nav__btn tabs-nav__btn_right"></button>
+
             </div>
 
-            <button class="nav-scroller-btn nav-scroller-btn--left"></button>
-
-            <button class="nav-scroller-btn nav-scroller-btn--right"></button>
-
-          </div>
-
-          <div id="tabs">
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
-            </div>
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
-            </div>
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
-            </div>
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
-            </div>
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
-            </div>
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
-            </div>
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
-            </div>
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
-            </div>
-            <div>
-            Item 1
-            </div>
-            <div hidden>
-            Item 2
-            </div>
-            <div hidden>
-            Item 3
+            <div class="tabs-body">
+              <div class="tabs-body__item tabs-body__item_active">
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
+              <div>
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
+              <div>
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
+              <div>
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
+              <div>
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
+              <div>
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
+              <div>
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
+              <div>
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
+              <div>
+              Item 1
+              </div>
+              <div class="tabs-body__item">
+              Item 2
+              </div>
+              <div class="tabs-body__item">
+              Item 3
+              </div>
             </div>
           </div>
 

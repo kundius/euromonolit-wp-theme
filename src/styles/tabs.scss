@@ -1,22 +1,32 @@
-$nav-scroller-btn-width: 44px;
-$nav-scroller-btn-height: 44px;
 $nav-scroller-scrollbar: 30px;
-$nav-scroller-angle-height: 16px;
-$nav-scroller-item-height: 82px;
+$nav-item-angle-height: 20px;
+$nav-item-height: 82px;
 
-// ----- Component -----
-.nav-scroller, .nav-scroller-wrapper {
-  display: flex;
+.tabs {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
+}
+
+.tabs-body {
+
+}
+
+.tabs-body__item {
+  display: none;
+
+  &_active {
+    display: block;
+  }
 }
   
-.nav-scroller {
+.tabs-nav {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: $nav-scroller-angle-height + $nav-scroller-item-height;
+  height: $nav-item-angle-height + $nav-item-height;
 }
   
-.nav-scroller-nav {
+.tabs-nav__wrapper {
   position: relative;
   overflow-x: auto;
   overflow-y: hidden;
@@ -30,14 +40,14 @@ $nav-scroller-item-height: 82px;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
   
-.nav-scroller-content, .nav-scroller-items {
+.tabs-nav__content {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
 }
   
-.nav-scroller-content {
-  min-height: $nav-scroller-btn-height; // Ensures full button is visible
+.tabs-nav__content {
+  min-height: $nav-item-height; // Ensures full button is visible
   will-change: transform;
 
   &:not(.no-transition) {
@@ -45,13 +55,13 @@ $nav-scroller-item-height: 82px;
   }
 }
   
-ul.nav-scroller-content {
+ul.tabs-nav__content {
   margin: 0;
   padding: 0;
   list-style: none;
 }
   
-.nav-scroller-item {
+.tabs-nav__item {
   flex: 1 0 auto;
   display: flex;
   padding: 0 16px;
@@ -108,52 +118,41 @@ ul.nav-scroller-content {
   }
 }
   
-  
-    .nav-scroller-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      width: $nav-scroller-btn-width;
-      min-height: $nav-scroller-btn-height;
-      height: 100%;
-      padding: .5rem;
-      font-size: 1.25rem;
-      color: #000;
-      background: #fff;
-      border: 1px solid #ddd;
-      transition: color .3s, opacity .3s;
-      cursor: pointer;
-  
-      &:hover {
-        color: #666;
-      }
-  
-      &:focus {
-        outline: 0;
-      }
-  
-      &:not(.active) {
-        opacity: 0;
-        pointer-events: none;
-      }
-    }
-  
-      .nav-scroller-icon {
-        display: inline-block;
-        position: relative;
-        top: -0.1em;
-        width: 1em;
-        height: 1em;
-        fill: currentColor;
-        vertical-align: middle;
-      }
-  
-  
-    .nav-scroller-btn--left {
-      left: 0;
-    }
-  
-    .nav-scroller-btn--right {
-      right: 0;
-    }
+.tabs-nav__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 20px;
+  min-height: $nav-item-height;
+  height: 100%;
+  padding: .5rem;
+  font-size: 1.25rem;
+  color: #000;
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: color .3s, opacity .3s;
+  cursor: pointer;
+
+  &:hover {
+    color: #666;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:not(.active) {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+
+.tabs-nav__btn_left {
+  left: 0;
+}
+
+.tabs-nav__btn_right {
+  right: 0;
+}
