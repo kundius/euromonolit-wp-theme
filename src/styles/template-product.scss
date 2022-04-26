@@ -1,6 +1,10 @@
 .product-body {
   padding-top: 45px;
   padding-bottom: 60px;
+
+  @include below(sm) {
+    padding-top: 30px;
+  }
 }
 
 .product-body__tabs {
@@ -290,7 +294,8 @@
 
   @include below(sm) {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 24px;
+    flex-direction: column;
   }
 }
 
@@ -330,6 +335,12 @@
     display: block;
     max-width: 100%;
   }
+
+  @include below(sm) {
+    margin-bottom: 20px;
+    width: 100%;
+    order: -1;
+  }
 }
 
 .content-specifications {
@@ -360,7 +371,8 @@
 
   @include below(sm) {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 24px;
+    flex-direction: column;
   }
 }
 
@@ -379,4 +391,9 @@
   width: 50%;
   text-align: center;
   flex-shrink: 0;
+
+  @include below(sm) {
+    width: 100%;
+    margin-top: 4px;
+  }
 }
