@@ -109,7 +109,7 @@ if (strlen($title) > 100) {
                   <?php endif ?>
                   <?php if ($item['content-type'] == 'content-appointment'): ?>
                   <div class="content-appointment">
-                    <?php if ($image == $item['content-appointment']['image']): ?>
+                    <?php if ($image = $item['content-appointment']['image']): ?>
                     <div class="content-appointment__image">
                       <img src="<?php echo $image['url'] ?>" alt="">
                     </div>
@@ -124,13 +124,13 @@ if (strlen($title) > 100) {
                     <?php foreach($item['content-construction'] as $key => $row): ?>
                     <!-- <div class="content-construction__row"> -->
                       <div class="content-construction__number">
-                        <?php echo $key ?>
+                        <?php echo ($key + 1) ?>
                       </div>
                       <div class="content-construction__description">
                         <?php echo $row['description'] ?>
                       </div>
                       <div class="content-construction__image">
-                        <?php if ($image == $row['image']): ?>
+                        <?php if ($image = $row['image']): ?>
                         <img src="<?php echo $image['url'] ?>" alt="">
                         <?php endif ?>
                       </div>
@@ -143,7 +143,7 @@ if (strlen($title) > 100) {
                     <?php foreach($item['content-specifications'] as $key => $row): ?>
                     <!-- <div class="content-specifications__row"> -->
                       <div class="content-specifications__number">
-                        <?php echo $key ?>
+                        <?php echo ($key + 1) ?>
                       </div>
                       <div class="content-specifications__name">
                         <?php echo $row['name'] ?>
