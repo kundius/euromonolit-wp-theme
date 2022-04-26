@@ -2,6 +2,7 @@
 /*
 Template Name: Альбом
  */
+$gallery = get_field('album_gallery');
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
@@ -17,10 +18,10 @@ Template Name: Альбом
       <?php get_template_part('partials/page-headline') ?>
 
       <div class="album">
-      album
+        <?php print_r($gallery) ?>
       </div>
 
-      <div class="page-body">
+      <div class="page-body album-body">
         <div class="ui-container">
           <div class="page-body__content ui-content">
             <?php the_content() ?>
