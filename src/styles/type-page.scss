@@ -35,9 +35,9 @@
 .page-headline__title {
   font-weight: bold;
   color: #215578;
-  font-size: 60px;
   line-height: 1;
   margin: 0;
+  font-size: 60px;
 
   &_medium {
     font-size: 42px;
@@ -47,8 +47,28 @@
     font-size: 32px;
   }
 
+  @include below(md) {
+    font-size: 54px;
+  
+    &_medium {
+      font-size: 36px;
+    }
+  
+    &_small {
+      font-size: 26px;
+    }
+  }
+
   @include below(sm) {
     font-size: 44px;
+  
+    &_medium {
+      font-size: 32px;
+    }
+  
+    &_small {
+      font-size: 24px;
+    }
   }
 }
 

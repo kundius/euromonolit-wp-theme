@@ -199,7 +199,6 @@
 
   @include below(md) {
     font-size: 16px;
-    line-height: 1.25;
   }
 }
 
@@ -240,6 +239,11 @@
   line-height: 26px;
   color: #000000;
   flex-grow: 1;
+
+  @include below(md) {
+    font-size: 16px;
+    line-height: 24;
+  }
 }
 
 .content-construction {
@@ -257,7 +261,7 @@
   color: #000000;
 
   @include below(md) {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
   }
 }
@@ -323,7 +327,7 @@
   }
 
   @include below(md) {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
   }
 }
