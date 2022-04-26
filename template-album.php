@@ -2,7 +2,7 @@
 /*
 Template Name: Альбом
  */
-$per_page = 4;
+$per_page = 16;
 $current_page = get_query_var('paged') ? get_query_var('paged') : 1;
 $offset = $per_page * $current_page - $per_page;
 $gallery = get_field('album_gallery');
