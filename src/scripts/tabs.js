@@ -7,7 +7,7 @@ let navScrollers = document.querySelectorAll('.nav-scroller');
 navScrollers.forEach((scroller) => {
   console.log(scroller.dataset.target)
   if (scroller.dataset.target) {
-    const tabs = scroller.querySelector(scroller.dataset.target)
+    const tabs = document.querySelector(scroller.dataset.target)
     console.log(tabs)
 
     if (tabs) {
