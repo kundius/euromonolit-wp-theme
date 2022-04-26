@@ -25,7 +25,7 @@ $nav-item-height: 82px;
   width: 100%;
   overflow: hidden;
   height: $nav-item-angle-height + $nav-item-height;
-  margin-bottom: $nav-item-angle-height + $nav-item-height * -1;
+  margin-bottom: -$nav-item-angle-height;
 }
   
 .tabs-nav__wrapper {
