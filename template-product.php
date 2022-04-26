@@ -92,6 +92,27 @@ if (strlen($title) > 100) {
                 <button class="nav-scroller-item">Item 1</button>
                 <button class="nav-scroller-item">Item 2</button>
                 <button class="nav-scroller-item">Item 3</button>
+                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item">Item 2</button>
+                <button class="nav-scroller-item">Item 3</button>
+                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item">Item 2</button>
+                <button class="nav-scroller-item">Item 3</button>
+                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item">Item 2</button>
+                <button class="nav-scroller-item">Item 3</button>
+                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item">Item 2</button>
+                <button class="nav-scroller-item">Item 3</button>
+                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item">Item 2</button>
+                <button class="nav-scroller-item">Item 3</button>
+                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item">Item 2</button>
+                <button class="nav-scroller-item">Item 3</button>
+                <button class="nav-scroller-item">Item 1</button>
+                <button class="nav-scroller-item">Item 2</button>
+                <button class="nav-scroller-item">Item 3</button>
               </div>
             </div>
 
@@ -102,6 +123,78 @@ if (strlen($title) > 100) {
           </div>
 
           <div id="tabs">
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
+            <div>
+            Item 1
+            </div>
+            <div hidden>
+            Item 2
+            </div>
+            <div hidden>
+            Item 3
+            </div>
             <div>
             Item 1
             </div>
