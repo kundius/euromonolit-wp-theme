@@ -8,6 +8,14 @@ $offset = $per_page * $current_page - $per_page;
 $gallery = get_field('album_gallery');
 $paged_gallery = array_slice($gallery, $offset, $per_page);
 $total_pages = ceil(count($gallery) / $per_page);
+$links = paginate_links([
+  'mid_size' => 1,
+  'class' => 'pagination',
+  'prev_text' => '',
+  'next_text' => '',
+  'total' => $total_pages,
+  'current' => $current_page,
+]);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
@@ -22,25 +30,24 @@ $total_pages = ceil(count($gallery) / $per_page);
       <?php get_template_part('partials/page-breadcrumbs') ?>
       <?php get_template_part('partials/page-headline') ?>
 
-        <?php print_r([
-          'prev_text' => '',
-          'next_text' => '',
-          'total' => $total_pages,
-          'current' => $current_page,
-        ]) ?>
       <div class="album">
-        <?php print_r($paged_gallery) ?>
+        <?php foreach($paged_gallery as $item): ?>
+        <div class="album-item">
+          <div class="album-item__image">
+            <img src="<?php echo $item['sizes']['large'] ?>" alt="" />
+          </div>
+          <div class="album-item__info">
+            <div class="album-item__title"><?php echo $item['title'] ?></div>
+            <?php if ($date = date_parse($item['date'])): ?>
+            <div class="album-item__date"><?php echo $date['year'] ?></div>
+            <?php endif ?>
+          </div>
+        </div>
+        <?php endforeach ?>
       </div>
 
       <div class="album-pagination">
-        <?php echo _navigation_markup(paginate_links([
-				  'mid_size' => 1,
-				  'class' => 'pagination',
-          'prev_text' => '',
-          'next_text' => '',
-          'total' => $total_pages,
-          'current' => $current_page,
-        ]), 'pagination') ?>
+        <?php echo _navigation_markup($links , 'pagination') ?>
       </div>
 
       <div class="page-body album-body">
