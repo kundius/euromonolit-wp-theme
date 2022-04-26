@@ -232,6 +232,14 @@
   border-top: 1px solid #bababa;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+
+  @include below(md) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .content-construction__info {
@@ -242,9 +250,6 @@
 }
 
 .content-construction__number {
-  font-size: 22px;
-  line-height: 26px;
-  color: #000000;
   width: 70px;
   margin-right: 20px;
   text-align: center;
@@ -252,9 +257,6 @@
 }
 
 .content-construction__description {
-  font-size: 22px;
-  line-height: 26px;
-  color: #000000;
   flex-grow: 1;
 
   p {
@@ -298,6 +300,11 @@
 
   &:nth-child(2n) {
     background: #f6f6f6;
+  }
+
+  @include below(md) {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
