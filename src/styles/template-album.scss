@@ -63,10 +63,10 @@
   text-align: center;
   justify-content: center;
   transition: opacity .5s ease;
+}
 
-  .album-item:hover & {
-    opacity: 1;
-  }
+.album-item:hover .album-item__info {
+  opacity: 1;
 }
 
 .album-item__title {
