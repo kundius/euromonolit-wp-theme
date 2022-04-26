@@ -4,7 +4,9 @@ Template Name: Альбом
  */
 $per_page = 4;
 $current_page = get_query_var('paged') ? get_query_var('paged') : 1;
+$offset = $per_page * $current_page - $per_page;
 $gallery = get_field('album_gallery');
+$paged_gallery = array_slice($gallery, $offset, $per_page);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
@@ -20,8 +22,9 @@ $gallery = get_field('album_gallery');
       <?php get_template_part('partials/page-headline') ?>
 
         <?php print_r($current_page) ?>
+        <?php print_r(count($paged_gallery)) ?>
       <div class="album">
-        <?php print_r($gallery) ?>
+        <?php print_r($paged_gallery) ?>
       </div>
 
       <div class="album-pagination">
