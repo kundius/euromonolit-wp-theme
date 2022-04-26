@@ -75,6 +75,11 @@
     grid-column: span 4;
     grid-row: span 4;
   }
+
+  @include below(sm) {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
 }
 
 .product-gallery__main-link {
