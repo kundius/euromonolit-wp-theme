@@ -83,36 +83,18 @@ if (strlen($title) > 100) {
             <?php endif ?>
           </div>
 
+          <?php if ($tabs = get_field('product_tabs')): ?>
           <div class="tabs">
 
             <div class="tabs-nav">
 
               <div class="tabs-nav__wrapper">
                 <div class="tabs-nav__content">
-                  <button class="tabs-nav__item tabs-nav__item_active">Item 1</button>
-                  <button class="tabs-nav__item">Item 2</button>
-                  <button class="tabs-nav__item">Item 3</button>
-                  <button class="tabs-nav__item">Item 1</button>
-                  <button class="tabs-nav__item">Item 2</button>
-                  <button class="tabs-nav__item">Item 3</button>
-                  <button class="tabs-nav__item">Item 1</button>
-                  <button class="tabs-nav__item">Item 2</button>
-                  <button class="tabs-nav__item">Item 3</button>
-                  <button class="tabs-nav__item">Item 1</button>
-                  <button class="tabs-nav__item">Item 2</button>
-                  <button class="tabs-nav__item">Item 3</button>
-                  <button class="tabs-nav__item">Item 1</button>
-                  <button class="tabs-nav__item">Item 2</button>
-                  <button class="tabs-nav__item">Item 3</button>
-                  <button class="tabs-nav__item">Item 1</button>
-                  <button class="tabs-nav__item">Item 2</button>
-                  <button class="tabs-nav__item">Item 3</button>
-                  <button class="tabs-nav__item">Item 1</button>
-                  <button class="tabs-nav__item">Item 2</button>
-                  <button class="tabs-nav__item">Item 3</button>
-                  <button class="tabs-nav__item">Item 1</button>
-                  <button class="tabs-nav__item">Item 2</button>
-                  <button class="tabs-nav__item">Item 3</button>
+                  <?php foreach ($tabs as $key => $item): ?>
+                  <button class="tabs-nav__item<?php echo ($key == 0 ? ' tabs-nav__item_active' : '') ?>">
+                    <?php echo $item['name'] ?>
+                  </button>
+                  <?php endforeach ?>
                 </div>
               </div>
 
@@ -123,65 +105,14 @@ if (strlen($title) > 100) {
             </div>
 
             <div class="tabs-body">
-              <div class="tabs-body__item tabs-body__item_active">
-              Item 1
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
-              <div class="tabs-body__item">
-              Item 2
-              </div>
-              <div class="tabs-body__item">
-              Item 3
-              </div>
+              <?php foreach ($tabs as $key => $item): ?>
+              <button class="tabs-body__item<?php echo ($key == 0 ? ' tabs-body__item_active' : '') ?>">
+                <?php echo $item['name'] ?>
+              </button>
+              <?php endforeach ?>
             </div>
           </div>
+          <?php endif ?>
 
         </div>
       </div>
