@@ -51,7 +51,7 @@ Template Name: Контакты
                 <div class="contacts-groups__group">
                   <div class="contacts-data">
                     <div class="contacts-data__title">Склад:</div>
-                    <div class="contacts-data__phone">
+                    <div class="contacts-data__phone contacts-data__hide-below-sm">
                       &nbsp;
                     </div>
                     <div class="contacts-data__address">

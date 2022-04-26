@@ -431,3 +431,10 @@
     margin-top: 14px;
   }
 }
+
+.contacts-data__hide-below-sm {
+
+  @include below(sm) {
+    display: none;
+  }
+}
