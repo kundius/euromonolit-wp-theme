@@ -145,9 +145,9 @@ if (strlen($title) > 100) {
                   <?php if ($item['content-type'] == 'content-specifications'): ?>
                   <div class="content-specifications">
                     <?php foreach($item['content-specifications'] as $key => $row): ?>
-                    <!-- <div class="content-specifications__row"> -->
+                    <div class="content-specifications__row">
                       <div class="content-specifications__number">
-                        <?php echo ($key + 1) ?>
+                        <?php echo ($key + 1) ?>.
                       </div>
                       <div class="content-specifications__name">
                         <?php echo $row['name'] ?>
@@ -155,7 +155,7 @@ if (strlen($title) > 100) {
                       <div class="content-specifications__value">
                         <?php echo $row['value'] ?>
                       </div>
-                    <!-- </div> -->
+                    </div>
                     <?php endforeach ?>
                   </div>
                   <?php endif ?>
