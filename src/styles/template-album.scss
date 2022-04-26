@@ -17,12 +17,12 @@
   display: block;
   position: relative;
   z-index: 10;
-  transition: opacity .5s ease;
 
   img {
     display: block;
     width: 100%;
     height: auto;
+    transition: opacity .5s ease;
   }
 
   &::after {
@@ -39,7 +39,7 @@
     transition: opacity .5s ease;
   }
 
-  .album-item:hover & {
+  .album-item:hover img {
     opacity: .6;
   }
 
