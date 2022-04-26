@@ -4,7 +4,7 @@
 }
 
 .product-body__tabs {
-  margin-top: 18px;
+  margin-top: 37px;
 }
 
 .product-body__content {
@@ -27,6 +27,10 @@
   width: 50%;
   max-width: 550px;
   flex-shrink: 0;
+
+  @include below(md) {
+    margin-right: 25px;
+  }
 }
 
 .product-layout__intro {
@@ -56,6 +60,11 @@
   padding: 0;
   display: block;
   position: relative;
+
+  @include below(md) {
+    grid-column: span 4;
+    grid-row: span 4;
+  }
 }
 
 .product-gallery__main-link {
