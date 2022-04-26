@@ -157,7 +157,7 @@
           <div class="drawer-addess__item-body">
             <div class="drawer-addess__item-title">Офис:</div>
             <div class="drawer-addess__item-content">
-              <?php the_field('theme_map-office', 'options') ?>
+              <?php the_field('theme_address-office', 'options') ?>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@
           <div class="drawer-addess__item-body">
             <div class="drawer-addess__item-title">Склад:</div>
             <div class="drawer-addess__item-content">
-              <?php the_field('theme_map-warehouse', 'options') ?>
+              <?php the_field('theme_address-warehouse', 'options') ?>
             </div>
           </div>
         </div>
