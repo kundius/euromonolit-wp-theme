@@ -78,6 +78,10 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 200;
 
   &::before {
     content: '';
@@ -98,4 +102,12 @@
 .scroll-up_visible {
   opacity: 1;
   visibility: visible;
+}
+
+.grecaptcha-badge {
+  transform: translateX(54px);
+
+  &:hover {
+    transform: translateX(0);
+  }
 }
