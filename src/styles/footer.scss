@@ -99,10 +99,10 @@
   }
 
   @include below(sm) {
-    width: 48px;
-    height: 48px;
-    right: 10px;
-    bottom: 10px;
+    width: 54px;
+    height: 54px;
+    right: 14px;
+    bottom: 16px;
   }
 }
 
@@ -112,9 +112,11 @@
 }
 
 .grecaptcha-badge {
-  transform: translateX(54px);
+  opacity: 0.2;
+  // transform: translateX(54px);
 
   &:hover {
-    transform: translateX(0);
+  //   transform: translateX(0);
+  opacity: 1;
   }
 }
