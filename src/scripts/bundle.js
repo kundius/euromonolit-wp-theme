@@ -2,7 +2,7 @@
 // import "lazysizes/plugins/native-loading/ls.native-loading";
 // import "lazysizes/plugins/object-fit/ls.object-fit";
 // import "what-input";
-import fslightbox from 'fslightbox'
+// import fslightbox from 'fslightbox'
 
 import "./modal";
 import "./modalAttachment";
