@@ -1,13 +1,15 @@
+import { modal } from './modal'
+
 let queue = [];
 let current = null;
 
 const triggerButtons = document.querySelectorAll("[data-modal-attachment]") || [];
-const modal = document.getElementById("modal-attachment");
-const title = modal.querySelector('.modal-attachment__title');
-const description = modal.querySelector('.modal-attachment__description');
-const image = modal.querySelector('.modal-attachment__figure-image');
-const prev = modal.querySelector('.modal-attachment__prev');
-const next = modal.querySelector('.modal-attachment__next');
+const modalAttachment = document.getElementById("modal-attachment");
+const title = modalAttachment.querySelector('.modal-attachment__title');
+const description = modalAttachment.querySelector('.modal-attachment__description');
+const image = modalAttachment.querySelector('.modal-attachment__figure-image');
+const prev = modalAttachment.querySelector('.modal-attachment__prev');
+const next = modalAttachment.querySelector('.modal-attachment__next');
 
 function loadAttachment (id) {
   const formData = new FormData();
