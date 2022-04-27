@@ -527,12 +527,13 @@
 }
 
 .modal-attachment__info {
-  flex-grow: 1;
+  width: 320px;
+  margin-left: 45px;
+  flex-shrink: 0;
 }
 
 .modal-attachment__figure {
-  width: 320px;
-  margin-left: 45px;
+  flex-grow: 1;
   position: relative;
   display: flex;
   justify-content: center;
