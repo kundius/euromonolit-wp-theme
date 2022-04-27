@@ -48,7 +48,7 @@ $products = new WP_Query([
                 <li>строительным бригадам</li>
               </ul>
               <div class="intro__button">
-                <button type="submit" class="ui-button-secondary">
+                <button type="submit" class="ui-button-secondary" data-hystmodal-order>
                   Отправить заявку
                   <span class="ui-arrow-right"></span>
                 </button>
