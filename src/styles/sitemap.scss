@@ -2,16 +2,27 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -68px;
+  margin-top: -30px;
 }
 
 .sitemap-layout__primary {
   width: 50%;
   padding-left: 68px;
+  padding-top: 30px;
+
+  @include below(sm) {
+    width: 100%;
+  }
 }
 
 .sitemap-layout__secondary {
   width: 50%;
   padding-left: 68px;
+  padding-top: 30px;
+
+  @include below(sm) {
+    width: 100%;
+  }
 }
 
 ul.sitemap {
