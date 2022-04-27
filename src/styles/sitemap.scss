@@ -110,15 +110,13 @@ ul.sitemap > li.menu-item > ul.sub-menu {
   overflow: hidden;
   transition: max-height .3s ease;
   background: #f6f6f6;
-  border-top: 1px solid #f6f6f6;
-  border-bottom: 1px solid #f6f6f6;
-  padding: 0;
+  padding: 0 16px;
   margin: 0;
 }
 
 ul.sitemap > li.menu-item > ul.sub-menu > li.menu-item {
-  padding: 0 0 0 10px;
-  margin: 8px 16px;
+  padding: 4px 0 4px 10px;
+  margin: 0;
   line-height: 1;
 
   &::before {
@@ -126,7 +124,7 @@ ul.sitemap > li.menu-item > ul.sub-menu > li.menu-item {
     height: 4px;
     background: #4e4e51;
     left: 0;
-    top: 10px;
+    top: 14px;
   }
 }
 
