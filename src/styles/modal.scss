@@ -76,7 +76,7 @@
   width: 640px;
   padding: 20px;
   border-radius: 4px;
-  max-width: 100%;
+  max-width: calc(100% - 16px);
   overflow: visible;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
@@ -92,12 +92,28 @@
   width: 740px;
   background-color: #fffdf4;
   padding: 28px;
+
+  @include below(sm) {
+    padding: 20px;
+  }
 }
 
 .hystmodal--attachment .hystmodal__window {
   width: 1528px;
   background-color: #ffffff;
   padding: 80px;
+
+  @include below(lg) {
+    padding: 60px;
+  }
+
+  @include below(md) {
+    padding: 40px;
+  }
+
+  @include below(sm) {
+    padding: 20px;
+  }
 }
 
 .hystmodal--active .hystmodal__window {
