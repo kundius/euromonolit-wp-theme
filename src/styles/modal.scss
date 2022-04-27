@@ -120,6 +120,30 @@
   }
 }
 
+.hystmodal--attachment .hystmodal__close {
+  @include above(md) {
+    width: 72px;
+    height: 72px;
+    background-color: rgba(0,0,0,0.3);
+    color: rgba(255,255,255,0.74);
+  
+    &:hover {
+      background-color: #474747;
+      color: rgba(255,255,255,0.8);
+    }
+
+    &::before {
+      width: 32px;
+      height: 3px;
+    }
+  
+    &::after {
+      width: 32px;
+      height: 3px;
+    }
+  }
+}
+
 .hystmodal--active .hystmodal__window {
   transform: scale(1);
   opacity: 1;
@@ -164,51 +188,6 @@
   position: absolute;
   width: 16px;
   height: 2px;
-  background: currentColor;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.hystmodal__close-alt {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  width: 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  background-color: rgba(0,0,0,0.3);
-  color: rgba(255,255,255,0.74);
-
-  &:hover {
-    background-color: #474747;
-    color: rgba(255,255,255,0.8);
-  }
-}
-
-.hystmodal__close-alt::before {
-  content: '';
-  position: absolute;
-  width: 32px;
-  height: 3px;
-  background: currentColor;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.hystmodal__close-alt::after {
-  content: '';
-  position: absolute;
-  width: 32px;
-  height: 3px;
   background: currentColor;
   position: absolute;
   left: 50%;
@@ -576,6 +555,7 @@
   color: #2d76a6;
   cursor: pointer;
   border: 1px solid currentColor;
+  
   &:hover {
     color: #faaf00;
   }
@@ -583,6 +563,12 @@
 
 .modal-attachment {
   display: flex;
+  position: relative;
+  z-index: 10;
+
+  @include below(lg) {
+    flex-direction: column;
+  }
 }
 
 .modal-attachment__info {
@@ -592,6 +578,17 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  @include below(lg) {
+    width: 280px;
+    margin-left: 40px;
+  }
+
+  @include below(md) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 .modal-attachment__figure {
