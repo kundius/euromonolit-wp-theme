@@ -82,6 +82,10 @@
   transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
   transform: scale(0.9);
   opacity: 0;
+
+  @include below(sm) {
+    margin: 8px 0;
+  }
 }
 
 .hystmodal--small .hystmodal__window {
