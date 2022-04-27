@@ -16,6 +16,7 @@ $links = paginate_links([
   'total' => $total_pages,
   'current' => $current_page,
 ]);
+$ids = implode(',', array_map(function($item) { return $item['id']; }, $gallery));
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
@@ -31,8 +32,8 @@ $links = paginate_links([
       <?php get_template_part('partials/page-headline') ?>
 
       <div class="album">
-        <?php foreach($paged_gallery as $item): print_r($item) ?>
-        <div class="album-item">
+        <?php foreach($paged_gallery as $item): ?>
+        <div class="album-item" data-modal-attachment="<?php echo $item['id'] ?>" data-modal-attachment-queue="<?php echo $ids ?>">
           <div class="album-item__image">
             <img src="<?php echo $item['sizes']['theme-medium'] ?>" alt="" />
           </div>

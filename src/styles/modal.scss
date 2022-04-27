@@ -509,3 +509,55 @@
     color: #faaf00;
   }
 }
+
+.modal-attachment {
+  display: flex;
+}
+
+.modal-attachment__info {
+  flex-grow: 1;
+}
+
+.modal-attachment__figure {
+  width: 320px;
+  margin-left: 45px;
+  position: relative;
+}
+
+.modal-attachment__figure-wrap {
+
+}
+
+.modal-attachment__figure-image {
+
+}
+
+.modal-attachment__prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 72px;
+  height: 72px;
+  background-color: rgba(29,30,33,0.4);
+  border-radius: 50%;
+}
+
+.modal-attachment__next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 72px;
+  height: 72px;
+  background-color: rgba(29,30,33,0.4);
+  border-radius: 50%;
+}
+
+.modal-attachment__title {
+
+}
+
+.modal-attachment__description {
+
+}

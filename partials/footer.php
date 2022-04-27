@@ -536,4 +536,26 @@
   </div>
 </div>
 
-<?php wp_footer();?>
+<div class="hystmodal hystmodal--attachment" id="modal-attachment" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close"></button>
+
+      <div class="modal-attachment">
+        <div class="modal-attachment__figure">
+          <div class="modal-attachment__figure-wrap">
+            <img src="" alt="" class="modal-attachment__figure-image" />
+          </div>
+          <button class="modal-attachment__prev"></button>
+          <button class="modal-attachment__next"></button>
+        </div>
+        <div class="modal-attachment__info">
+          <div class="modal-attachment__title"></div>
+          <div class="modal-attachment__description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php wp_footer() ?>
