@@ -110,6 +110,8 @@ ul.sitemap > li.menu-item > ul.sub-menu {
   overflow: hidden;
   transition: max-height .3s ease;
   background: #f6f6f6;
+  border-top: 1px solid #f6f6f6;
+  border-bottom: 1px solid #f6f6f6;
   padding: 0;
   margin: 0;
 }
