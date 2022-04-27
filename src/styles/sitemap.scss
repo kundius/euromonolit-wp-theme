@@ -103,6 +103,7 @@
 .sitemap > .menu-item > .sub-menu > .menu-item {
   padding: 0 0 0 8px;
   margin: 8px 16px;
+  line-height: 1;
 
   &::before {
     width: 4px;
@@ -115,8 +116,12 @@
 
 .sitemap > .menu-item > .sub-menu > .menu-item > a {
   font-size: 16px;
-  line-height: 1;
   text-decoration: underline;
   color: #000000;
   font-weight: 400;
+
+  &:hover {
+    background: #faaf00;
+    color: #fff;
+  }
 }
