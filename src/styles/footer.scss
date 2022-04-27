@@ -75,6 +75,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 
   &::before {
     content: '';
