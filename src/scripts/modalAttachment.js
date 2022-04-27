@@ -75,8 +75,8 @@ triggerButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
     current = button.dataset.modalAttachment;
-    if (button.dataset.modalQueue) {
-      queue = button.dataset.modalQueue.split(',');
+    if (button.dataset.modalAttachmentQueue) {
+      queue = button.dataset.modalAttachmentQueue.split(',');
     }
     loadAttachment(current);
   });
