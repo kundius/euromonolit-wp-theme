@@ -539,7 +539,7 @@
 <div class="hystmodal hystmodal--attachment" id="modal-attachment" aria-hidden="true">
   <div class="hystmodal__wrap">
     <div class="hystmodal__window" role="dialog" aria-modal="true">
-      <button data-hystclose class="hystmodal__close"></button>
+      <button data-hystclose class="hystmodal__close-alt"></button>
 
       <div class="modal-attachment">
         <div class="modal-attachment__figure">
