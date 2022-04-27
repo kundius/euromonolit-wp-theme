@@ -1,15 +1,18 @@
 <?php
+$sticky = get_option('sticky_posts');
+
 $articles = new WP_Query([
     'post_type' => 'post',
     'order' => 'DESC',
     'orderby' => 'date',
     'posts_per_page' => -1,
-    'meta_query' => [
-        [
-            'key' => 'post_favorite',
-            'value' => 1,
-        ],
-    ],
+    'post__in' => $sticky,
+    // 'meta_query' => [
+    //     [
+    //         'key' => 'post_favorite',
+    //         'value' => 1,
+    //     ],
+    // ],
 ]);
 ?>
 <div class="side-news">
