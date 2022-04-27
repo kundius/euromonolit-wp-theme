@@ -23,6 +23,13 @@
   background: #000;
 }
 
+.album-item + .album-item {
+
+  @include below(sm) {
+    border-top: 20px solid #0d5c97;
+  }
+}
+
 .album-item__image {
   display: block;
   position: relative;
