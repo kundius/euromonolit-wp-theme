@@ -58,3 +58,41 @@
 .footer__creator a:hover {
   filter: grayscale(0);
 }
+
+.scroll-up {
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s ease;
+  width: 66px;
+  height: 66px;
+  border-radius: 12px;
+  background-color: rgba(29,48,56,0.3);
+  font-size: 12px;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-left: 4px solid currentColor;
+    border-top: 4px solid currentColor;
+    transform: rotate(45deg);
+    margin-bottom: 4px;
+  }
+
+  &:hover {
+    background-color: rgba(29,48,56,0.7);
+  }
+}
+
+.scroll-up_visible {
+  opacity: 1;
+  visibility: visible;
+}

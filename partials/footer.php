@@ -103,6 +103,10 @@
   </div>
 </section>
 
+<button class="scroll-up">
+  <span>Наверх</span>
+</button>
+
 <div class="drawer">
   <button class="drawer__overlay"></button>
 

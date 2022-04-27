@@ -1,8 +1,8 @@
-const specialOfferSmItems = document.querySelectorAll('.special-offer-sm') || []
+const specialOfferSmItems = document.querySelectorAll('.special-offer-sm') || [];
 
 specialOfferSmItems.forEach(function (item) {
-  const close = item.querySelector('.special-offer-sm__close')
+  const close = item.querySelector('.special-offer-sm__close');
   close.addEventListener('click', () => {
-    item.style.display = 'none'
-  })
-})
+    item.style.display = 'none';
+  });
+});
