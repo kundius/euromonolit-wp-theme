@@ -208,9 +208,17 @@
   background: transparent;
   cursor: pointer;
   transition: background .3s ease;
-
+  
   @include below(sm) {
-    display: none;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
   }
 }
 
@@ -239,6 +247,10 @@
   justify-content: center;
   color: #333333;
   transition: color .3s ease;
+  
+  @include below(sm) {
+    margin: 0;
+  }
 }
 
 .header__callback-icon svg {
@@ -258,6 +270,10 @@
   
   @include below(md) {
     font-size: 14px;
+  }
+  
+  @include below(sm) {
+    display: none;
   }
 }
 
