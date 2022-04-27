@@ -11,7 +11,7 @@ specialOfferSmItems.forEach(function (item) {
 const callbackOrModalItems = document.querySelectorAll('.js-callback-or-modal') || [];
 
 callbackOrModalItems.forEach(function (item) {
-  close.addEventListener('click', (e) => {
+  item.addEventListener('click', (e) => {
     if (window.matchMedia("(min-width: 640px)").matches) {
       e.preventDefault();
       modal.open("#modal-callback");
