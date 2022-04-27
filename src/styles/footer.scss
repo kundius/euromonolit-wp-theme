@@ -97,6 +97,13 @@
   &:hover {
     background-color: rgba(29,48,56,0.7);
   }
+
+  @include below(sm) {
+    width: 48px;
+    height: 48px;
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
 .scroll-up_visible {
