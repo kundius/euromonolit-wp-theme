@@ -5,6 +5,7 @@
 import fslightbox from 'fslightbox'
 
 import "./modal";
+import "./modalAttachment";
 import "./form";
 import "./drawer";
 import "./menuScrollTo";
