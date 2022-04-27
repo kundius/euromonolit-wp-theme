@@ -94,6 +94,12 @@
   padding: 28px;
 }
 
+.hystmodal--attachment .hystmodal__window {
+  width: 1528px;
+  background-color: #ffffff;
+  padding: 80px;
+}
+
 .hystmodal--active .hystmodal__window {
   transform: scale(1);
   opacity: 1;
@@ -114,6 +120,7 @@
   border: none;
   cursor: pointer;
   background: transparent;
+
   &:hover {
     background: #c9d7e0;
     color: #000;
@@ -192,6 +199,7 @@
 
 .modal-form__loader {
   display: none;
+
   ._mail-sending & {
     display: block;
   }
@@ -204,6 +212,7 @@
   right: 0;
   bottom: 0;
   display: none;
+
   ._mail-sent & {
     display: block;
   }
@@ -216,6 +225,7 @@
   right: 0;
   bottom: 0;
   display: none;
+
   ._mail-failed & {
     display: block;
   }
@@ -232,9 +242,11 @@
   display: flex;
   align-items: center;
   padding: 40px 20px;
+
   .modal-form-result_success & {
     background: #2e82b9;
   }
+
   .modal-form-result_failed & {
     background: #e48a00;
   }
@@ -522,6 +534,9 @@
   width: 320px;
   margin-left: 45px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-attachment__figure-wrap {
@@ -529,7 +544,9 @@
 }
 
 .modal-attachment__figure-image {
-
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .modal-attachment__prev {
