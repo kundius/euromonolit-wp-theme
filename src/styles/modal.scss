@@ -151,6 +151,7 @@
 
 .hystmodal__close {
   position: absolute;
+  z-index: 20;
   right: 4px;
   top: 4px;
   width: 28px;
@@ -681,6 +682,10 @@
   line-height: 1;
   color: #2a2c2f;
   font-weight: 700;
+
+  @include below(sm) {
+    font-size: 18px;
+  }
 }
 
 .modal-attachment__description {
@@ -691,5 +696,10 @@
   
   &:empty {
     display: none;
+  }
+
+  @include below(sm) {
+    margin-top: 12px;
+    font-size: 14px;
   }
 }
