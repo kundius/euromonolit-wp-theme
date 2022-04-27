@@ -62,15 +62,20 @@ class Theme implements Service
     private function add_shortcodes(): void
     {
         \add_shortcode('template_part', [$this, 'template_part']);
+        add_shortcode( 'foobar', function ( $atts ){
+            return 'Привет! Я шорткод.';
+        } );
+
+
     }
 
     private function template_part($atts, $content = null): string
     {
-        $tp_atts = shortcode_atts([
+        $tp_atts = \shortcode_atts([
             'path' =>  null,
         ], $atts);         
         ob_start();  
-        get_template_part($tp_atts['path']);  
+        \get_template_part($tp_atts['path']);  
         $output = ob_get_contents();  
         ob_end_clean();  
         return $output; 
