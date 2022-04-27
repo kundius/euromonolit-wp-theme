@@ -35,14 +35,8 @@ class Theme implements Service
      */
     public function after_setup_theme(): void
     {
-        /**
-         * Init the supports.
-         */
         $this->add_theme_supports();
-
-        /**
-         * Load translations.
-         */
+        $this->add_shortcodes();
         $this->i18n();
     }
 
@@ -63,6 +57,23 @@ class Theme implements Service
         \add_theme_support('wp-block-styles');
         \add_theme_support('post-thumbnails');
         \add_theme_support('html5', ['comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'script', 'style']);
+    }
+
+    private function add_shortcodes(): void
+    {
+        \add_shortcode('template_part', [$this, 'template_part']);
+    }
+
+    private function template_part($atts, $content = null): string
+    {
+        $tp_atts = shortcode_atts([
+            'path' =>  null,
+        ], $atts);         
+        ob_start();  
+        get_template_part($tp_atts['path']);  
+        $output = ob_get_contents();  
+        ob_end_clean();  
+        return $output; 
     }
 
     /**
