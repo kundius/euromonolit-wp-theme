@@ -2,6 +2,9 @@
 /*
 Template Name: Продукт
 */
+$gallery = get_field('product_gallery');
+$ids = implode(',', array_map(function($item) { return $item['id']; }, $gallery));
+array_unshift($ids , get_post_thumbnail_id());
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">
@@ -19,11 +22,11 @@ Template Name: Продукт
       <div class="page-body product-body">
         <div class="ui-container">
           <div class="product-layout">
-            <?php if ($gallery = get_field('product_gallery')): ?>
+            <?php if ($gallery): ?>
             <div class="product-layout__gallery">
               <div class="product-gallery">
                 <figure class="product-gallery__main">
-                  <a href="<?php the_post_thumbnail_url('full') ?>" class="product-gallery__main-link" data-fslightbox="product">
+                  <a href="<?php the_post_thumbnail_url('full') ?>" class="product-gallery__main-link" data-modal-attachment="<?php echo get_post_thumbnail_id() ?>" data-modal-attachment-queue="<?php echo $ids ?>">
                     <img src="<?php the_post_thumbnail_url('theme-medium') ?>" alt="<?php the_title() ?>" />
                   </a>
                   <button class="product-gallery__main-order" data-hystmodal="#modal-order">
@@ -32,7 +35,7 @@ Template Name: Продукт
                 </figure>
                 <?php foreach ($gallery as $item): ?>
                 <figure class="product-gallery__thumb">
-                  <a href="<?php echo $item['url'] ?>" class="product-gallery__thumb-link" data-fslightbox="product">
+                  <a href="<?php echo $item['url'] ?>" class="product-gallery__thumb-link" data-modal-attachment="<?php echo $item['id'] ?>" data-modal-attachment-queue="<?php echo $ids ?>">
                     <img src="<?php echo $item['sizes']['theme-medium'] ?>" alt="<?php echo $item['title'] ?>" />
                   </a>
                 </figure>
