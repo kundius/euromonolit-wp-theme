@@ -553,23 +553,27 @@
 .modal-attachment__prev {
   position: absolute;
   top: 50%;
-  left: 0;
   transform: translateY(-50%);
   width: 72px;
   height: 72px;
-  background-color: rgba(29,30,33,0.4);
-  border-radius: 50%;
+  background-color: rgba(29,30,33,.4);
+  border-radius: 50% 0 0 50%;
+  border: none;
+  left: -32px;
+  padding: 0 0 0 32px;
 }
 
 .modal-attachment__next {
   position: absolute;
   top: 50%;
-  right: 0;
   transform: translateY(-50%);
   width: 72px;
   height: 72px;
-  background-color: rgba(29,30,33,0.4);
-  border-radius: 50%;
+  background-color: rgba(29,30,33,.4);
+  border-radius: 50% 0 0 50%;
+  border: none;
+  right: -32px;
+  padding: 0 32px 0 0;
 }
 
 .modal-attachment__title {
