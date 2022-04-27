@@ -101,7 +101,7 @@
 }
 
 .sitemap > .menu-item > .sub-menu > .menu-item {
-  padding: 0 0 0 8px;
+  padding: 0 0 0 10px;
   margin: 8px 16px;
   line-height: 1;
 
@@ -123,5 +123,6 @@
   &:hover {
     background: #faaf00;
     color: #fff;
+    text-decoration: none;
   }
 }
