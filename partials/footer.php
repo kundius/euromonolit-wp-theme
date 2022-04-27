@@ -296,7 +296,7 @@
   </div>
 </div>
 
-<div class="hystmodal hystmodal--small" id="callback" aria-hidden="true">
+<div class="hystmodal hystmodal--small" id="modal-callback" aria-hidden="true">
   <div class="hystmodal__wrap">
     <div class="hystmodal__window" role="dialog" aria-modal="true">
       <button data-hystclose class="hystmodal__close"></button>
