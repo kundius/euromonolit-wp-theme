@@ -20,7 +20,7 @@
         </div>
         <div class="page-404-code">
           <div class="page-404-code__number">404</div>
-          <div class="page-404-code__desc">Страница не найдена</div>
+          <div class="page-404-code__desc">Страница не&nbsp;найдена</div>
         </div>
         <div class="page-404-desc">
           Возможно, она была перемещена или удалена.<br />
