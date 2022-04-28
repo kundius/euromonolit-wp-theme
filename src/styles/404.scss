@@ -1,0 +1,107 @@
+.page-404-main {
+  width: 100%;
+  min-height: 100vh;
+  background: #0d5c97 url('../images/bg-404.png') no-repeat 100% 100%;
+  padding-top: 94px;
+  padding-bottom: 200px;
+}
+
+.page-404-header {
+  display: flex;
+  align-items: center;
+}
+
+.page-404-header__logo {
+  margin-right: 30px;
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.page-404-header__desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.388);
+  line-height: 22px;
+  letter-spacing: 0.1em;
+}
+
+.page-404-code {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 94px;
+}
+
+.page-404-code__number {
+  font-weight: 100;
+  font-size: 92px;
+  line-height: 1;
+  color: #fff;
+}
+
+.page-404-code__desc {
+  font-size: 18px;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: 0.3em;
+  line-height: 1;
+}
+
+.page-404-desc {
+  margin-top: 64px;
+  width: 580px;
+  max-width: 100%;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.149);
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgb(250, 175, 0);
+    }
+  }
+}
+
+.page-404-phone {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 580px;
+  max-width: 100%;
+}
+
+.page-404-phone__label {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+}
+
+.page-404-phone__number {
+  font-size: 20px;
+  color: #f9f9f9;
+  letter-spacing: 0.01em;
+  line-height: 30px;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(250, 175, 0);
+  }
+}
