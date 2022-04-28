@@ -87,38 +87,6 @@ $emulsifier = get_field('emulsifier');
               </div>
               <?php endwhile?>
               <?php wp_reset_postdata()?>
-
-              <?php if ($components = get_post(150)): ?>
-              <div class="catalog-grid__cell-components">
-                <article class="catalog-card catalog-card_horisontal">
-                  <figure class="catalog-card__image">
-                    <img src="<?php echo get_the_post_thumbnail_url($components, 'theme-medium')?>" alt="<?php echo get_the_title($components)?>" />
-                    <button class="catalog-card__order" data-hystmodal-order="<?php echo get_the_title($components)?>">
-                      <span>Отправить заявку на аренду</span>
-                    </button>
-                  </figure>
-                  <div class="catalog-card__body">
-                    <div class="catalog-card__headline">
-                      <h2 class="catalog-card__title">
-                        <?php echo get_the_title($components)?>
-                      </h2>
-                      <div class="catalog-card__subtitle">
-                        <?php the_field('product_price', $components)?>
-                      </div>
-                    </div>
-                    <div class="catalog-card__description">
-                        <?php the_field('product_description', $components)?>
-                    </div>
-                    <div class="catalog-card__more">
-                      <a href="<?php the_permalink($components)?>" class="ui-button-more" data-hystmodal="#feedback">
-                        Узнать больше
-                        <span class="ui-arrow-right"></span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <?php endif?>
             </div>
           </div>
           <?php endif?>
