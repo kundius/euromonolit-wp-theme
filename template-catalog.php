@@ -37,13 +37,13 @@ $emulsifier = get_field('emulsifier');
           <?php if ($special_offer && $special_offer['show']): ?>
           <div class="catalog-body__special-offer">
             <div class="special-offer-sm">
-              <div class="special-offer-sm__title">
+              <div class="special-offer-sm__title" data-hystmodal-order>
                 <?php echo $special_offer['title'] ?>
                 <div class="special-offer-sm__date">
                   <?php echo $special_offer['date'] ?>
                 </div>
               </div>
-              <div class="special-offer-sm__description">
+              <div class="special-offer-sm__description" data-hystmodal-order>
                 <?php echo $special_offer['description'] ?>
               </div>
               <button class="special-offer-sm__close"></button>
