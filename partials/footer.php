@@ -93,7 +93,7 @@
       <?php the_field('theme_counters', 'options') ?>
     </div>
     <div class="footer__map">
-      <a href="#">Карта сайта</a>
+      <a href="<?php the_permalink(297) ?>">Карта сайта</a>
     </div>
     <div class="footer__creator">
       <a href="https://domenart-studio.ru/" target="_blank">

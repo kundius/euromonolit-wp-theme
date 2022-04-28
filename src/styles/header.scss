@@ -363,10 +363,10 @@
   }
 }
 
-.header-menu .menu-item {
+.header-menu > .menu-item {
 }
 
-.header-menu .menu-item + .menu-item {
+.header-menu > .menu-item + .menu-item {
   margin-left: 50px;
 
   @include below(lg) {
@@ -378,7 +378,7 @@
   }
 }
 
-.header-menu .menu-item a {
+.header-menu > .menu-item a {
   display: block;
   line-height: 36px;
   font-weight: bold;
@@ -392,7 +392,7 @@
   }
 }
 
-.header-menu .menu-item a::after {
+.header-menu > .menu-item > a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -405,12 +405,16 @@
   transition: all .3s ease;
 }
 
-.header-menu .menu-item a:hover {
+.header-menu > .menu-item > a:hover {
   color: #000000;
   text-decoration: none;
 }
 
-.header-menu .menu-item a:hover::after {
+.header-menu > .menu-item > a:hover::after {
   visibility: visible;
   opacity: 1;
+}
+
+.header-menu > .menu-item > .sub-menu {
+  display: none;
 }
