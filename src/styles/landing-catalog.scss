@@ -52,16 +52,16 @@
   color: rgb(0, 0, 0);
   line-height: 1.5;
 
-  a {
+  a:not(.ui-button-submit) {
     color: #3681b3;
     text-decoration: underline;
   }
 
-  a:visited {
+  a:not(.ui-button-submit):visited {
     color: #846bb2;
   }
 
-  a:hover {
+  a:not(.ui-button-submit):hover {
     color: #fff;
     background: #faaf00;
     text-decoration: none;

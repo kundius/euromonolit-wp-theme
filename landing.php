@@ -149,9 +149,7 @@ $products = new WP_Query([
 
           <div class="landing-catalog__subtitle">
             <a href="<?php the_permalink(256) ?>" target="_blank">ГК «Евромонолит»</a> предлагает в аренду специализированное оборудование для коттеджного строительства:<br />
-          </div>
-
-          <div class="landing-catalog__subtitle">
+            <br />
             <a href="/wp-content/uploads/2022/04/предложение-о-струдничестве.pdf" target="_blank" class="ui-button-submit ui-button-submit_glare">Предложение о сотрудничестве</a>
           </div>
 
