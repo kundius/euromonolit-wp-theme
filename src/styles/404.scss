@@ -1,9 +1,13 @@
 .page-404-main {
   width: 100%;
   min-height: 100vh;
-  background: #0d5c97 url('../images/bg-404.png') no-repeat 100% 100%;
+  background: #0d5c97 url('../images/bg-404.png') no-repeat 50% 100%;
   padding-top: 94px;
   padding-bottom: 200px;
+
+  @media (min-width: 1920px) {
+    background-position: 100% 100%;
+  }
 }
 
 .page-404-header {
@@ -51,6 +55,7 @@
   color: #fff;
   letter-spacing: 0.3em;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .page-404-desc {
