@@ -49,10 +49,17 @@
 }
 
 .archive-grid {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+  // overflow: hidden;
   margin-left: -30px;
   margin-top: -30px;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 
   @include below(lg) {
     margin-left: -20px;
@@ -64,6 +71,11 @@
   padding-left: 30px;
   padding-top: 30px;
   width: 50%;
+  float: left;
+
+  &:nth-child(2n) {
+    float: right;
+  }
 
   @include below(lg) {
     padding-left: 20px;
