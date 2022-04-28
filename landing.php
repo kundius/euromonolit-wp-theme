@@ -146,7 +146,7 @@ $products = new WP_Query([
           </h1>
 
           <div class="landing-catalog__subtitle">
-            <a href="https://euromonolit.com/" target="_blank">ГК «Евромонолит»</a> предлагает в аренду специализированное оборудование для коттеджного строительства:<br />
+            <a href="<?php the_permalink(256) ?>" target="_blank">ГК «Евромонолит»</a> предлагает в аренду специализированное оборудование для коттеджного строительства:<br />
           </div>
 
           <div class="landing-catalog__subtitle">
@@ -196,18 +196,36 @@ $products = new WP_Query([
             в отличном состоянии, гарантировано качество всех элементов опалубки, в числе которых щиты,
             замки, гайки, анкера, стойки, балки и другие.
           </div>
+        </div>
+      </section>
 
-          <div class="landing-catalog__action">
-            <div class="special-offer">
-              <div class="special-offer__title">
-                Спецпредложение
-                <div class="special-offer__date">
-                  только до 17 мая 2022
-                </div>
+      <section class="news" id="news">
+        <div class="ui-container">
+          <div class="news__title">
+            Акции
+            <!-- <a href="<?php echo get_term_link(7) ?>" class="news__more">смотреть все</a> -->
+          </div>
+
+          <div class="news__items">
+            <div class="news__grid">
+              <?php while ($news->have_posts()): ?>
+              <?php $news->the_post()?>
+              <div class="news__grid-cell">
+                <article class="news-item">
+                  <div class="news-item__date"><?php the_date('d.m.Y')?></div>
+                  <div class="news-item__title">
+                    <a href="<?php the_permalink()?>"><?php the_title()?></a>
+                  </div>
+                  <div class="news-item__desc">
+                    <?php the_excerpt()?>
+                  </div>
+                  <div class="news-item__more">
+                    <a href="<?php the_permalink()?>">Читать далее <span class="ui-arrow-right"></span></a>
+                  </div>
+                </article>
               </div>
-              <div class="special-offer__description">
-                Скидки при раннем бронировании!
-              </div>
+              <?php endwhile?>
+              <?php wp_reset_postdata()?>
             </div>
           </div>
         </div>
@@ -391,38 +409,6 @@ $products = new WP_Query([
       <?php get_template_part('partials/section-how-we-work') ?>
 
       <?php get_template_part('partials/section-get-estimate') ?>
-
-      <section class="news" id="news">
-        <div class="ui-container">
-          <div class="news__title">
-            Новости
-            <a href="<?php echo get_term_link(7) ?>" class="news__more">смотреть все</a>
-          </div>
-
-          <div class="news__items">
-            <div class="news__grid">
-              <?php while ($news->have_posts()): ?>
-              <?php $news->the_post()?>
-              <div class="news__grid-cell">
-                <article class="news-item">
-                  <div class="news-item__date"><?php the_date('d.m.Y')?></div>
-                  <div class="news-item__title">
-                    <a href="<?php the_permalink()?>"><?php the_title()?></a>
-                  </div>
-                  <div class="news-item__desc">
-                    <?php the_excerpt()?>
-                  </div>
-                  <div class="news-item__more">
-                    <a href="<?php the_permalink()?>">Читать далее <span class="ui-arrow-right"></span></a>
-                  </div>
-                </article>
-              </div>
-              <?php endwhile?>
-              <?php wp_reset_postdata()?>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section class="section-map">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af35372aecc6daf7269a14f23dd0162eca35df6f7bc4c1810693c2e6d5328dbe4&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
