@@ -12,7 +12,7 @@ $products = new WP_Query([
     <div class="hystmodal__window" role="dialog" aria-modal="true">
       <button data-hystclose class="hystmodal__close"></button>
 
-      <form action="/wp-json/contact-form-7/v1/contact-forms/12/feedback" method="post" class="modal-form js-form">
+      <form action="/wp-json/contact-form-7/v1/contact-forms/234/feedback" method="post" class="modal-form js-form">
         <div class="modal-form__title">
           Заказать расчет
         </div>
@@ -212,7 +212,7 @@ $products = new WP_Query([
     <div class="hystmodal__window" role="dialog" aria-modal="true">
       <button data-hystclose class="hystmodal__close"></button>
 
-      <form action="/wp-json/contact-form-7/v1/contact-forms/19/feedback" method="post" class="order-form js-form">
+      <form action="/wp-json/contact-form-7/v1/contact-forms/12/feedback" method="post" class="order-form js-form">
         <input type="hidden" name="pre-product" value="" />
 
         <div class="order-form__process">
