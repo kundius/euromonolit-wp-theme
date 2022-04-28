@@ -194,7 +194,7 @@ $products = new WP_Query([
                 <article class="catalog-card">
                   <figure class="catalog-card__image">
                     <img src="<?php echo get_the_post_thumbnail_url($components, 'theme-medium')?>" alt="<?php echo get_the_title($components)?>" />
-                    <button class="catalog-card__order" data-hystmodal-order="<?php echo get_the_title($components)?>">
+                    <button class="catalog-card__order" data-hystmodal="#feedback">
                       <span>Отправить заявку на аренду</span>
                     </button>
                   </figure>
@@ -211,7 +211,7 @@ $products = new WP_Query([
                         <?php the_field('product_description', $components)?>
                     </div>
                     <div class="catalog-card__more">
-                      <a href="<?php the_permalink($components)?>" class="ui-button-more" data-hystmodal-order="<?php echo get_the_title($components)?>">
+                      <a href="<?php the_permalink($components)?>" class="ui-button-more" data-hystmodal="#feedback">
                         Узнать больше
                         <span class="ui-arrow-right"></span>
                       </a>
