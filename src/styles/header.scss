@@ -364,6 +364,7 @@
 }
 
 .header-menu > .menu-item {
+  position: relative;
 }
 
 .header-menu > .menu-item + .menu-item {
@@ -378,7 +379,7 @@
   }
 }
 
-.header-menu > .menu-item a {
+.header-menu > .menu-item > a {
   display: block;
   line-height: 36px;
   font-weight: bold;
@@ -405,11 +406,13 @@
   transition: all .3s ease;
 }
 
+.header-menu > .menu-item.current-menu-item > a,
 .header-menu > .menu-item > a:hover {
   color: #000000;
   text-decoration: none;
 }
 
+.header-menu > .menu-item.current-menu-item > a::after,
 .header-menu > .menu-item > a:hover::after {
   visibility: visible;
   opacity: 1;
@@ -417,4 +420,40 @@
 
 .header-menu > .menu-item > .sub-menu {
   display: none;
+  width: 260px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.header-menu > .menu-item:hover > .sub-menu {
+  display: block;
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+  background-color: rgb(229, 231, 238);
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.23);  
+}
+
+.header-menu > .menu-item:hover > .sub-menu > .menu-item {
+  position: relative;
+}
+
+.header-menu > .menu-item:hover > .sub-menu > .menu-item + .menu-item {
+  margin-top: 1px;
+}
+
+.header-menu > .menu-item:hover > .sub-menu > .menu-item > a {
+  display: block;
+  line-height: 16px;
+  padding: 12px;
+  font-weight: bold;
+  color: #5f5f5f;
+  font-size: 15px;
+  background: #fffbee;
+}
+
+.header-menu > .menu-item:hover > .sub-menu > .menu-item > a:hover {
+  color: #000;
+  background: #fff3cf;
 }
