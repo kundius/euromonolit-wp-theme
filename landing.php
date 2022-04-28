@@ -2,12 +2,14 @@
 /*
 Template Name: Главная
 */
-$news = new WP_Query([
+$sticky = get_option('sticky_posts');
+$sticky_posts = new WP_Query([
 	'posts_per_page' => 3,
   'post_type' => 'post',
   'order' => 'DESC',
   'orderby' => 'date',
   'cat' => 7,
+  'post__in' => $sticky,
 ]);
 $products = new WP_Query([
   'post_type' => 'page',
@@ -208,8 +210,8 @@ $products = new WP_Query([
 
           <div class="news__items">
             <div class="news__grid">
-              <?php while ($news->have_posts()): ?>
-              <?php $news->the_post()?>
+              <?php while ($sticky_posts->have_posts()): ?>
+              <?php $sticky_posts->the_post()?>
               <div class="news__grid-cell">
                 <article class="news-item">
                   <div class="news-item__date"><?php the_date('d.m.Y')?></div>
