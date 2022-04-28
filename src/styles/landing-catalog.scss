@@ -76,6 +76,9 @@
 
 .landing-catalog__items {
   margin-top: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 860px;
 }
 
 .landing-catalog__grid {
@@ -94,7 +97,7 @@
 .landing-catalog__grid-cell {
   padding-left: 33px;
   padding-top: 33px;
-  width: calc(100% / 3);
+  width: calc(100% / 2);
 
   @include below(lg) {
     padding-left: 15px;
