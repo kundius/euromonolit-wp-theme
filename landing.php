@@ -211,7 +211,7 @@ $products = new WP_Query([
                         <?php the_field('product_description', $components)?>
                     </div>
                     <div class="catalog-card__more">
-                      <a href="<?php the_permalink($components)?>" class="ui-button-more" data-hystmodal="#feedback">
+                      <a href="<?php the_permalink($components)?>" class="ui-button-more" data-hystmodal-order="<?php echo get_the_title($components)?>">
                         Узнать больше
                         <span class="ui-arrow-right"></span>
                       </a>

@@ -1,3 +1,12 @@
+<?php
+$products = new WP_Query([
+  'post_type' => 'page',
+  'post_parent' => 52,
+  'order' => 'ASC',
+  'orderby' => 'menu_order',
+]);
+?>
+
 <div class="hystmodal hystmodal--small" id="feedback" aria-hidden="true">
   <div class="hystmodal__wrap">
     <div class="hystmodal__window" role="dialog" aria-modal="true">
@@ -204,6 +213,8 @@
       <button data-hystclose class="hystmodal__close"></button>
 
       <form action="/wp-json/contact-form-7/v1/contact-forms/19/feedback" method="post" class="order-form js-form">
+        <input type="hidden" name="pre-product" value="" />
+
         <div class="order-form__process">
           <div class="order-form-headline">
             <div class="order-form-headline__title">
@@ -242,34 +253,17 @@
             <div class="order-form-products__title">Хочу арендовать:</div>
             
             <div class="order-form-products__group">
+              <?php while ($products->have_posts()): ?>
+              <?php $products->the_post()?>
               <div class="order-form-products__group-item">
                 <label class="ui-checkbox-field">
-                  <input type="checkbox" name="product" value="Мелкощитовую опалубку стен">
+                  <input type="checkbox" name="product" value="<?php the_title() ?>">
                   <span></span>
-                  Мелкощитовую опалубку стен
+                  <?php the_title() ?>
                 </label>
               </div>
-              <div class="order-form-products__group-item">
-                <label class="ui-checkbox-field">
-                  <input type="checkbox" name="product" value="Мелкощитовую опалубку стен">
-                  <span></span>
-                  Мелкощитовую опалубку стен
-                </label>
-              </div>
-              <div class="order-form-products__group-item">
-                <label class="ui-checkbox-field">
-                  <input type="checkbox" name="product" value="Мелкощитовую опалубку стен">
-                  <span></span>
-                  Мелкощитовую опалубку стен
-                </label>
-              </div>
-              <div class="order-form-products__group-item">
-                <label class="ui-checkbox-field">
-                  <input type="checkbox" name="product" value="Мелкощитовую опалубку стен">
-                  <span></span>
-                  Мелкощитовую опалубку стен
-                </label>
-              </div>
+              <?php endwhile?>
+              <?php wp_reset_postdata()?>
             </div>
           </div>
 
