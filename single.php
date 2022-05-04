@@ -93,31 +93,32 @@ if (strpos($post->post_content, '<!--more-->')) {
             <div class="see-also__title">Читайте также:</div>
             <div class="see-also__grid">
               <?php foreach ($see_also as $item): ?>
-              <?php print_r($item)?>
-              <?php setup_postdata($item)?>
               <div class="see-also__grid-cell">
                 <article class="archive-card">
                   <figure class="archive-card__image">
-                    <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
+                    <img src="<?php echo get_the_post_thumbnail_url($item->ID, 'theme-medium') ?>" alt="<?php echo get_the_title($item->ID) ?>" />
                   </figure>
                   <div class="archive-card__body">
                     <div class="archive-card__date">
-                      <?php the_date('d.m.Y')?>
+                      <?php echo get_the_date('d.m.Y', $item->ID) ?>
                     </div>
                     <h2 class="archive-card__title">
-                      <a href="<?php the_permalink()?>"><?php the_title()?></a>
+                      <a href="<?php the_permalink($item->ID) ?>"><?php echo get_the_title($item->ID) ?></a>
                     </h2>
                     <div class="archive-card__excerpt">
-                      <?php the_excerpt()?>
+                      <?php echo get_the_excerpt($item->ID) ?>
                     </div>
                   </div>
+                  <?php if ($tags = get_the_tags($item->ID)): ?>
                   <div class="archive-card__tags">
-                    <?php the_tags('')?>
+                    <?php foreach ($tags as $tag): ?>
+                    <a href="<?php echo get_term_link($tag->term_id) ?>"><?php echo $tag->name ?></a>
+                    <?php endforeach ?>
                   </div>
+                  <?php endif ?>
                 </article>
               </div>
-              <?php endforeach?>
-              <?php wp_reset_postdata()?>
+              <?php endforeach ?>
             </div>
           </div>
           <?php endif?>
