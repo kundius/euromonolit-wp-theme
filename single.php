@@ -93,6 +93,7 @@ if (strpos($post->post_content, '<!--more-->')) {
             <div class="see-also__title">Читайте также:</div>
             <div class="see-also__grid">
               <?php foreach ($see_also as $item): ?>
+              <?php print_r($item)?>
               <?php setup_postdata($item)?>
               <div class="see-also__grid-cell">
                 <article class="archive-card">
