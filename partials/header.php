@@ -36,9 +36,14 @@
 
       <div class="header__contacts-sep-2"></div>
 
-      <a href="tel:<?php the_field('theme_phone', 'options') ?>" class="header__phone">
-        <?php the_field('theme_phone', 'options') ?>
-      </a>
+      <div class="header__phones">
+        <a href="tel:<?php the_field('theme_phone', 'options') ?>" class="header__phone">
+          <?php the_field('theme_phone', 'options') ?>
+        </a>
+        <a href="tel:<?php the_field('theme_phone-second', 'options') ?>" class="header__phone">
+          <?php the_field('theme_phone-second', 'options') ?>
+        </a>
+      </div>
     </div>
 
     <div class="header__menu">
