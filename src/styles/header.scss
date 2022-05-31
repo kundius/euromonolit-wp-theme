@@ -18,7 +18,7 @@
   height: 88px;
 
   @include below(sm) {
-    height: 68px;
+    height: 60px;
   }
 }
 
@@ -90,7 +90,7 @@
   @include below(lg) {
     width: 240px;
   }
-  
+
   @include below(md) {
     width: 200px;
   }
@@ -300,21 +300,18 @@
   // @include below(lg) {
   //   font-size: 20px;
   // }
-  
+
   // @include below(md) {
   //   font-size: 18px;
   // }
 
   @include below(sm) {
+    font-size: 14px;
     position: absolute;
-    top: 100%;
+    top: 40px;
     left: 50%;
-    width: 100%;
     transform: translateX(-50%);
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 2px 8px;
-    gap: 4px;
+    margin-left: -16px;
   }
 }
 
@@ -334,6 +331,9 @@
 
   @include below(sm) {
     font-size: 16px;
+    .header__phone + & {
+      display: none;
+    }
   //   position: absolute;
   //   top: 40px;
   //   left: 50%;
