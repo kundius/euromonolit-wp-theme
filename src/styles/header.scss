@@ -18,7 +18,7 @@
   height: 88px;
 
   @include below(sm) {
-    height: 60px;
+    height: 68px;
   }
 }
 
@@ -32,7 +32,8 @@
   }
 
   @include below(sm) {
-    height: 60px;
+    height: 48px;
+    margin-bottom: 20px;
   }
 }
 
@@ -305,13 +306,15 @@
   // }
 
   @include below(sm) {
-    // font-size: 14px;
     position: absolute;
-    top: 40px;
+    top: 100%;
     left: 50%;
+    width: 100%;
     transform: translateX(-50%);
-
-    margin-left: -16px;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2px 8px;
+    gap: 4px;
   }
 }
 
@@ -329,15 +332,15 @@
   //   font-size: 12px;
   // }
 
-  // @include below(sm) {
-  //   font-size: 14px;
+  @include below(sm) {
+    font-size: 16px;
   //   position: absolute;
   //   top: 40px;
   //   left: 50%;
   //   transform: translateX(-50%);
 
   //   margin-left: -16px;
-  // }
+  }
 }
 
 .header__contacts-sep-1 {
