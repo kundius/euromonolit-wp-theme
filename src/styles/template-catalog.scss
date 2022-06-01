@@ -67,19 +67,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -33px 0 0 -33px;
+  margin-left: -33px;
+  margin-top: -33px;
 
   @include below(lg) {
-    margin: -15px 0 0 -15px;
+    margin-left: -15px;
+    margin-top: -15px;
   }
 }
 
 .catalog-grid__cell {
-  padding: 33px 0 0 33px;
-  width: calc(100% / 3);
+  padding-left: 33px;
+  padding-top: 33px;
+  width: calc(100% / 2);
 
   @include below(lg) {
-    padding: 15px 0 0 15px;
+    padding-left: 15px;
+    padding-top: 15px;
   }
   
   @include below(md) {
@@ -369,6 +373,9 @@
 
 .catalog-body__products {
   margin-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 860px;
 }
 
 .catalog-body__content {
