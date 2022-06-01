@@ -23,6 +23,18 @@
     padding-bottom: 40px;
     background-image: url('../images/bg-intro-sm.jpg');
     background-size: cover;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, .2);
+      z-index: -1;
+    }
   }
 }
 
@@ -41,7 +53,7 @@
   }
 
   @include below(sm) {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
@@ -62,7 +74,7 @@
     font-size: 18px;
     line-height: 1.111;
     letter-spacing: -0.01em;
-    margin-top: 6px;
+    margin-top: 8px;
   }
 }
 
@@ -78,8 +90,7 @@
 
   @include below(sm) {
     font-size: 16px;
-    line-height: 1;
-    margin-top: 12px;
+    margin-top: 16px;
   }
 }
 
@@ -128,7 +139,6 @@
 
   @include below(sm) {
     font-size: 14px;
-    line-height: 1;
   }
 }
 
@@ -152,7 +162,7 @@
   border-radius: 50%;
 
   @include below(sm) {
-    top: 6px;
+    top: 8px;
   }
 }
 
