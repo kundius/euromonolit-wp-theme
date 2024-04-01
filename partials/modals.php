@@ -253,18 +253,31 @@ $products = new WP_Query([
             <div class="order-form-products__title">Хочу арендовать:</div>
             
             <div class="order-form-products__group">
-              <?php while ($products->have_posts()): ?>
-              <?php $products->the_post()?>
-              <div class="order-form-products__group-item">
+               <div class="order-form-products__group-item">
                 <label class="ui-checkbox-field">
-                  <input type="checkbox" name="product" value="<?php the_title() ?>">
+                  <input type="checkbox" name="product" value="Мелкощитовая опалубка">
                   <span></span>
-                  <?php the_title() ?>
-                </label>
+                  Мелкощитовая опалубка                </label>
               </div>
-              <?php endwhile?>
-              <?php wp_reset_postdata()?>
-            </div>
+                                          <div class="order-form-products__group-item">
+                <label class="ui-checkbox-field">
+                  <input type="checkbox" name="product" value="Опалубка перекрытия">
+                  <span></span>
+                  Опалубка перекрытия                </label>
+              </div>
+                                          <div class="order-form-products__group-item">
+                <label class="ui-checkbox-field">
+                  <input type="checkbox" name="product" value="Ламинированная фанера">
+                  <span></span>
+                  Ламинированная фанера                </label>
+              </div>
+                                          <div class="order-form-products__group-item">
+                <label class="ui-checkbox-field">
+                  <input type="checkbox" name="product" value="Крупный щит">
+                  <span></span>
+                  Крупный щит                </label>
+              </div>
+             </div>
           </div>
 
           <div class="order-form__field">
