@@ -218,7 +218,7 @@ $products = new WP_Query([
         <div class="order-form__process">
           <div class="order-form-headline">
             <div class="order-form-headline__title">
-              Заказать аренду
+              Получить расчет
             </div>
             <div class="order-form-headline__subtitle">
             </div>
