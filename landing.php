@@ -56,7 +56,7 @@ $products = new WP_Query([
                 </button>
               </div>
             </div>
-            <div class="intro__layout-form">
+            <div class="intro__layout-form" style="display: none">
               <form action="/wp-json/contact-form-7/v1/contact-forms/19/feedback" method="post" class="intro-form js-form">
                 <div class="intro-form__title">
                   Заказать<br />
