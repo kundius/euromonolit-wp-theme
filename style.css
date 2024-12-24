@@ -18,3 +18,19 @@ Version: 1.0.0
   background-size: 428px 518px, 398px 126px, 133px 42px;
   z-index: -1;
 }
+
+@media (max-width: 1320px) {
+.header_ng::before {
+  background-position-x: -213px, calc(100% + 126px), calc(50% - 120px);
+  background-position-y: 0px, -40px, 0px;
+  background-size: calc(428px * 0.8) calc(518px * 0.8), 398px 126px, 133px 42px;
+}
+}
+
+@media (max-width: 768px) {
+.header_ng::before {
+  background-position-x: -192px, calc(100% + 80px), calc(50% - 80px);
+  background-position-y: 0px, 0px, 0px;
+  background-size: calc(428px * 0.6) calc(518px * 0.6), calc(398px * 0.6) calc(126px * 0.6), 133px 42px;
+}
+}
