@@ -10,6 +10,7 @@ Version: 1.0.0
   pointer-events: none;
   width: 100%;
   height: 518px;
+  position: absolute;
   background-position-x: 50%, 50%, 50%;
   background-position-y: 0px, 0px, 0px;
   background-repeat: no-repeat, no-repeat, no-repeat;
