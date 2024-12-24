@@ -3,6 +3,8 @@ Theme Name: euromonolit-wp-theme
 Version: 1.0.0
 */
 
+@import 'dist/styles/bundle.css';
+
 .header_ng::before {
   content: '';
   pointer-events: none;
