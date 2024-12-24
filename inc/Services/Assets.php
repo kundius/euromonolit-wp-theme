@@ -60,7 +60,7 @@ class Assets implements Service
 
     public function stylesheet_uri(string $stylesheet_uri): string
     {
-        $file = 'dist/styles/bundle.css';
+        $file = 'style.css';
 
         if (file_exists(\get_theme_file_path($file))) {
             return \get_theme_file_uri($file);
