@@ -1,4 +1,4 @@
-<section class="header">
+<section class="header <?php if (is_new_year()): ?>header_ng<?php endif; ?>">
   <div class="ui-container header__container">
     
     <button class="header__toggle">
